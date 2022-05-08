@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kursa4", "Kursa4\Kursa4.csproj", "{6626793B-6C75-4CE4-A0B0-8D97F20353E9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Model", "Model\Model.csproj", "{BCF82E75-473A-44BE-BE49-728410C297CA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataBaseAccess", "DataBaseAccess\DataBaseAccess.csproj", "{ACFB8D7B-D8AF-4404-BB7D-D518E03366EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6626793B-6C75-4CE4-A0B0-8D97F20353E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6626793B-6C75-4CE4-A0B0-8D97F20353E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6626793B-6C75-4CE4-A0B0-8D97F20353E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6626793B-6C75-4CE4-A0B0-8D97F20353E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCF82E75-473A-44BE-BE49-728410C297CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCF82E75-473A-44BE-BE49-728410C297CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCF82E75-473A-44BE-BE49-728410C297CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCF82E75-473A-44BE-BE49-728410C297CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACFB8D7B-D8AF-4404-BB7D-D518E03366EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACFB8D7B-D8AF-4404-BB7D-D518E03366EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACFB8D7B-D8AF-4404-BB7D-D518E03366EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACFB8D7B-D8AF-4404-BB7D-D518E03366EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {00582BEF-5123-40CF-B3A1-847E08A06336}
+	EndGlobalSection
+EndGlobal
