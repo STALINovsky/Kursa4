@@ -140,11 +140,11 @@
             this.createDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ExportTab = new System.Windows.Forms.TabPage();
+            this.ExportButton = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.ExportPeriod = new System.Windows.Forms.MonthCalendar();
             this.label15 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.ExportPeriod = new System.Windows.Forms.MonthCalendar();
-            this.label16 = new System.Windows.Forms.Label();
-            this.ExportButton = new System.Windows.Forms.Button();
             this.TableTabControl.SuspendLayout();
             this.EmployeeTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -707,7 +707,7 @@
             this.ProductTab.Name = "ProductTab";
             this.ProductTab.Size = new System.Drawing.Size(1169, 594);
             this.ProductTab.TabIndex = 2;
-            this.ProductTab.Text = "Product";
+            this.ProductTab.Text = "Book";
             this.ProductTab.UseVisualStyleBackColor = true;
             // 
             // splitContainer3
@@ -967,7 +967,7 @@
             this.PurchaseProductsTab.Name = "PurchaseProductsTab";
             this.PurchaseProductsTab.Size = new System.Drawing.Size(1169, 594);
             this.PurchaseProductsTab.TabIndex = 3;
-            this.PurchaseProductsTab.Text = "PurchaseProducts";
+            this.PurchaseProductsTab.Text = "OrderedBooks";
             this.PurchaseProductsTab.UseVisualStyleBackColor = true;
             // 
             // splitContainer4
@@ -1439,6 +1439,34 @@
             this.ExportTab.Text = "Export";
             this.ExportTab.UseVisualStyleBackColor = true;
             // 
+            // ExportButton
+            // 
+            this.ExportButton.Font = new System.Drawing.Font("Segoe UI", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ExportButton.Location = new System.Drawing.Point(382, 96);
+            this.ExportButton.Name = "ExportButton";
+            this.ExportButton.Size = new System.Drawing.Size(784, 501);
+            this.ExportButton.TabIndex = 3;
+            this.ExportButton.Text = "EXPORT";
+            this.ExportButton.UseVisualStyleBackColor = true;
+            this.ExportButton.Click += new System.EventHandler(this.ExportButton_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label16.Location = new System.Drawing.Point(12, 96);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(70, 25);
+            this.label16.TabIndex = 2;
+            this.label16.Text = "Period:";
+            // 
+            // ExportPeriod
+            // 
+            this.ExportPeriod.Location = new System.Drawing.Point(105, 96);
+            this.ExportPeriod.MaxSelectionCount = 31;
+            this.ExportPeriod.Name = "ExportPeriod";
+            this.ExportPeriod.TabIndex = 1;
+            // 
             // label15
             // 
             this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1455,34 +1483,6 @@
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // ExportPeriod
-            // 
-            this.ExportPeriod.Location = new System.Drawing.Point(105, 96);
-            this.ExportPeriod.MaxSelectionCount = 31;
-            this.ExportPeriod.Name = "ExportPeriod";
-            this.ExportPeriod.TabIndex = 1;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label16.Location = new System.Drawing.Point(12, 96);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(70, 25);
-            this.label16.TabIndex = 2;
-            this.label16.Text = "Period:";
-            // 
-            // ExportButton
-            // 
-            this.ExportButton.Font = new System.Drawing.Font("Segoe UI", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ExportButton.Location = new System.Drawing.Point(382, 96);
-            this.ExportButton.Name = "ExportButton";
-            this.ExportButton.Size = new System.Drawing.Size(784, 501);
-            this.ExportButton.TabIndex = 3;
-            this.ExportButton.Text = "EXPORT";
-            this.ExportButton.UseVisualStyleBackColor = true;
-            this.ExportButton.Click += new System.EventHandler(this.ExportButton_Click);
             // 
             // Form1
             // 

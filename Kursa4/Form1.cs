@@ -24,9 +24,9 @@ namespace Kursa4
 
             _context.Employees.Load();
             _context.Consumers.Load();
-            _context.Products.Load();
+            _context.Books.Load();
             _context.Orders.Load();
-            _context.PurchaseProducts.Load();
+            _context.OrderedBooks.Load();
             SetDataInGridView();
 
             ConsumerInOrder.DataSource = _context.Consumers.Local.ToBindingList();
@@ -34,7 +34,7 @@ namespace Kursa4
             OrderStatus.DataSource = Enum.GetValues(typeof(OrderStatus));
             ConsumerPurchaseProduct.DataSource = _context.Consumers.Local.ToBindingList();
             PurcahseProductOrder.DataSource = _context.Orders.Local.ToBindingList();
-            PurchaseProductSourceProduct.DataSource = _context.Products.Local.ToBindingList();
+            PurchaseProductSourceProduct.DataSource = _context.Books.Local.ToBindingList();
 
             //OrdersGrid.Columns[2].CellTemplate = new PurchaseProductListCell();
         }
@@ -43,9 +43,9 @@ namespace Kursa4
         {
             EmployeeGrid.DataSource = _context.Employees.Local.ToBindingList();
             ConsumerGrid.DataSource = _context.Consumers.Local.ToBindingList();
-            ProductGrid.DataSource = _context.Products.Local.ToBindingList();
+            ProductGrid.DataSource = _context.Books.Local.ToBindingList();
             OrdersGrid.DataSource = _context.Orders.Local.ToBindingList();
-            PurchaseProductsGrid.DataSource = _context.PurchaseProducts.Local.ToBindingList();
+            PurchaseProductsGrid.DataSource = _context.OrderedBooks.Local.ToBindingList();
         }
 
         private void EmployeeSaveButton_Click(object sender, EventArgs e)
@@ -161,7 +161,7 @@ namespace Kursa4
                 StockCount = ProductStockCountUpDown.Value.ToString()
             };
 
-            _context.Products.Add(product);
+            _context.Books.Add(product);
             _context.SaveChanges();
         }
 
@@ -172,7 +172,7 @@ namespace Kursa4
                 var currentRow = ProductGrid.CurrentCell.RowIndex;
                 var idCell = ProductGrid[0, currentRow];
                 var id = (int)idCell.Value;
-                var rowData = _context.Products.Where(product => product.Id == id).First();
+                var rowData = _context.Books.Where(product => product.Id == id).First();
 
                 _context.Remove(rowData);
                 _context.SaveChangesAsync();
@@ -194,7 +194,7 @@ namespace Kursa4
             var currentRow = ProductGrid.CurrentCell.RowIndex;
             var idCell = ProductGrid[0, currentRow];
             var id = (int)idCell.Value;
-            var rowData = _context.Products.Where(product => product.Id == id).First();
+            var rowData = _context.Books.Where(product => product.Id == id).First();
 
             ProductName.Text = rowData.Name;
             ProductDescription.Text = rowData.Description;
@@ -257,7 +257,7 @@ namespace Kursa4
                 Order = (Order)PurcahseProductOrder.SelectedValue,
             };
 
-            _context.PurchaseProducts.Add(purchaseProduct);
+            _context.OrderedBooks.Add(purchaseProduct);
             _context.SaveChanges();
         }
 
@@ -268,7 +268,7 @@ namespace Kursa4
                 var currentRow = PurchaseProductsGrid.CurrentCell.RowIndex;
                 var idCell = PurchaseProductsGrid[0, currentRow];
                 var id = (int)idCell.Value;
-                var rowData = _context.PurchaseProducts.Where(product => product.Id == id).First();
+                var rowData = _context.OrderedBooks.Where(product => product.Id == id).First();
 
                 _context.Remove(rowData);
                 _context.SaveChangesAsync();

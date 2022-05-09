@@ -78,8 +78,8 @@ namespace Kursa4.ExportHelpers
             var consumerSheet = workBook.CreateWorkSheet("consumer");
             ExportDataToSheet(consumerSheet, ordersdata.Select(x => x.Consumer).ToArray(), consumerSelectors);
             
-            var purchaseProductSheet = workBook.CreateWorkSheet("purchaseProduct");
-            ExportDataToSheet(purchaseProductSheet, ordersdata.SelectMany(x => x.PurchaseProducts).ToArray(), purchaseProductSelectors);
+            var orderedBooksSheet = workBook.CreateWorkSheet("Ordered books");
+            ExportDataToSheet(orderedBooksSheet, ordersdata.SelectMany(x => x.PurchaseProducts).ToArray(), purchaseProductSelectors);
 
             workBook.SaveAs("NewExcelFile.xls");
         }
