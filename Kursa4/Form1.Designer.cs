@@ -751,9 +751,19 @@
             0,
             0,
             0});
+            this.ProductStockCountUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.ProductStockCountUpDown.Name = "ProductStockCountUpDown";
             this.ProductStockCountUpDown.Size = new System.Drawing.Size(252, 23);
             this.ProductStockCountUpDown.TabIndex = 13;
+            this.ProductStockCountUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // ProductPriceUpDown
             // 
@@ -766,9 +776,19 @@
             0,
             0,
             0});
+            this.ProductPriceUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.ProductPriceUpDown.Name = "ProductPriceUpDown";
             this.ProductPriceUpDown.Size = new System.Drawing.Size(290, 23);
             this.ProductPriceUpDown.TabIndex = 12;
+            this.ProductPriceUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // SaveProduct
             // 
