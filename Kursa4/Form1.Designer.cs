@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.TableTabControl = new System.Windows.Forms.TabControl();
             this.EmployeeTab = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -138,7 +139,12 @@
             this.emploeeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.createDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button1 = new System.Windows.Forms.Button();
+            this.ExportTab = new System.Windows.Forms.TabPage();
+            this.label15 = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ExportPeriod = new System.Windows.Forms.MonthCalendar();
+            this.label16 = new System.Windows.Forms.Label();
+            this.ExportButton = new System.Windows.Forms.Button();
             this.TableTabControl.SuspendLayout();
             this.EmployeeTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -179,6 +185,7 @@
             this.splitContainer5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OrdersGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
+            this.ExportTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // TableTabControl
@@ -191,6 +198,7 @@
             this.TableTabControl.Controls.Add(this.ProductTab);
             this.TableTabControl.Controls.Add(this.PurchaseProductsTab);
             this.TableTabControl.Controls.Add(this.OrdersTab);
+            this.TableTabControl.Controls.Add(this.ExportTab);
             this.TableTabControl.Location = new System.Drawing.Point(12, 12);
             this.TableTabControl.Name = "TableTabControl";
             this.TableTabControl.SelectedIndex = 0;
@@ -1222,7 +1230,6 @@
             // 
             // splitContainer5.Panel1
             // 
-            this.splitContainer5.Panel1.Controls.Add(this.button1);
             this.splitContainer5.Panel1.Controls.Add(this.EmployeeInOrder);
             this.splitContainer5.Panel1.Controls.Add(this.OrderStatus);
             this.splitContainer5.Panel1.Controls.Add(this.ConsumerInOrder);
@@ -1419,15 +1426,63 @@
             // 
             this.orderBindingSource.DataSource = typeof(Model.Order);
             // 
-            // button1
+            // ExportTab
             // 
-            this.button1.Location = new System.Drawing.Point(124, 369);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.ExportTab.Controls.Add(this.ExportButton);
+            this.ExportTab.Controls.Add(this.label16);
+            this.ExportTab.Controls.Add(this.ExportPeriod);
+            this.ExportTab.Controls.Add(this.label15);
+            this.ExportTab.Location = new System.Drawing.Point(4, 24);
+            this.ExportTab.Name = "ExportTab";
+            this.ExportTab.Size = new System.Drawing.Size(1169, 594);
+            this.ExportTab.TabIndex = 5;
+            this.ExportTab.Text = "Export";
+            this.ExportTab.UseVisualStyleBackColor = true;
+            // 
+            // label15
+            // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label15.Location = new System.Drawing.Point(12, 13);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(1102, 74);
+            this.label15.TabIndex = 0;
+            this.label15.Text = resources.GetString("label15.Text");
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // ExportPeriod
+            // 
+            this.ExportPeriod.Location = new System.Drawing.Point(105, 96);
+            this.ExportPeriod.MaxSelectionCount = 31;
+            this.ExportPeriod.Name = "ExportPeriod";
+            this.ExportPeriod.TabIndex = 1;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label16.Location = new System.Drawing.Point(12, 96);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(70, 25);
+            this.label16.TabIndex = 2;
+            this.label16.Text = "Period:";
+            // 
+            // ExportButton
+            // 
+            this.ExportButton.Font = new System.Drawing.Font("Segoe UI", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ExportButton.Location = new System.Drawing.Point(382, 96);
+            this.ExportButton.Name = "ExportButton";
+            this.ExportButton.Size = new System.Drawing.Size(784, 501);
+            this.ExportButton.TabIndex = 3;
+            this.ExportButton.Text = "EXPORT";
+            this.ExportButton.UseVisualStyleBackColor = true;
+            this.ExportButton.Click += new System.EventHandler(this.ExportButton_Click);
             // 
             // Form1
             // 
@@ -1482,6 +1537,8 @@
             this.splitContainer5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.OrdersGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
+            this.ExportTab.ResumeLayout(false);
+            this.ExportTab.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1597,6 +1654,11 @@
         private Label label23;
         private ComboBox PurchaseProductSourceProduct;
         private Label SourceProduct;
-        private Button button1;
+        private TabPage ExportTab;
+        private Button ExportButton;
+        private Label label16;
+        private MonthCalendar ExportPeriod;
+        private Label label15;
+        private ContextMenuStrip contextMenuStrip1;
     }
 }
