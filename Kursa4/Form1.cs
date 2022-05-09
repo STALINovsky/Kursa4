@@ -3,6 +3,7 @@ using Kursa4.ExportHelpers;
 using Microsoft.EntityFrameworkCore;
 using Model;
 using Model.Enums;
+using System.Diagnostics;
 using System.Linq;
 
 namespace Kursa4
@@ -290,9 +291,12 @@ namespace Kursa4
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void ExportButton_Click(object sender, EventArgs e)
         {
-            ExelExportHelper.ExportData(_context, DateTime.Now.AddDays(-1), DateTime.Now.AddDays(1));
+            var startDate = ExportPeriod.SelectionRange.Start;
+            var endDate = ExportPeriod.SelectionRange.End;
+            ExelExportHelper.ExportData(_context, startDate, endDate);
+            MessageBox.Show($"Excel report was successuly generated({startDate} - {endDate})");
         }
     }
 }
