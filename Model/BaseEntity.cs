@@ -12,7 +12,7 @@ namespace Model
 
         public override string ToString()
         {
-            return JsonSerializer.Serialize(this);
+            return Id.ToString();
         }
     }
 }

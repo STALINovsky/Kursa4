@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataBaseAccess.Migrations
 {
     [DbContext(typeof(BDLabsDbContext))]
-    [Migration("20220425182747_initial")]
-    partial class initial
+    [Migration("20220509120524_InitialStore")]
+    partial class InitialStore
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -24,6 +24,30 @@ namespace DataBaseAccess.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("Model.Consumer", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("BirthDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Surname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Consumers");
+                });
+
             modelBuilder.Entity("Model.Emploee", b =>
                 {
                     b.Property<int>("Id")
@@ -32,8 +56,8 @@ namespace DataBaseAccess.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("Age")
-                        .HasColumnType("int");
+                    b.Property<DateTime>("BirthDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -63,6 +87,9 @@ namespace DataBaseAccess.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
+                    b.Property<int>("ConsumerId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
 
@@ -72,37 +99,13 @@ namespace DataBaseAccess.Migrations
                     b.Property<int>("OrderStatus")
                         .HasColumnType("int");
 
-                    b.Property<string>("ProducerId")
-                        .HasColumnType("nvarchar(450)");
-
                     b.HasKey("Id");
+
+                    b.HasIndex("ConsumerId");
 
                     b.HasIndex("EmploeeId");
 
-                    b.HasIndex("ProducerId");
-
                     b.ToTable("Orders");
-                });
-
-            modelBuilder.Entity("Model.Producer", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("Age")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Surname")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Producers");
                 });
 
             modelBuilder.Entity("Model.Product", b =>
@@ -112,6 +115,9 @@ namespace DataBaseAccess.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int?>("ConsumerId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -124,17 +130,13 @@ namespace DataBaseAccess.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<string>("ProducerId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<string>("StockCount")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ProducerId");
+                    b.HasIndex("ConsumerId");
 
                     b.ToTable("Products");
                 });
@@ -146,6 +148,9 @@ namespace DataBaseAccess.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("ConsumerId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -167,6 +172,8 @@ namespace DataBaseAccess.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ConsumerId");
+
                     b.HasIndex("OrderId");
 
                     b.ToTable("PurchaseProducts");
@@ -174,47 +181,53 @@ namespace DataBaseAccess.Migrations
 
             modelBuilder.Entity("Model.Order", b =>
                 {
+                    b.HasOne("Model.Consumer", "Consumer")
+                        .WithMany()
+                        .HasForeignKey("ConsumerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Model.Emploee", "Emploee")
                         .WithMany()
                         .HasForeignKey("EmploeeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Model.Producer", "Producer")
-                        .WithMany()
-                        .HasForeignKey("ProducerId");
+                    b.Navigation("Consumer");
 
                     b.Navigation("Emploee");
-
-                    b.Navigation("Producer");
                 });
 
             modelBuilder.Entity("Model.Product", b =>
                 {
-                    b.HasOne("Model.Producer", "Producer")
+                    b.HasOne("Model.Consumer", null)
                         .WithMany("Products")
-                        .HasForeignKey("ProducerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Producer");
+                        .HasForeignKey("ConsumerId");
                 });
 
             modelBuilder.Entity("Model.PurchaseProduct", b =>
                 {
+                    b.HasOne("Model.Consumer", "Consumer")
+                        .WithMany()
+                        .HasForeignKey("ConsumerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Model.Order", null)
                         .WithMany("PurchaseProducts")
                         .HasForeignKey("OrderId");
+
+                    b.Navigation("Consumer");
+                });
+
+            modelBuilder.Entity("Model.Consumer", b =>
+                {
+                    b.Navigation("Products");
                 });
 
             modelBuilder.Entity("Model.Order", b =>
                 {
                     b.Navigation("PurchaseProducts");
-                });
-
-            modelBuilder.Entity("Model.Producer", b =>
-                {
-                    b.Navigation("Products");
                 });
 #pragma warning restore 612, 618
         }

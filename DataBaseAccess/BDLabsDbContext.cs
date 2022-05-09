@@ -5,7 +5,7 @@ namespace DataBaseAccess
 {
     public class BDLabsDbContext : DbContext
     {
-        public const string ConnectionString = "Server=(localdb)\\MsSqlLocaldb ;Database=Course;Trusted_Connection=True;";
+        public const string ConnectionString = "Server=localhost ;Database=Course;Trusted_Connection=True;";
         public BDLabsDbContext() : base()
         {
         }
