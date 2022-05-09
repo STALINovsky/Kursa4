@@ -97,20 +97,18 @@
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.PurchaseProductsTab = new System.Windows.Forms.TabPage();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
+            this.PurchaseProductSourceProduct = new System.Windows.Forms.ComboBox();
+            this.SourceProduct = new System.Windows.Forms.Label();
+            this.PurcahseProductOrder = new System.Windows.Forms.ComboBox();
+            this.label23 = new System.Windows.Forms.Label();
             this.ConsumerPurchaseProduct = new System.Windows.Forms.ComboBox();
             this.label22 = new System.Windows.Forms.Label();
             this.PurchaseProductCount = new System.Windows.Forms.NumericUpDown();
             this.label14 = new System.Windows.Forms.Label();
-            this.PurchaseProductPrice = new System.Windows.Forms.NumericUpDown();
-            this.PurchaseProductDescription = new System.Windows.Forms.TextBox();
-            this.PurchaseProductName = new System.Windows.Forms.TextBox();
             this.ClearPurchaseProduct = new System.Windows.Forms.Button();
             this.SavePurchaseProduct = new System.Windows.Forms.Button();
             this.DeletePurchaseProduct = new System.Windows.Forms.Button();
             this.CreatePurchaseProduct = new System.Windows.Forms.Button();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.PurchaseProductsGrid = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -118,10 +116,10 @@
             this.priceDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.purchaseCountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.consumerDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.purchaseProductBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.OrdersTab = new System.Windows.Forms.TabPage();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
-            this.OrderDate = new System.Windows.Forms.MonthCalendar();
             this.EmployeeInOrder = new System.Windows.Forms.ComboBox();
             this.OrderStatus = new System.Windows.Forms.ComboBox();
             this.ConsumerInOrder = new System.Windows.Forms.ComboBox();
@@ -129,7 +127,6 @@
             this.SaveOrder = new System.Windows.Forms.Button();
             this.DeleteOrder = new System.Windows.Forms.Button();
             this.CreateOrder = new System.Windows.Forms.Button();
-            this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -172,7 +169,6 @@
             this.splitContainer4.Panel2.SuspendLayout();
             this.splitContainer4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PurchaseProductCount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PurchaseProductPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PurchaseProductsGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchaseProductBindingSource)).BeginInit();
             this.OrdersTab.SuspendLayout();
@@ -265,6 +261,9 @@
             // 
             // EmployeeSalary
             // 
+            this.EmployeeSalary.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.EmployeeSalary.Location = new System.Drawing.Point(47, 90);
             this.EmployeeSalary.Maximum = new decimal(new int[] {
             10000,
@@ -311,7 +310,7 @@
             // 
             // EmployeeBirthDate
             // 
-            this.EmployeeBirthDate.Location = new System.Drawing.Point(166, 125);
+            this.EmployeeBirthDate.Location = new System.Drawing.Point(99, 125);
             this.EmployeeBirthDate.MaxSelectionCount = 1;
             this.EmployeeBirthDate.Name = "EmployeeBirthDate";
             this.EmployeeBirthDate.TabIndex = 8;
@@ -551,7 +550,10 @@
             // 
             // ConsumerBIrthdate
             // 
-            this.ConsumerBIrthdate.Location = new System.Drawing.Point(162, 96);
+            this.ConsumerBIrthdate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ConsumerBIrthdate.Location = new System.Drawing.Point(99, 96);
             this.ConsumerBIrthdate.MaxSelectionCount = 1;
             this.ConsumerBIrthdate.Name = "ConsumerBIrthdate";
             this.ConsumerBIrthdate.TabIndex = 8;
@@ -740,6 +742,9 @@
             // 
             // ProductStockCountUpDown
             // 
+            this.ProductStockCountUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ProductStockCountUpDown.Location = new System.Drawing.Point(80, 92);
             this.ProductStockCountUpDown.Maximum = new decimal(new int[] {
             99999,
@@ -752,6 +757,9 @@
             // 
             // ProductPriceUpDown
             // 
+            this.ProductPriceUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ProductPriceUpDown.Location = new System.Drawing.Point(42, 63);
             this.ProductPriceUpDown.Maximum = new decimal(new int[] {
             99999,
@@ -942,20 +950,18 @@
             // 
             // splitContainer4.Panel1
             // 
+            this.splitContainer4.Panel1.Controls.Add(this.PurchaseProductSourceProduct);
+            this.splitContainer4.Panel1.Controls.Add(this.SourceProduct);
+            this.splitContainer4.Panel1.Controls.Add(this.PurcahseProductOrder);
+            this.splitContainer4.Panel1.Controls.Add(this.label23);
             this.splitContainer4.Panel1.Controls.Add(this.ConsumerPurchaseProduct);
             this.splitContainer4.Panel1.Controls.Add(this.label22);
             this.splitContainer4.Panel1.Controls.Add(this.PurchaseProductCount);
             this.splitContainer4.Panel1.Controls.Add(this.label14);
-            this.splitContainer4.Panel1.Controls.Add(this.PurchaseProductPrice);
-            this.splitContainer4.Panel1.Controls.Add(this.PurchaseProductDescription);
-            this.splitContainer4.Panel1.Controls.Add(this.PurchaseProductName);
             this.splitContainer4.Panel1.Controls.Add(this.ClearPurchaseProduct);
             this.splitContainer4.Panel1.Controls.Add(this.SavePurchaseProduct);
             this.splitContainer4.Panel1.Controls.Add(this.DeletePurchaseProduct);
             this.splitContainer4.Panel1.Controls.Add(this.CreatePurchaseProduct);
-            this.splitContainer4.Panel1.Controls.Add(this.label15);
-            this.splitContainer4.Panel1.Controls.Add(this.label16);
-            this.splitContainer4.Panel1.Controls.Add(this.label17);
             // 
             // splitContainer4.Panel2
             // 
@@ -964,10 +970,59 @@
             this.splitContainer4.SplitterDistance = 336;
             this.splitContainer4.TabIndex = 5;
             // 
+            // PurchaseProductSourceProduct
+            // 
+            this.PurchaseProductSourceProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PurchaseProductSourceProduct.FormattingEnabled = true;
+            this.PurchaseProductSourceProduct.Location = new System.Drawing.Point(99, 7);
+            this.PurchaseProductSourceProduct.Name = "PurchaseProductSourceProduct";
+            this.PurchaseProductSourceProduct.Size = new System.Drawing.Size(234, 23);
+            this.PurchaseProductSourceProduct.TabIndex = 29;
+            // 
+            // SourceProduct
+            // 
+            this.SourceProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SourceProduct.AutoSize = true;
+            this.SourceProduct.Location = new System.Drawing.Point(5, 9);
+            this.SourceProduct.Name = "SourceProduct";
+            this.SourceProduct.Size = new System.Drawing.Size(88, 15);
+            this.SourceProduct.TabIndex = 28;
+            this.SourceProduct.Text = "Source Product";
+            // 
+            // PurcahseProductOrder
+            // 
+            this.PurcahseProductOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PurcahseProductOrder.FormattingEnabled = true;
+            this.PurcahseProductOrder.Location = new System.Drawing.Point(48, 94);
+            this.PurcahseProductOrder.Name = "PurcahseProductOrder";
+            this.PurcahseProductOrder.Size = new System.Drawing.Size(285, 23);
+            this.PurcahseProductOrder.TabIndex = 27;
+            // 
+            // label23
+            // 
+            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(5, 97);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(37, 15);
+            this.label23.TabIndex = 26;
+            this.label23.Text = "Order";
+            // 
             // ConsumerPurchaseProduct
             // 
+            this.ConsumerPurchaseProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ConsumerPurchaseProduct.FormattingEnabled = true;
-            this.ConsumerPurchaseProduct.Location = new System.Drawing.Point(80, 122);
+            this.ConsumerPurchaseProduct.Location = new System.Drawing.Point(82, 65);
             this.ConsumerPurchaseProduct.Name = "ConsumerPurchaseProduct";
             this.ConsumerPurchaseProduct.Size = new System.Drawing.Size(251, 23);
             this.ConsumerPurchaseProduct.TabIndex = 25;
@@ -978,7 +1033,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(3, 125);
+            this.label22.Location = new System.Drawing.Point(5, 68);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(72, 15);
             this.label22.TabIndex = 24;
@@ -986,7 +1041,10 @@
             // 
             // PurchaseProductCount
             // 
-            this.PurchaseProductCount.Location = new System.Drawing.Point(97, 93);
+            this.PurchaseProductCount.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PurchaseProductCount.Location = new System.Drawing.Point(99, 36);
             this.PurchaseProductCount.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -1002,46 +1060,15 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(3, 95);
+            this.label14.Location = new System.Drawing.Point(5, 38);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(88, 15);
             this.label14.TabIndex = 22;
             this.label14.Text = "PurchaseCount";
             // 
-            // PurchaseProductPrice
-            // 
-            this.PurchaseProductPrice.Increment = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.PurchaseProductPrice.Location = new System.Drawing.Point(80, 61);
-            this.PurchaseProductPrice.Maximum = new decimal(new int[] {
-            99999,
-            0,
-            0,
-            0});
-            this.PurchaseProductPrice.Name = "PurchaseProductPrice";
-            this.PurchaseProductPrice.Size = new System.Drawing.Size(251, 23);
-            this.PurchaseProductPrice.TabIndex = 21;
-            // 
-            // PurchaseProductDescription
-            // 
-            this.PurchaseProductDescription.Location = new System.Drawing.Point(80, 32);
-            this.PurchaseProductDescription.Name = "PurchaseProductDescription";
-            this.PurchaseProductDescription.Size = new System.Drawing.Size(251, 23);
-            this.PurchaseProductDescription.TabIndex = 20;
-            // 
-            // PurchaseProductName
-            // 
-            this.PurchaseProductName.Location = new System.Drawing.Point(80, 3);
-            this.PurchaseProductName.Name = "PurchaseProductName";
-            this.PurchaseProductName.Size = new System.Drawing.Size(251, 23);
-            this.PurchaseProductName.TabIndex = 19;
-            // 
             // ClearPurchaseProduct
             // 
-            this.ClearPurchaseProduct.Location = new System.Drawing.Point(256, 171);
+            this.ClearPurchaseProduct.Location = new System.Drawing.Point(260, 123);
             this.ClearPurchaseProduct.Name = "ClearPurchaseProduct";
             this.ClearPurchaseProduct.Size = new System.Drawing.Size(75, 23);
             this.ClearPurchaseProduct.TabIndex = 14;
@@ -1065,6 +1092,7 @@
             this.DeletePurchaseProduct.TabIndex = 10;
             this.DeletePurchaseProduct.Text = "Delete";
             this.DeletePurchaseProduct.UseVisualStyleBackColor = true;
+            this.DeletePurchaseProduct.Click += new System.EventHandler(this.DeletePurchaseProduct_Click);
             // 
             // CreatePurchaseProduct
             // 
@@ -1074,42 +1102,7 @@
             this.CreatePurchaseProduct.TabIndex = 9;
             this.CreatePurchaseProduct.Text = "Create";
             this.CreatePurchaseProduct.UseVisualStyleBackColor = true;
-            // 
-            // label15
-            // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(3, 64);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(33, 15);
-            this.label15.TabIndex = 5;
-            this.label15.Text = "Price";
-            // 
-            // label16
-            // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(3, 35);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(67, 15);
-            this.label16.TabIndex = 3;
-            this.label16.Text = "Description";
-            // 
-            // label17
-            // 
-            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(3, 6);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(39, 15);
-            this.label17.TabIndex = 1;
-            this.label17.Text = "Name";
+            this.CreatePurchaseProduct.Click += new System.EventHandler(this.CreatePurchaseProduct_Click);
             // 
             // PurchaseProductsGrid
             // 
@@ -1127,7 +1120,8 @@
             this.descriptionDataGridViewTextBoxColumn1,
             this.priceDataGridViewTextBoxColumn1,
             this.purchaseCountDataGridViewTextBoxColumn,
-            this.consumerDataGridViewTextBoxColumn1});
+            this.consumerDataGridViewTextBoxColumn1,
+            this.orderDataGridViewTextBoxColumn});
             this.PurchaseProductsGrid.DataSource = this.purchaseProductBindingSource;
             this.PurchaseProductsGrid.Location = new System.Drawing.Point(3, 3);
             this.PurchaseProductsGrid.Name = "PurchaseProductsGrid";
@@ -1177,6 +1171,13 @@
             this.consumerDataGridViewTextBoxColumn1.HeaderText = "Consumer";
             this.consumerDataGridViewTextBoxColumn1.Name = "consumerDataGridViewTextBoxColumn1";
             // 
+            // orderDataGridViewTextBoxColumn
+            // 
+            this.orderDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.orderDataGridViewTextBoxColumn.DataPropertyName = "Order";
+            this.orderDataGridViewTextBoxColumn.HeaderText = "Order";
+            this.orderDataGridViewTextBoxColumn.Name = "orderDataGridViewTextBoxColumn";
+            // 
             // purchaseProductBindingSource
             // 
             this.purchaseProductBindingSource.DataSource = typeof(Model.PurchaseProduct);
@@ -1200,7 +1201,6 @@
             // 
             // splitContainer5.Panel1
             // 
-            this.splitContainer5.Panel1.Controls.Add(this.OrderDate);
             this.splitContainer5.Panel1.Controls.Add(this.EmployeeInOrder);
             this.splitContainer5.Panel1.Controls.Add(this.OrderStatus);
             this.splitContainer5.Panel1.Controls.Add(this.ConsumerInOrder);
@@ -1208,7 +1208,6 @@
             this.splitContainer5.Panel1.Controls.Add(this.SaveOrder);
             this.splitContainer5.Panel1.Controls.Add(this.DeleteOrder);
             this.splitContainer5.Panel1.Controls.Add(this.CreateOrder);
-            this.splitContainer5.Panel1.Controls.Add(this.label18);
             this.splitContainer5.Panel1.Controls.Add(this.label19);
             this.splitContainer5.Panel1.Controls.Add(this.label20);
             this.splitContainer5.Panel1.Controls.Add(this.label21);
@@ -1217,42 +1216,45 @@
             // 
             this.splitContainer5.Panel2.Controls.Add(this.OrdersGrid);
             this.splitContainer5.Size = new System.Drawing.Size(1169, 594);
-            this.splitContainer5.SplitterDistance = 336;
+            this.splitContainer5.SplitterDistance = 326;
             this.splitContainer5.TabIndex = 4;
-            // 
-            // OrderDate
-            // 
-            this.OrderDate.Location = new System.Drawing.Point(167, 99);
-            this.OrderDate.Name = "OrderDate";
-            this.OrderDate.TabIndex = 18;
             // 
             // EmployeeInOrder
             // 
+            this.EmployeeInOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.EmployeeInOrder.FormattingEnabled = true;
             this.EmployeeInOrder.Location = new System.Drawing.Point(80, 64);
             this.EmployeeInOrder.Name = "EmployeeInOrder";
-            this.EmployeeInOrder.Size = new System.Drawing.Size(252, 23);
+            this.EmployeeInOrder.Size = new System.Drawing.Size(243, 23);
             this.EmployeeInOrder.TabIndex = 17;
             // 
             // OrderStatus
             // 
+            this.OrderStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderStatus.FormattingEnabled = true;
             this.OrderStatus.Location = new System.Drawing.Point(80, 34);
             this.OrderStatus.Name = "OrderStatus";
-            this.OrderStatus.Size = new System.Drawing.Size(252, 23);
+            this.OrderStatus.Size = new System.Drawing.Size(243, 23);
             this.OrderStatus.TabIndex = 16;
             // 
             // ConsumerInOrder
             // 
+            this.ConsumerInOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ConsumerInOrder.FormattingEnabled = true;
             this.ConsumerInOrder.Location = new System.Drawing.Point(80, 3);
             this.ConsumerInOrder.Name = "ConsumerInOrder";
-            this.ConsumerInOrder.Size = new System.Drawing.Size(252, 23);
+            this.ConsumerInOrder.Size = new System.Drawing.Size(243, 23);
             this.ConsumerInOrder.TabIndex = 15;
             // 
             // ClearOrderData
             // 
-            this.ClearOrderData.Location = new System.Drawing.Point(256, 286);
+            this.ClearOrderData.Location = new System.Drawing.Point(3, 93);
             this.ClearOrderData.Name = "ClearOrderData";
             this.ClearOrderData.Size = new System.Drawing.Size(75, 23);
             this.ClearOrderData.TabIndex = 14;
@@ -1286,18 +1288,7 @@
             this.CreateOrder.TabIndex = 9;
             this.CreateOrder.Text = "Create";
             this.CreateOrder.UseVisualStyleBackColor = true;
-            // 
-            // label18
-            // 
-            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(5, 92);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(31, 15);
-            this.label18.TabIndex = 7;
-            this.label18.Text = "Date";
+            this.CreateOrder.Click += new System.EventHandler(this.CreateOrder_Click);
             // 
             // label19
             // 
@@ -1356,8 +1347,9 @@
             this.OrdersGrid.Location = new System.Drawing.Point(3, 3);
             this.OrdersGrid.Name = "OrdersGrid";
             this.OrdersGrid.RowTemplate.Height = 25;
-            this.OrdersGrid.Size = new System.Drawing.Size(823, 588);
+            this.OrdersGrid.Size = new System.Drawing.Size(811, 647);
             this.OrdersGrid.TabIndex = 0;
+            this.OrdersGrid.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.OrdersGrid_CellFormatting);
             // 
             // idDataGridViewTextBoxColumn3
             // 
@@ -1448,7 +1440,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
             this.splitContainer4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PurchaseProductCount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PurchaseProductPrice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PurchaseProductsGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchaseProductBindingSource)).EndInit();
             this.OrdersTab.ResumeLayout(false);
@@ -1538,19 +1529,8 @@
         private Button SavePurchaseProduct;
         private Button DeletePurchaseProduct;
         private Button CreatePurchaseProduct;
-        private Label label15;
-        private Label label16;
-        private Label label17;
         private DataGridView PurchaseProductsGrid;
-        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn4;
-        private DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn3;
-        private DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn purchaseCountDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn consumerDataGridViewTextBoxColumn1;
-        private BindingSource purchaseProductBindingSource;
         private SplitContainer splitContainer5;
-        private MonthCalendar OrderDate;
         private ComboBox EmployeeInOrder;
         private ComboBox OrderStatus;
         private ComboBox ConsumerInOrder;
@@ -1558,7 +1538,6 @@
         private Button SaveOrder;
         private Button DeleteOrder;
         private Button CreateOrder;
-        private Label label18;
         private Label label19;
         private Label label20;
         private Label label21;
@@ -1574,8 +1553,17 @@
         private Label label22;
         private NumericUpDown PurchaseProductCount;
         private Label label14;
-        private NumericUpDown PurchaseProductPrice;
-        private TextBox PurchaseProductDescription;
-        private TextBox PurchaseProductName;
+        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn purchaseCountDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn consumerDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn orderDataGridViewTextBoxColumn;
+        private BindingSource purchaseProductBindingSource;
+        private ComboBox PurcahseProductOrder;
+        private Label label23;
+        private ComboBox PurchaseProductSourceProduct;
+        private Label SourceProduct;
     }
 }

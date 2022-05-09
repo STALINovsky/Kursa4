@@ -11,7 +11,13 @@ namespace Model
         public string Name { get; set; }
         public string Description { get; set; }
         public decimal Price { get; set; }
-        public string PurchaseCount { get; set; }
+        public int PurchaseCount { get; set; }
         public Consumer Consumer { get; set; }
+        public Order? Order { get; set; }
+
+        public override string ToString()
+        {
+            return Id + ": " + Name + " " + PurchaseCount;
+        }
     }
 }

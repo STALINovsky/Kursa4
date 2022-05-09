@@ -1,6 +1,8 @@
 using DataBaseAccess;
+using Kursa4.Customizations;
 using Microsoft.EntityFrameworkCore;
 using Model;
+using Model.Enums;
 using System.Linq;
 
 namespace Kursa4
@@ -27,24 +29,21 @@ namespace Kursa4
             SetDataInGridView();
 
             ConsumerInOrder.DataSource = _context.Consumers.Local.ToBindingList();
+            EmployeeInOrder.DataSource = _context.Employees.Local.ToBindingList();
+            OrderStatus.DataSource = Enum.GetValues(typeof(OrderStatus));
+            ConsumerPurchaseProduct.DataSource = _context.Consumers.Local.ToBindingList();
+            PurcahseProductOrder.DataSource = _context.Orders.Local.ToBindingList();
+            PurchaseProductSourceProduct.DataSource = _context.Products.Local.ToBindingList();
 
+            //OrdersGrid.Columns[2].CellTemplate = new PurchaseProductListCell();
         }
 
         public void SetDataInGridView()
         {
-            EmployeeGrid.AutoGenerateColumns = false;
             EmployeeGrid.DataSource = _context.Employees.Local.ToBindingList();
-
-            ConsumerGrid.AutoGenerateColumns = false;
             ConsumerGrid.DataSource = _context.Consumers.Local.ToBindingList();
-
-            ProductGrid.AutoGenerateColumns = false;
             ProductGrid.DataSource = _context.Products.Local.ToBindingList();
-
-            OrdersGrid.AutoGenerateColumns = false;
             OrdersGrid.DataSource = _context.Orders.Local.ToBindingList();
-
-            PurchaseProductsGrid.AutoGenerateColumns = false;
             PurchaseProductsGrid.DataSource = _context.PurchaseProducts.Local.ToBindingList();
         }
 
@@ -228,6 +227,64 @@ namespace Kursa4
             ProductGrid.Update();
 
             MessageBox.Show("Changes was saved successfully");
+        }
+
+        private void CreateOrder_Click(object sender, EventArgs e)
+        {
+            Order order = new()
+            {
+                Consumer = (Consumer)ConsumerInOrder.SelectedValue,
+                CreateDate = DateTime.Now,
+                Emploee = (Emploee)EmployeeInOrder.SelectedValue,
+                OrderStatus = (OrderStatus)OrderStatus.SelectedValue,
+            };
+
+            _context.Orders.Add(order);
+            _context.SaveChanges();
+        }
+
+
+        private void CreatePurchaseProduct_Click(object sender, EventArgs e)
+        {
+            PurchaseProduct purchaseProduct = new()
+            {
+                Name = ((Product)PurchaseProductSourceProduct.SelectedValue).Name,
+                Description = ((Product)PurchaseProductSourceProduct.SelectedValue).Description,
+                Price = ((Product)PurchaseProductSourceProduct.SelectedValue).Price,
+                PurchaseCount = (int)PurchaseProductCount.Value,
+                Consumer = (Consumer)ConsumerPurchaseProduct.SelectedValue,
+                Order = (Order)PurcahseProductOrder.SelectedValue,
+            };
+
+            _context.PurchaseProducts.Add(purchaseProduct);
+            _context.SaveChanges();
+        }
+
+        private void DeletePurchaseProduct_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to delete this record ?", "Delete ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                var currentRow = PurchaseProductsGrid.CurrentCell.RowIndex;
+                var idCell = PurchaseProductsGrid[0, currentRow];
+                var id = (int)idCell.Value;
+                var rowData = _context.PurchaseProducts.Where(product => product.Id == id).First();
+
+                _context.Remove(rowData);
+                _context.SaveChangesAsync();
+
+                MessageBox.Show($"Product with id = {id} was deleted successfully");
+            }
+        }
+
+        private void OrdersGrid_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            const int one = 1;
+            if (e.ColumnIndex == one + one)
+            {
+                var dataGridView = sender as DataGridView;
+                var temp = dataGridView[one + one, e.RowIndex].Value as ICollection<PurchaseProduct>;
+                e.Value = string.Join(", ", temp);
+            }
         }
     }
 }

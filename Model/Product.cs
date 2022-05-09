@@ -12,5 +12,10 @@ namespace Model
         public string Description { get; set; }
         public Decimal Price { get; set; }
         public string StockCount { get; set; }
+
+        public override string ToString()
+        {
+            return Id + ": " + Name + " " + Description;
+        }
     }
 }

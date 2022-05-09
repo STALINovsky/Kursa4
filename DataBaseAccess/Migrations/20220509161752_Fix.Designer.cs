@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataBaseAccess.Migrations
 {
     [DbContext(typeof(BDLabsDbContext))]
-    [Migration("20220509120524_InitialStore")]
-    partial class InitialStore
+    [Migration("20220509161752_Fix")]
+    partial class Fix
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -166,9 +166,8 @@ namespace DataBaseAccess.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<string>("PurchaseCount")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("PurchaseCount")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -213,11 +212,13 @@ namespace DataBaseAccess.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Model.Order", null)
+                    b.HasOne("Model.Order", "Order")
                         .WithMany("PurchaseProducts")
                         .HasForeignKey("OrderId");
 
                     b.Navigation("Consumer");
+
+                    b.Navigation("Order");
                 });
 
             modelBuilder.Entity("Model.Consumer", b =>
