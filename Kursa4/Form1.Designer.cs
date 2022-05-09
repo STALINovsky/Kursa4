@@ -138,6 +138,7 @@
             this.emploeeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.createDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.TableTabControl.SuspendLayout();
             this.EmployeeTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -1221,6 +1222,7 @@
             // 
             // splitContainer5.Panel1
             // 
+            this.splitContainer5.Panel1.Controls.Add(this.button1);
             this.splitContainer5.Panel1.Controls.Add(this.EmployeeInOrder);
             this.splitContainer5.Panel1.Controls.Add(this.OrderStatus);
             this.splitContainer5.Panel1.Controls.Add(this.ConsumerInOrder);
@@ -1417,6 +1419,16 @@
             // 
             this.orderBindingSource.DataSource = typeof(Model.Order);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(124, 369);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1585,5 +1597,6 @@
         private Label label23;
         private ComboBox PurchaseProductSourceProduct;
         private Label SourceProduct;
+        private Button button1;
     }
 }

@@ -1,4 +1,5 @@
 using DataBaseAccess;
+using Kursa4.ExportHelpers;
 using Microsoft.EntityFrameworkCore;
 using Model;
 using Model.Enums;
@@ -282,8 +283,16 @@ namespace Kursa4
             {
                 var dataGridView = sender as DataGridView;
                 var temp = dataGridView[one + one, e.RowIndex].Value as ICollection<PurchaseProduct>;
-                e.Value = string.Join(", ", temp);
+                if (temp is not null)
+                {
+                    e.Value = string.Join(", ", temp);
+                }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ExelExportHelper.ExportData(_context, DateTime.Now.AddDays(-1), DateTime.Now.AddDays(1));
         }
     }
 }
