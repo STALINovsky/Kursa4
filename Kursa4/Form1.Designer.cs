@@ -47,14 +47,15 @@
             this.EmployeeSurname = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.EmployeeName = new System.Windows.Forms.TextBox();
-            this.EmployeeGrid = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.birthDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salaryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmployeeGrid = new DevExpress.XtraGrid.GridControl();
             this.emploeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSalary = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSurname = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colBirthDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPhoneNumber = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ConsumerTab = new System.Windows.Forms.TabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.ClearConsumerData = new System.Windows.Forms.Button();
@@ -69,12 +70,13 @@
             this.ConsumerSurname = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.ConsumerName = new System.Windows.Forms.TextBox();
-            this.ConsumerGrid = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.surnameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.birthDateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ConsumersGrid = new DevExpress.XtraGrid.GridControl();
             this.consumerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colName1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSurname1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colBirthDate1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colId1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ProductTab = new System.Windows.Forms.TabPage();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.ClearProductData = new System.Windows.Forms.Button();
@@ -89,13 +91,14 @@
             this.ProductDescription = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.ProductName = new System.Windows.Forms.TextBox();
-            this.ProductGrid = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stockCountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ProductGrid = new DevExpress.XtraGrid.GridControl();
+            this.productBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colName2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDescription = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPrice = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colStockCount = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colId2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.PurchaseProductsTab = new System.Windows.Forms.TabPage();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.PurchaseProductSourceProduct = new System.Windows.Forms.ComboBox();
@@ -110,15 +113,16 @@
             this.SavePurchaseProduct = new System.Windows.Forms.Button();
             this.DeletePurchaseProduct = new System.Windows.Forms.Button();
             this.CreatePurchaseProduct = new System.Windows.Forms.Button();
-            this.PurchaseProductsGrid = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.purchaseCountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.consumerDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.orderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.purchaseProductBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.PurchaseProductsGrid = new DevExpress.XtraGrid.GridControl();
+            this.purchaseProductBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colName3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDescription1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPrice1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPurchaseCount = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colConsumer = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colOrder = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colId3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.OrdersTab = new System.Windows.Forms.TabPage();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
             this.EmployeeInOrder = new System.Windows.Forms.ComboBox();
@@ -131,20 +135,30 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.OrdersGrid = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.consumerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.purchaseProductsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.orderStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emploeeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.createDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.OrdersGrid = new DevExpress.XtraGrid.GridControl();
+            this.orderBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colCreateDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colConsumer1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPurchaseProducts = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colOrderStatus = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEmploee = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colId4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ExportTab = new System.Windows.Forms.TabPage();
-            this.label15 = new System.Windows.Forms.Label();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.ExportPeriod = new System.Windows.Forms.MonthCalendar();
-            this.label16 = new System.Windows.Forms.Label();
             this.ExportButton = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.ExportPeriod = new System.Windows.Forms.MonthCalendar();
+            this.label15 = new System.Windows.Forms.Label();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.purchaseProductBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pdfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.wordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rtfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.htmlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TableTabControl.SuspendLayout();
             this.EmployeeTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -154,13 +168,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeSalary)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emploeeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.ConsumerTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ConsumerGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ConsumersGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consumerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.ProductTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
@@ -169,7 +185,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ProductStockCountUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProductPriceUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProductGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             this.PurchaseProductsTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
             this.splitContainer4.Panel1.SuspendLayout();
@@ -177,15 +194,21 @@
             this.splitContainer4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PurchaseProductCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PurchaseProductsGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.purchaseProductBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.purchaseProductBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             this.OrdersTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).BeginInit();
             this.splitContainer5.Panel1.SuspendLayout();
             this.splitContainer5.Panel2.SuspendLayout();
             this.splitContainer5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OrdersGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
             this.ExportTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.purchaseProductBindingSource)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // TableTabControl
@@ -199,10 +222,10 @@
             this.TableTabControl.Controls.Add(this.PurchaseProductsTab);
             this.TableTabControl.Controls.Add(this.OrdersTab);
             this.TableTabControl.Controls.Add(this.ExportTab);
-            this.TableTabControl.Location = new System.Drawing.Point(12, 12);
+            this.TableTabControl.Location = new System.Drawing.Point(12, 27);
             this.TableTabControl.Name = "TableTabControl";
             this.TableTabControl.SelectedIndex = 0;
-            this.TableTabControl.Size = new System.Drawing.Size(1177, 622);
+            this.TableTabControl.Size = new System.Drawing.Size(1206, 644);
             this.TableTabControl.TabIndex = 0;
             // 
             // EmployeeTab
@@ -211,7 +234,7 @@
             this.EmployeeTab.Location = new System.Drawing.Point(4, 24);
             this.EmployeeTab.Name = "EmployeeTab";
             this.EmployeeTab.Padding = new System.Windows.Forms.Padding(3);
-            this.EmployeeTab.Size = new System.Drawing.Size(1169, 594);
+            this.EmployeeTab.Size = new System.Drawing.Size(1198, 616);
             this.EmployeeTab.TabIndex = 0;
             this.EmployeeTab.Text = "Employee";
             this.EmployeeTab.UseVisualStyleBackColor = true;
@@ -243,13 +266,13 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.EmployeeGrid);
-            this.splitContainer1.Size = new System.Drawing.Size(1163, 588);
-            this.splitContainer1.SplitterDistance = 335;
+            this.splitContainer1.Size = new System.Drawing.Size(1192, 610);
+            this.splitContainer1.SplitterDistance = 327;
             this.splitContainer1.TabIndex = 0;
             // 
             // ClearEmployeeData
             // 
-            this.ClearEmployeeData.Location = new System.Drawing.Point(254, 310);
+            this.ClearEmployeeData.Location = new System.Drawing.Point(3, 143);
             this.ClearEmployeeData.Name = "ClearEmployeeData";
             this.ClearEmployeeData.Size = new System.Drawing.Size(75, 23);
             this.ClearEmployeeData.TabIndex = 15;
@@ -260,7 +283,7 @@
             // DeleteButton
             // 
             this.DeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.DeleteButton.Location = new System.Drawing.Point(254, 562);
+            this.DeleteButton.Location = new System.Drawing.Point(246, 584);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(75, 23);
             this.DeleteButton.TabIndex = 14;
@@ -280,13 +303,13 @@
             0,
             0});
             this.EmployeeSalary.Name = "EmployeeSalary";
-            this.EmployeeSalary.Size = new System.Drawing.Size(282, 23);
+            this.EmployeeSalary.Size = new System.Drawing.Size(274, 23);
             this.EmployeeSalary.TabIndex = 13;
             // 
             // CreateButton
             // 
             this.CreateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.CreateButton.Location = new System.Drawing.Point(3, 562);
+            this.CreateButton.Location = new System.Drawing.Point(3, 584);
             this.CreateButton.Name = "CreateButton";
             this.CreateButton.Size = new System.Drawing.Size(75, 23);
             this.CreateButton.TabIndex = 12;
@@ -297,7 +320,7 @@
             // EmployeeSaveButton
             // 
             this.EmployeeSaveButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.EmployeeSaveButton.Location = new System.Drawing.Point(123, 562);
+            this.EmployeeSaveButton.Location = new System.Drawing.Point(130, 584);
             this.EmployeeSaveButton.Name = "EmployeeSaveButton";
             this.EmployeeSaveButton.Size = new System.Drawing.Size(75, 23);
             this.EmployeeSaveButton.TabIndex = 11;
@@ -355,7 +378,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.EmployeePhone.Location = new System.Drawing.Point(50, 61);
             this.EmployeePhone.Name = "EmployeePhone";
-            this.EmployeePhone.Size = new System.Drawing.Size(279, 23);
+            this.EmployeePhone.Size = new System.Drawing.Size(271, 23);
             this.EmployeePhone.TabIndex = 4;
             // 
             // label2
@@ -377,7 +400,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.EmployeeSurname.Location = new System.Drawing.Point(63, 32);
             this.EmployeeSurname.Name = "EmployeeSurname";
-            this.EmployeeSurname.Size = new System.Drawing.Size(266, 23);
+            this.EmployeeSurname.Size = new System.Drawing.Size(258, 23);
             this.EmployeeSurname.TabIndex = 2;
             // 
             // label1
@@ -399,79 +422,78 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.EmployeeName.Location = new System.Drawing.Point(47, 3);
             this.EmployeeName.Name = "EmployeeName";
-            this.EmployeeName.Size = new System.Drawing.Size(282, 23);
+            this.EmployeeName.Size = new System.Drawing.Size(274, 23);
             this.EmployeeName.TabIndex = 0;
             // 
             // EmployeeGrid
             // 
-            this.EmployeeGrid.AccessibleName = "EmployeeGrid";
-            this.EmployeeGrid.AllowUserToAddRows = false;
-            this.EmployeeGrid.AllowUserToDeleteRows = false;
             this.EmployeeGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.EmployeeGrid.AutoGenerateColumns = false;
-            this.EmployeeGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.EmployeeGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.surnameDataGridViewTextBoxColumn,
-            this.birthDateDataGridViewTextBoxColumn,
-            this.phoneNumberDataGridViewTextBoxColumn,
-            this.salaryDataGridViewTextBoxColumn});
             this.EmployeeGrid.DataSource = this.emploeeBindingSource;
-            this.EmployeeGrid.Location = new System.Drawing.Point(3, 3);
+            this.EmployeeGrid.Location = new System.Drawing.Point(7, 3);
+            this.EmployeeGrid.MainView = this.gridView1;
             this.EmployeeGrid.Name = "EmployeeGrid";
-            this.EmployeeGrid.RowTemplate.Height = 25;
-            this.EmployeeGrid.Size = new System.Drawing.Size(818, 582);
+            this.EmployeeGrid.Size = new System.Drawing.Size(851, 604);
             this.EmployeeGrid.TabIndex = 0;
-            this.EmployeeGrid.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.EmployeeGrid_RowHeaderMouseClick);
+            this.EmployeeGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
             // 
-            // idDataGridViewTextBoxColumn
+            // gridView1
             // 
-            this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colId,
+            this.colSalary,
+            this.colName,
+            this.colSurname,
+            this.colBirthDate,
+            this.colPhoneNumber});
+            this.gridView1.GridControl = this.EmployeeGrid;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colId, DevExpress.Data.ColumnSortOrder.Ascending)});
             // 
-            // nameDataGridViewTextBoxColumn
+            // colId
             // 
-            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.colId.FieldName = "Id";
+            this.colId.Name = "colId";
+            this.colId.Visible = true;
+            this.colId.VisibleIndex = 0;
             // 
-            // surnameDataGridViewTextBoxColumn
+            // colSalary
             // 
-            this.surnameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.surnameDataGridViewTextBoxColumn.DataPropertyName = "Surname";
-            this.surnameDataGridViewTextBoxColumn.HeaderText = "Surname";
-            this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
+            this.colSalary.FieldName = "Salary";
+            this.colSalary.Name = "colSalary";
+            this.colSalary.Visible = true;
+            this.colSalary.VisibleIndex = 5;
             // 
-            // birthDateDataGridViewTextBoxColumn
+            // colName
             // 
-            this.birthDateDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.birthDateDataGridViewTextBoxColumn.DataPropertyName = "BirthDate";
-            this.birthDateDataGridViewTextBoxColumn.HeaderText = "BirthDate";
-            this.birthDateDataGridViewTextBoxColumn.Name = "birthDateDataGridViewTextBoxColumn";
+            this.colName.FieldName = "Name";
+            this.colName.Name = "colName";
+            this.colName.Visible = true;
+            this.colName.VisibleIndex = 1;
             // 
-            // phoneNumberDataGridViewTextBoxColumn
+            // colSurname
             // 
-            this.phoneNumberDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
+            this.colSurname.FieldName = "Surname";
+            this.colSurname.Name = "colSurname";
+            this.colSurname.Visible = true;
+            this.colSurname.VisibleIndex = 2;
             // 
-            // salaryDataGridViewTextBoxColumn
+            // colBirthDate
             // 
-            this.salaryDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.salaryDataGridViewTextBoxColumn.DataPropertyName = "Salary";
-            this.salaryDataGridViewTextBoxColumn.HeaderText = "Salary";
-            this.salaryDataGridViewTextBoxColumn.Name = "salaryDataGridViewTextBoxColumn";
+            this.colBirthDate.FieldName = "BirthDate";
+            this.colBirthDate.Name = "colBirthDate";
+            this.colBirthDate.Visible = true;
+            this.colBirthDate.VisibleIndex = 3;
             // 
-            // emploeeBindingSource
+            // colPhoneNumber
             // 
-            this.emploeeBindingSource.DataSource = typeof(Model.Emploee);
+            this.colPhoneNumber.FieldName = "PhoneNumber";
+            this.colPhoneNumber.Name = "colPhoneNumber";
+            this.colPhoneNumber.Visible = true;
+            this.colPhoneNumber.VisibleIndex = 4;
             // 
             // ConsumerTab
             // 
@@ -479,7 +501,7 @@
             this.ConsumerTab.Location = new System.Drawing.Point(4, 24);
             this.ConsumerTab.Name = "ConsumerTab";
             this.ConsumerTab.Padding = new System.Windows.Forms.Padding(3);
-            this.ConsumerTab.Size = new System.Drawing.Size(1169, 594);
+            this.ConsumerTab.Size = new System.Drawing.Size(1198, 616);
             this.ConsumerTab.TabIndex = 1;
             this.ConsumerTab.Text = "Consumer";
             this.ConsumerTab.UseVisualStyleBackColor = true;
@@ -508,15 +530,15 @@
             // 
             // splitContainer2.Panel2
             // 
-            this.splitContainer2.Panel2.Controls.Add(this.ConsumerGrid);
-            this.splitContainer2.Size = new System.Drawing.Size(1163, 588);
-            this.splitContainer2.SplitterDistance = 335;
+            this.splitContainer2.Panel2.Controls.Add(this.ConsumersGrid);
+            this.splitContainer2.Size = new System.Drawing.Size(1192, 610);
+            this.splitContainer2.SplitterDistance = 343;
             this.splitContainer2.TabIndex = 1;
             // 
             // ClearConsumerData
             // 
             this.ClearConsumerData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ClearConsumerData.Location = new System.Drawing.Point(251, 286);
+            this.ClearConsumerData.Location = new System.Drawing.Point(259, 308);
             this.ClearConsumerData.Name = "ClearConsumerData";
             this.ClearConsumerData.Size = new System.Drawing.Size(75, 23);
             this.ClearConsumerData.TabIndex = 12;
@@ -527,7 +549,7 @@
             // ConsumerSaveButton
             // 
             this.ConsumerSaveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.ConsumerSaveButton.Location = new System.Drawing.Point(3, 562);
+            this.ConsumerSaveButton.Location = new System.Drawing.Point(3, 584);
             this.ConsumerSaveButton.Name = "ConsumerSaveButton";
             this.ConsumerSaveButton.Size = new System.Drawing.Size(75, 23);
             this.ConsumerSaveButton.TabIndex = 11;
@@ -538,7 +560,7 @@
             // ConsumerCreateButton
             // 
             this.ConsumerCreateButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.ConsumerCreateButton.Location = new System.Drawing.Point(131, 562);
+            this.ConsumerCreateButton.Location = new System.Drawing.Point(135, 584);
             this.ConsumerCreateButton.Name = "ConsumerCreateButton";
             this.ConsumerCreateButton.Size = new System.Drawing.Size(75, 23);
             this.ConsumerCreateButton.TabIndex = 10;
@@ -549,7 +571,7 @@
             // ConsumerDeleteButton
             // 
             this.ConsumerDeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ConsumerDeleteButton.Location = new System.Drawing.Point(257, 562);
+            this.ConsumerDeleteButton.Location = new System.Drawing.Point(265, 584);
             this.ConsumerDeleteButton.Name = "ConsumerDeleteButton";
             this.ConsumerDeleteButton.Size = new System.Drawing.Size(75, 23);
             this.ConsumerDeleteButton.TabIndex = 9;
@@ -598,7 +620,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ConsumerPhoneNumber.Location = new System.Drawing.Point(50, 61);
             this.ConsumerPhoneNumber.Name = "ConsumerPhoneNumber";
-            this.ConsumerPhoneNumber.Size = new System.Drawing.Size(282, 23);
+            this.ConsumerPhoneNumber.Size = new System.Drawing.Size(290, 23);
             this.ConsumerPhoneNumber.TabIndex = 4;
             // 
             // label9
@@ -620,7 +642,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ConsumerSurname.Location = new System.Drawing.Point(63, 32);
             this.ConsumerSurname.Name = "ConsumerSurname";
-            this.ConsumerSurname.Size = new System.Drawing.Size(269, 23);
+            this.ConsumerSurname.Size = new System.Drawing.Size(277, 23);
             this.ConsumerSurname.TabIndex = 2;
             // 
             // label10
@@ -642,70 +664,67 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ConsumerName.Location = new System.Drawing.Point(47, 3);
             this.ConsumerName.Name = "ConsumerName";
-            this.ConsumerName.Size = new System.Drawing.Size(285, 23);
+            this.ConsumerName.Size = new System.Drawing.Size(293, 23);
             this.ConsumerName.TabIndex = 0;
             // 
-            // ConsumerGrid
+            // ConsumersGrid
             // 
-            this.ConsumerGrid.AccessibleName = "EmployeeGrid";
-            this.ConsumerGrid.AllowUserToAddRows = false;
-            this.ConsumerGrid.AllowUserToDeleteRows = false;
-            this.ConsumerGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.ConsumersGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ConsumerGrid.AutoGenerateColumns = false;
-            this.ConsumerGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ConsumerGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn1,
-            this.nameDataGridViewTextBoxColumn1,
-            this.surnameDataGridViewTextBoxColumn1,
-            this.birthDateDataGridViewTextBoxColumn1});
-            this.ConsumerGrid.DataSource = this.consumerBindingSource;
-            this.ConsumerGrid.Location = new System.Drawing.Point(3, 3);
-            this.ConsumerGrid.Name = "ConsumerGrid";
-            this.ConsumerGrid.RowTemplate.Height = 25;
-            this.ConsumerGrid.Size = new System.Drawing.Size(818, 582);
-            this.ConsumerGrid.TabIndex = 0;
-            this.ConsumerGrid.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.ConsumerGrid_RowHeaderMouseClick);
+            this.ConsumersGrid.DataSource = this.consumerBindingSource;
+            this.ConsumersGrid.Location = new System.Drawing.Point(3, 3);
+            this.ConsumersGrid.MainView = this.gridView2;
+            this.ConsumersGrid.Name = "ConsumersGrid";
+            this.ConsumersGrid.Size = new System.Drawing.Size(839, 604);
+            this.ConsumersGrid.TabIndex = 0;
+            this.ConsumersGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
             // 
-            // idDataGridViewTextBoxColumn1
+            // gridView2
             // 
-            this.idDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idDataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
+            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colName1,
+            this.colSurname1,
+            this.colBirthDate1,
+            this.colId1});
+            this.gridView2.GridControl = this.ConsumersGrid;
+            this.gridView2.Name = "gridView2";
             // 
-            // nameDataGridViewTextBoxColumn1
+            // colName1
             // 
-            this.nameDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn1.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
+            this.colName1.FieldName = "Name";
+            this.colName1.Name = "colName1";
+            this.colName1.Visible = true;
+            this.colName1.VisibleIndex = 1;
             // 
-            // surnameDataGridViewTextBoxColumn1
+            // colSurname1
             // 
-            this.surnameDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.surnameDataGridViewTextBoxColumn1.DataPropertyName = "Surname";
-            this.surnameDataGridViewTextBoxColumn1.HeaderText = "Surname";
-            this.surnameDataGridViewTextBoxColumn1.Name = "surnameDataGridViewTextBoxColumn1";
+            this.colSurname1.FieldName = "Surname";
+            this.colSurname1.Name = "colSurname1";
+            this.colSurname1.Visible = true;
+            this.colSurname1.VisibleIndex = 2;
             // 
-            // birthDateDataGridViewTextBoxColumn1
+            // colBirthDate1
             // 
-            this.birthDateDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.birthDateDataGridViewTextBoxColumn1.DataPropertyName = "BirthDate";
-            this.birthDateDataGridViewTextBoxColumn1.HeaderText = "BirthDate";
-            this.birthDateDataGridViewTextBoxColumn1.Name = "birthDateDataGridViewTextBoxColumn1";
+            this.colBirthDate1.FieldName = "BirthDate";
+            this.colBirthDate1.Name = "colBirthDate1";
+            this.colBirthDate1.Visible = true;
+            this.colBirthDate1.VisibleIndex = 3;
             // 
-            // consumerBindingSource
+            // colId1
             // 
-            this.consumerBindingSource.DataSource = typeof(Model.Consumer);
+            this.colId1.FieldName = "Id";
+            this.colId1.Name = "colId1";
+            this.colId1.Visible = true;
+            this.colId1.VisibleIndex = 0;
             // 
             // ProductTab
             // 
             this.ProductTab.Controls.Add(this.splitContainer3);
             this.ProductTab.Location = new System.Drawing.Point(4, 24);
             this.ProductTab.Name = "ProductTab";
-            this.ProductTab.Size = new System.Drawing.Size(1169, 594);
+            this.ProductTab.Size = new System.Drawing.Size(1198, 616);
             this.ProductTab.TabIndex = 2;
             this.ProductTab.Text = "Product";
             this.ProductTab.UseVisualStyleBackColor = true;
@@ -735,8 +754,8 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.ProductGrid);
-            this.splitContainer3.Size = new System.Drawing.Size(1169, 594);
-            this.splitContainer3.SplitterDistance = 336;
+            this.splitContainer3.Size = new System.Drawing.Size(1198, 616);
+            this.splitContainer3.SplitterDistance = 333;
             this.splitContainer3.TabIndex = 2;
             // 
             // ClearProductData
@@ -766,7 +785,7 @@
             0,
             0});
             this.ProductStockCountUpDown.Name = "ProductStockCountUpDown";
-            this.ProductStockCountUpDown.Size = new System.Drawing.Size(252, 23);
+            this.ProductStockCountUpDown.Size = new System.Drawing.Size(225, 23);
             this.ProductStockCountUpDown.TabIndex = 13;
             this.ProductStockCountUpDown.Value = new decimal(new int[] {
             1,
@@ -791,7 +810,7 @@
             0,
             0});
             this.ProductPriceUpDown.Name = "ProductPriceUpDown";
-            this.ProductPriceUpDown.Size = new System.Drawing.Size(290, 23);
+            this.ProductPriceUpDown.Size = new System.Drawing.Size(263, 23);
             this.ProductPriceUpDown.TabIndex = 12;
             this.ProductPriceUpDown.Value = new decimal(new int[] {
             1,
@@ -801,7 +820,7 @@
             // 
             // SaveProduct
             // 
-            this.SaveProduct.Location = new System.Drawing.Point(3, 568);
+            this.SaveProduct.Location = new System.Drawing.Point(3, 590);
             this.SaveProduct.Name = "SaveProduct";
             this.SaveProduct.Size = new System.Drawing.Size(75, 23);
             this.SaveProduct.TabIndex = 11;
@@ -811,7 +830,7 @@
             // 
             // DeleteProduct
             // 
-            this.DeleteProduct.Location = new System.Drawing.Point(262, 568);
+            this.DeleteProduct.Location = new System.Drawing.Point(255, 590);
             this.DeleteProduct.Name = "DeleteProduct";
             this.DeleteProduct.Size = new System.Drawing.Size(75, 23);
             this.DeleteProduct.TabIndex = 10;
@@ -821,7 +840,7 @@
             // 
             // CreateProduct
             // 
-            this.CreateProduct.Location = new System.Drawing.Point(128, 568);
+            this.CreateProduct.Location = new System.Drawing.Point(145, 590);
             this.CreateProduct.Name = "CreateProduct";
             this.CreateProduct.Size = new System.Drawing.Size(75, 23);
             this.CreateProduct.TabIndex = 9;
@@ -872,7 +891,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ProductDescription.Location = new System.Drawing.Point(76, 32);
             this.ProductDescription.Name = "ProductDescription";
-            this.ProductDescription.Size = new System.Drawing.Size(256, 23);
+            this.ProductDescription.Size = new System.Drawing.Size(229, 23);
             this.ProductDescription.TabIndex = 2;
             // 
             // label13
@@ -894,78 +913,75 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ProductName.Location = new System.Drawing.Point(47, 3);
             this.ProductName.Name = "ProductName";
-            this.ProductName.Size = new System.Drawing.Size(285, 23);
+            this.ProductName.Size = new System.Drawing.Size(258, 23);
             this.ProductName.TabIndex = 0;
             // 
             // ProductGrid
             // 
-            this.ProductGrid.AccessibleName = "ProductGrid";
-            this.ProductGrid.AllowUserToAddRows = false;
-            this.ProductGrid.AllowUserToDeleteRows = false;
             this.ProductGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ProductGrid.AutoGenerateColumns = false;
-            this.ProductGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ProductGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn2,
-            this.nameDataGridViewTextBoxColumn2,
-            this.descriptionDataGridViewTextBoxColumn,
-            this.priceDataGridViewTextBoxColumn,
-            this.stockCountDataGridViewTextBoxColumn});
-            this.ProductGrid.DataSource = this.productBindingSource;
+            this.ProductGrid.DataSource = this.productBindingSource1;
             this.ProductGrid.Location = new System.Drawing.Point(3, 3);
+            this.ProductGrid.MainView = this.gridView3;
             this.ProductGrid.Name = "ProductGrid";
-            this.ProductGrid.RowTemplate.Height = 25;
-            this.ProductGrid.Size = new System.Drawing.Size(823, 588);
+            this.ProductGrid.Size = new System.Drawing.Size(826, 610);
             this.ProductGrid.TabIndex = 0;
-            this.ProductGrid.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.ProductGrid_RowHeaderMouseClick);
+            this.ProductGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView3});
             // 
-            // idDataGridViewTextBoxColumn2
+            // gridView3
             // 
-            this.idDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idDataGridViewTextBoxColumn2.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn2.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn2.Name = "idDataGridViewTextBoxColumn2";
+            this.gridView3.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colName2,
+            this.colDescription,
+            this.colPrice,
+            this.colStockCount,
+            this.colId2});
+            this.gridView3.GridControl = this.ProductGrid;
+            this.gridView3.Name = "gridView3";
             // 
-            // nameDataGridViewTextBoxColumn2
+            // colName2
             // 
-            this.nameDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nameDataGridViewTextBoxColumn2.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn2.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn2.Name = "nameDataGridViewTextBoxColumn2";
+            this.colName2.FieldName = "Name";
+            this.colName2.Name = "colName2";
+            this.colName2.Visible = true;
+            this.colName2.VisibleIndex = 1;
             // 
-            // descriptionDataGridViewTextBoxColumn
+            // colDescription
             // 
-            this.descriptionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
-            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
-            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.colDescription.FieldName = "Description";
+            this.colDescription.Name = "colDescription";
+            this.colDescription.Visible = true;
+            this.colDescription.VisibleIndex = 2;
             // 
-            // priceDataGridViewTextBoxColumn
+            // colPrice
             // 
-            this.priceDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            this.colPrice.FieldName = "Price";
+            this.colPrice.Name = "colPrice";
+            this.colPrice.Visible = true;
+            this.colPrice.VisibleIndex = 3;
             // 
-            // stockCountDataGridViewTextBoxColumn
+            // colStockCount
             // 
-            this.stockCountDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.stockCountDataGridViewTextBoxColumn.DataPropertyName = "StockCount";
-            this.stockCountDataGridViewTextBoxColumn.HeaderText = "StockCount";
-            this.stockCountDataGridViewTextBoxColumn.Name = "stockCountDataGridViewTextBoxColumn";
+            this.colStockCount.FieldName = "StockCount";
+            this.colStockCount.Name = "colStockCount";
+            this.colStockCount.Visible = true;
+            this.colStockCount.VisibleIndex = 4;
             // 
-            // productBindingSource
+            // colId2
             // 
-            this.productBindingSource.DataSource = typeof(Model.Product);
+            this.colId2.FieldName = "Id";
+            this.colId2.Name = "colId2";
+            this.colId2.Visible = true;
+            this.colId2.VisibleIndex = 0;
             // 
             // PurchaseProductsTab
             // 
             this.PurchaseProductsTab.Controls.Add(this.splitContainer4);
             this.PurchaseProductsTab.Location = new System.Drawing.Point(4, 24);
             this.PurchaseProductsTab.Name = "PurchaseProductsTab";
-            this.PurchaseProductsTab.Size = new System.Drawing.Size(1169, 594);
+            this.PurchaseProductsTab.Size = new System.Drawing.Size(1198, 616);
             this.PurchaseProductsTab.TabIndex = 3;
             this.PurchaseProductsTab.Text = "PurchaseProducts";
             this.PurchaseProductsTab.UseVisualStyleBackColor = true;
@@ -995,8 +1011,8 @@
             // splitContainer4.Panel2
             // 
             this.splitContainer4.Panel2.Controls.Add(this.PurchaseProductsGrid);
-            this.splitContainer4.Size = new System.Drawing.Size(1169, 594);
-            this.splitContainer4.SplitterDistance = 336;
+            this.splitContainer4.Size = new System.Drawing.Size(1198, 616);
+            this.splitContainer4.SplitterDistance = 344;
             this.splitContainer4.TabIndex = 5;
             // 
             // PurchaseProductSourceProduct
@@ -1007,7 +1023,7 @@
             this.PurchaseProductSourceProduct.FormattingEnabled = true;
             this.PurchaseProductSourceProduct.Location = new System.Drawing.Point(99, 7);
             this.PurchaseProductSourceProduct.Name = "PurchaseProductSourceProduct";
-            this.PurchaseProductSourceProduct.Size = new System.Drawing.Size(234, 23);
+            this.PurchaseProductSourceProduct.Size = new System.Drawing.Size(242, 23);
             this.PurchaseProductSourceProduct.TabIndex = 29;
             // 
             // SourceProduct
@@ -1030,7 +1046,7 @@
             this.PurcahseProductOrder.FormattingEnabled = true;
             this.PurcahseProductOrder.Location = new System.Drawing.Point(48, 94);
             this.PurcahseProductOrder.Name = "PurcahseProductOrder";
-            this.PurcahseProductOrder.Size = new System.Drawing.Size(285, 23);
+            this.PurcahseProductOrder.Size = new System.Drawing.Size(293, 23);
             this.PurcahseProductOrder.TabIndex = 27;
             // 
             // label23
@@ -1053,7 +1069,7 @@
             this.ConsumerPurchaseProduct.FormattingEnabled = true;
             this.ConsumerPurchaseProduct.Location = new System.Drawing.Point(82, 65);
             this.ConsumerPurchaseProduct.Name = "ConsumerPurchaseProduct";
-            this.ConsumerPurchaseProduct.Size = new System.Drawing.Size(251, 23);
+            this.ConsumerPurchaseProduct.Size = new System.Drawing.Size(259, 23);
             this.ConsumerPurchaseProduct.TabIndex = 25;
             // 
             // label22
@@ -1080,7 +1096,7 @@
             0,
             0});
             this.PurchaseProductCount.Name = "PurchaseProductCount";
-            this.PurchaseProductCount.Size = new System.Drawing.Size(234, 23);
+            this.PurchaseProductCount.Size = new System.Drawing.Size(242, 23);
             this.PurchaseProductCount.TabIndex = 23;
             // 
             // label14
@@ -1106,7 +1122,7 @@
             // 
             // SavePurchaseProduct
             // 
-            this.SavePurchaseProduct.Location = new System.Drawing.Point(3, 568);
+            this.SavePurchaseProduct.Location = new System.Drawing.Point(5, 590);
             this.SavePurchaseProduct.Name = "SavePurchaseProduct";
             this.SavePurchaseProduct.Size = new System.Drawing.Size(75, 23);
             this.SavePurchaseProduct.TabIndex = 11;
@@ -1115,7 +1131,7 @@
             // 
             // DeletePurchaseProduct
             // 
-            this.DeletePurchaseProduct.Location = new System.Drawing.Point(262, 568);
+            this.DeletePurchaseProduct.Location = new System.Drawing.Point(266, 590);
             this.DeletePurchaseProduct.Name = "DeletePurchaseProduct";
             this.DeletePurchaseProduct.Size = new System.Drawing.Size(75, 23);
             this.DeletePurchaseProduct.TabIndex = 10;
@@ -1125,7 +1141,7 @@
             // 
             // CreatePurchaseProduct
             // 
-            this.CreatePurchaseProduct.Location = new System.Drawing.Point(128, 568);
+            this.CreatePurchaseProduct.Location = new System.Drawing.Point(126, 590);
             this.CreatePurchaseProduct.Name = "CreatePurchaseProduct";
             this.CreatePurchaseProduct.Size = new System.Drawing.Size(75, 23);
             this.CreatePurchaseProduct.TabIndex = 9;
@@ -1135,88 +1151,86 @@
             // 
             // PurchaseProductsGrid
             // 
-            this.PurchaseProductsGrid.AccessibleName = "ProductGrid";
-            this.PurchaseProductsGrid.AllowUserToAddRows = false;
-            this.PurchaseProductsGrid.AllowUserToDeleteRows = false;
             this.PurchaseProductsGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PurchaseProductsGrid.AutoGenerateColumns = false;
-            this.PurchaseProductsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.PurchaseProductsGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn4,
-            this.nameDataGridViewTextBoxColumn3,
-            this.descriptionDataGridViewTextBoxColumn1,
-            this.priceDataGridViewTextBoxColumn1,
-            this.purchaseCountDataGridViewTextBoxColumn,
-            this.consumerDataGridViewTextBoxColumn1,
-            this.orderDataGridViewTextBoxColumn});
-            this.PurchaseProductsGrid.DataSource = this.purchaseProductBindingSource;
+            this.PurchaseProductsGrid.DataSource = this.purchaseProductBindingSource1;
             this.PurchaseProductsGrid.Location = new System.Drawing.Point(3, 3);
+            this.PurchaseProductsGrid.MainView = this.gridView4;
             this.PurchaseProductsGrid.Name = "PurchaseProductsGrid";
-            this.PurchaseProductsGrid.RowTemplate.Height = 25;
-            this.PurchaseProductsGrid.Size = new System.Drawing.Size(823, 588);
+            this.PurchaseProductsGrid.Size = new System.Drawing.Size(844, 610);
             this.PurchaseProductsGrid.TabIndex = 0;
+            this.PurchaseProductsGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView4});
             // 
-            // idDataGridViewTextBoxColumn4
+            // gridView4
             // 
-            this.idDataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idDataGridViewTextBoxColumn4.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn4.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn4.Name = "idDataGridViewTextBoxColumn4";
+            this.gridView4.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colName3,
+            this.colDescription1,
+            this.colPrice1,
+            this.colPurchaseCount,
+            this.colConsumer,
+            this.colOrder,
+            this.colId3});
+            this.gridView4.GridControl = this.PurchaseProductsGrid;
+            this.gridView4.Name = "gridView4";
             // 
-            // nameDataGridViewTextBoxColumn3
+            // colName3
             // 
-            this.nameDataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nameDataGridViewTextBoxColumn3.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn3.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn3.Name = "nameDataGridViewTextBoxColumn3";
+            this.colName3.FieldName = "Name";
+            this.colName3.Name = "colName3";
+            this.colName3.Visible = true;
+            this.colName3.VisibleIndex = 1;
             // 
-            // descriptionDataGridViewTextBoxColumn1
+            // colDescription1
             // 
-            this.descriptionDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.descriptionDataGridViewTextBoxColumn1.DataPropertyName = "Description";
-            this.descriptionDataGridViewTextBoxColumn1.HeaderText = "Description";
-            this.descriptionDataGridViewTextBoxColumn1.Name = "descriptionDataGridViewTextBoxColumn1";
+            this.colDescription1.FieldName = "Description";
+            this.colDescription1.Name = "colDescription1";
+            this.colDescription1.Visible = true;
+            this.colDescription1.VisibleIndex = 2;
             // 
-            // priceDataGridViewTextBoxColumn1
+            // colPrice1
             // 
-            this.priceDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.priceDataGridViewTextBoxColumn1.DataPropertyName = "Price";
-            this.priceDataGridViewTextBoxColumn1.HeaderText = "Price";
-            this.priceDataGridViewTextBoxColumn1.Name = "priceDataGridViewTextBoxColumn1";
+            this.colPrice1.FieldName = "Price";
+            this.colPrice1.Name = "colPrice1";
+            this.colPrice1.Visible = true;
+            this.colPrice1.VisibleIndex = 3;
             // 
-            // purchaseCountDataGridViewTextBoxColumn
+            // colPurchaseCount
             // 
-            this.purchaseCountDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.purchaseCountDataGridViewTextBoxColumn.DataPropertyName = "PurchaseCount";
-            this.purchaseCountDataGridViewTextBoxColumn.HeaderText = "PurchaseCount";
-            this.purchaseCountDataGridViewTextBoxColumn.Name = "purchaseCountDataGridViewTextBoxColumn";
+            this.colPurchaseCount.FieldName = "PurchaseCount";
+            this.colPurchaseCount.Name = "colPurchaseCount";
+            this.colPurchaseCount.Visible = true;
+            this.colPurchaseCount.VisibleIndex = 4;
             // 
-            // consumerDataGridViewTextBoxColumn1
+            // colConsumer
             // 
-            this.consumerDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.consumerDataGridViewTextBoxColumn1.DataPropertyName = "Consumer";
-            this.consumerDataGridViewTextBoxColumn1.HeaderText = "Consumer";
-            this.consumerDataGridViewTextBoxColumn1.Name = "consumerDataGridViewTextBoxColumn1";
+            this.colConsumer.FieldName = "Consumer";
+            this.colConsumer.Name = "colConsumer";
+            this.colConsumer.Visible = true;
+            this.colConsumer.VisibleIndex = 5;
             // 
-            // orderDataGridViewTextBoxColumn
+            // colOrder
             // 
-            this.orderDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.orderDataGridViewTextBoxColumn.DataPropertyName = "Order";
-            this.orderDataGridViewTextBoxColumn.HeaderText = "Order";
-            this.orderDataGridViewTextBoxColumn.Name = "orderDataGridViewTextBoxColumn";
+            this.colOrder.FieldName = "Order";
+            this.colOrder.Name = "colOrder";
+            this.colOrder.Visible = true;
+            this.colOrder.VisibleIndex = 6;
             // 
-            // purchaseProductBindingSource
+            // colId3
             // 
-            this.purchaseProductBindingSource.DataSource = typeof(Model.PurchaseProduct);
+            this.colId3.FieldName = "Id";
+            this.colId3.Name = "colId3";
+            this.colId3.Visible = true;
+            this.colId3.VisibleIndex = 0;
             // 
             // OrdersTab
             // 
             this.OrdersTab.Controls.Add(this.splitContainer5);
             this.OrdersTab.Location = new System.Drawing.Point(4, 24);
             this.OrdersTab.Name = "OrdersTab";
-            this.OrdersTab.Size = new System.Drawing.Size(1169, 594);
+            this.OrdersTab.Size = new System.Drawing.Size(1198, 616);
             this.OrdersTab.TabIndex = 4;
             this.OrdersTab.Text = "Orders";
             this.OrdersTab.UseVisualStyleBackColor = true;
@@ -1244,8 +1258,8 @@
             // splitContainer5.Panel2
             // 
             this.splitContainer5.Panel2.Controls.Add(this.OrdersGrid);
-            this.splitContainer5.Size = new System.Drawing.Size(1169, 594);
-            this.splitContainer5.SplitterDistance = 326;
+            this.splitContainer5.Size = new System.Drawing.Size(1198, 616);
+            this.splitContainer5.SplitterDistance = 334;
             this.splitContainer5.TabIndex = 4;
             // 
             // EmployeeInOrder
@@ -1256,7 +1270,7 @@
             this.EmployeeInOrder.FormattingEnabled = true;
             this.EmployeeInOrder.Location = new System.Drawing.Point(80, 64);
             this.EmployeeInOrder.Name = "EmployeeInOrder";
-            this.EmployeeInOrder.Size = new System.Drawing.Size(243, 23);
+            this.EmployeeInOrder.Size = new System.Drawing.Size(251, 23);
             this.EmployeeInOrder.TabIndex = 17;
             // 
             // OrderStatus
@@ -1267,7 +1281,7 @@
             this.OrderStatus.FormattingEnabled = true;
             this.OrderStatus.Location = new System.Drawing.Point(80, 34);
             this.OrderStatus.Name = "OrderStatus";
-            this.OrderStatus.Size = new System.Drawing.Size(243, 23);
+            this.OrderStatus.Size = new System.Drawing.Size(251, 23);
             this.OrderStatus.TabIndex = 16;
             // 
             // ConsumerInOrder
@@ -1278,7 +1292,7 @@
             this.ConsumerInOrder.FormattingEnabled = true;
             this.ConsumerInOrder.Location = new System.Drawing.Point(80, 3);
             this.ConsumerInOrder.Name = "ConsumerInOrder";
-            this.ConsumerInOrder.Size = new System.Drawing.Size(243, 23);
+            this.ConsumerInOrder.Size = new System.Drawing.Size(251, 23);
             this.ConsumerInOrder.TabIndex = 15;
             // 
             // ClearOrderData
@@ -1292,7 +1306,7 @@
             // 
             // SaveOrder
             // 
-            this.SaveOrder.Location = new System.Drawing.Point(3, 568);
+            this.SaveOrder.Location = new System.Drawing.Point(3, 590);
             this.SaveOrder.Name = "SaveOrder";
             this.SaveOrder.Size = new System.Drawing.Size(75, 23);
             this.SaveOrder.TabIndex = 11;
@@ -1302,7 +1316,7 @@
             // 
             // DeleteOrder
             // 
-            this.DeleteOrder.Location = new System.Drawing.Point(262, 568);
+            this.DeleteOrder.Location = new System.Drawing.Point(256, 590);
             this.DeleteOrder.Name = "DeleteOrder";
             this.DeleteOrder.Size = new System.Drawing.Size(75, 23);
             this.DeleteOrder.TabIndex = 10;
@@ -1311,7 +1325,7 @@
             // 
             // CreateOrder
             // 
-            this.CreateOrder.Location = new System.Drawing.Point(128, 568);
+            this.CreateOrder.Location = new System.Drawing.Point(141, 590);
             this.CreateOrder.Name = "CreateOrder";
             this.CreateOrder.Size = new System.Drawing.Size(75, 23);
             this.CreateOrder.TabIndex = 9;
@@ -1357,74 +1371,71 @@
             // 
             // OrdersGrid
             // 
-            this.OrdersGrid.AccessibleName = "ProductGrid";
-            this.OrdersGrid.AllowUserToAddRows = false;
-            this.OrdersGrid.AllowUserToDeleteRows = false;
             this.OrdersGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.OrdersGrid.AutoGenerateColumns = false;
-            this.OrdersGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.OrdersGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn3,
-            this.consumerDataGridViewTextBoxColumn,
-            this.purchaseProductsDataGridViewTextBoxColumn,
-            this.orderStatusDataGridViewTextBoxColumn,
-            this.emploeeDataGridViewTextBoxColumn,
-            this.createDateDataGridViewTextBoxColumn});
-            this.OrdersGrid.DataSource = this.orderBindingSource;
+            this.OrdersGrid.DataSource = this.orderBindingSource1;
             this.OrdersGrid.Location = new System.Drawing.Point(3, 3);
+            this.OrdersGrid.MainView = this.gridView5;
             this.OrdersGrid.Name = "OrdersGrid";
-            this.OrdersGrid.RowTemplate.Height = 25;
-            this.OrdersGrid.Size = new System.Drawing.Size(811, 647);
+            this.OrdersGrid.Size = new System.Drawing.Size(854, 610);
             this.OrdersGrid.TabIndex = 0;
-            this.OrdersGrid.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.OrdersGrid_CellFormatting);
+            this.OrdersGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView5});
             // 
-            // idDataGridViewTextBoxColumn3
+            // gridView5
             // 
-            this.idDataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idDataGridViewTextBoxColumn3.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn3.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn3.Name = "idDataGridViewTextBoxColumn3";
+            this.gridView5.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colCreateDate,
+            this.colConsumer1,
+            this.colPurchaseProducts,
+            this.colOrderStatus,
+            this.colEmploee,
+            this.colId4});
+            this.gridView5.GridControl = this.OrdersGrid;
+            this.gridView5.Name = "gridView5";
             // 
-            // consumerDataGridViewTextBoxColumn
+            // colCreateDate
             // 
-            this.consumerDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.consumerDataGridViewTextBoxColumn.DataPropertyName = "Consumer";
-            this.consumerDataGridViewTextBoxColumn.HeaderText = "Consumer";
-            this.consumerDataGridViewTextBoxColumn.Name = "consumerDataGridViewTextBoxColumn";
+            this.colCreateDate.FieldName = "CreateDate";
+            this.colCreateDate.Name = "colCreateDate";
+            this.colCreateDate.Visible = true;
+            this.colCreateDate.VisibleIndex = 1;
             // 
-            // purchaseProductsDataGridViewTextBoxColumn
+            // colConsumer1
             // 
-            this.purchaseProductsDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.purchaseProductsDataGridViewTextBoxColumn.DataPropertyName = "PurchaseProducts";
-            this.purchaseProductsDataGridViewTextBoxColumn.HeaderText = "PurchaseProducts";
-            this.purchaseProductsDataGridViewTextBoxColumn.Name = "purchaseProductsDataGridViewTextBoxColumn";
+            this.colConsumer1.FieldName = "Consumer";
+            this.colConsumer1.Name = "colConsumer1";
+            this.colConsumer1.Visible = true;
+            this.colConsumer1.VisibleIndex = 2;
             // 
-            // orderStatusDataGridViewTextBoxColumn
+            // colPurchaseProducts
             // 
-            this.orderStatusDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.orderStatusDataGridViewTextBoxColumn.DataPropertyName = "OrderStatus";
-            this.orderStatusDataGridViewTextBoxColumn.HeaderText = "OrderStatus";
-            this.orderStatusDataGridViewTextBoxColumn.Name = "orderStatusDataGridViewTextBoxColumn";
+            this.colPurchaseProducts.FieldName = "PurchaseProducts";
+            this.colPurchaseProducts.Name = "colPurchaseProducts";
+            this.colPurchaseProducts.Visible = true;
+            this.colPurchaseProducts.VisibleIndex = 3;
             // 
-            // emploeeDataGridViewTextBoxColumn
+            // colOrderStatus
             // 
-            this.emploeeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.emploeeDataGridViewTextBoxColumn.DataPropertyName = "Emploee";
-            this.emploeeDataGridViewTextBoxColumn.HeaderText = "Emploee";
-            this.emploeeDataGridViewTextBoxColumn.Name = "emploeeDataGridViewTextBoxColumn";
+            this.colOrderStatus.FieldName = "OrderStatus";
+            this.colOrderStatus.Name = "colOrderStatus";
+            this.colOrderStatus.Visible = true;
+            this.colOrderStatus.VisibleIndex = 4;
             // 
-            // createDateDataGridViewTextBoxColumn
+            // colEmploee
             // 
-            this.createDateDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.createDateDataGridViewTextBoxColumn.DataPropertyName = "CreateDate";
-            this.createDateDataGridViewTextBoxColumn.HeaderText = "CreateDate";
-            this.createDateDataGridViewTextBoxColumn.Name = "createDateDataGridViewTextBoxColumn";
+            this.colEmploee.FieldName = "Emploee";
+            this.colEmploee.Name = "colEmploee";
+            this.colEmploee.Visible = true;
+            this.colEmploee.VisibleIndex = 5;
             // 
-            // orderBindingSource
+            // colId4
             // 
-            this.orderBindingSource.DataSource = typeof(Model.Order);
+            this.colId4.FieldName = "Id";
+            this.colId4.Name = "colId4";
+            this.colId4.Visible = true;
+            this.colId4.VisibleIndex = 0;
             // 
             // ExportTab
             // 
@@ -1434,44 +1445,10 @@
             this.ExportTab.Controls.Add(this.label15);
             this.ExportTab.Location = new System.Drawing.Point(4, 24);
             this.ExportTab.Name = "ExportTab";
-            this.ExportTab.Size = new System.Drawing.Size(1169, 594);
+            this.ExportTab.Size = new System.Drawing.Size(1198, 616);
             this.ExportTab.TabIndex = 5;
             this.ExportTab.Text = "Export";
             this.ExportTab.UseVisualStyleBackColor = true;
-            // 
-            // label15
-            // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(12, 13);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(1102, 74);
-            this.label15.TabIndex = 0;
-            this.label15.Text = resources.GetString("label15.Text");
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // ExportPeriod
-            // 
-            this.ExportPeriod.Location = new System.Drawing.Point(105, 96);
-            this.ExportPeriod.MaxSelectionCount = 31;
-            this.ExportPeriod.Name = "ExportPeriod";
-            this.ExportPeriod.TabIndex = 1;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label16.Location = new System.Drawing.Point(12, 96);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(70, 25);
-            this.label16.TabIndex = 2;
-            this.label16.Text = "Period:";
             // 
             // ExportButton
             // 
@@ -1484,12 +1461,100 @@
             this.ExportButton.UseVisualStyleBackColor = true;
             this.ExportButton.Click += new System.EventHandler(this.ExportButton_Click);
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label16.Location = new System.Drawing.Point(12, 96);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(70, 25);
+            this.label16.TabIndex = 2;
+            this.label16.Text = "Period:";
+            // 
+            // ExportPeriod
+            // 
+            this.ExportPeriod.Location = new System.Drawing.Point(105, 96);
+            this.ExportPeriod.MaxSelectionCount = 31;
+            this.ExportPeriod.Name = "ExportPeriod";
+            this.ExportPeriod.TabIndex = 1;
+            // 
+            // label15
+            // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label15.Location = new System.Drawing.Point(12, 13);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(1131, 111);
+            this.label15.TabIndex = 0;
+            this.label15.Text = resources.GetString("label15.Text");
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exportToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1230, 24);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // exportToolStripMenuItem
+            // 
+            this.exportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pdfToolStripMenuItem,
+            this.exelToolStripMenuItem,
+            this.wordToolStripMenuItem,
+            this.rtfToolStripMenuItem,
+            this.htmlToolStripMenuItem});
+            this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
+            this.exportToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.exportToolStripMenuItem.Text = "Export";
+            // 
+            // pdfToolStripMenuItem
+            // 
+            this.pdfToolStripMenuItem.Name = "pdfToolStripMenuItem";
+            this.pdfToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.pdfToolStripMenuItem.Text = "Pdf";
+            this.pdfToolStripMenuItem.Click += new System.EventHandler(this.pdfToolStripMenuItem_Click);
+            // 
+            // exelToolStripMenuItem
+            // 
+            this.exelToolStripMenuItem.Name = "exelToolStripMenuItem";
+            this.exelToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.exelToolStripMenuItem.Text = "Exel";
+            this.exelToolStripMenuItem.Click += new System.EventHandler(this.exelToolStripMenuItem_Click);
+            // 
+            // wordToolStripMenuItem
+            // 
+            this.wordToolStripMenuItem.Name = "wordToolStripMenuItem";
+            this.wordToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.wordToolStripMenuItem.Text = "Word";
+            this.wordToolStripMenuItem.Click += new System.EventHandler(this.wordToolStripMenuItem_Click);
+            // 
+            // rtfToolStripMenuItem
+            // 
+            this.rtfToolStripMenuItem.Name = "rtfToolStripMenuItem";
+            this.rtfToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.rtfToolStripMenuItem.Text = "Rtf";
+            this.rtfToolStripMenuItem.Click += new System.EventHandler(this.rtfToolStripMenuItem_Click);
+            // 
+            // htmlToolStripMenuItem
+            // 
+            this.htmlToolStripMenuItem.Name = "htmlToolStripMenuItem";
+            this.htmlToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.htmlToolStripMenuItem.Text = "Html";
+            this.htmlToolStripMenuItem.Click += new System.EventHandler(this.htmlToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1201, 646);
+            this.ClientSize = new System.Drawing.Size(1230, 683);
             this.Controls.Add(this.TableTabControl);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = " ";
             this.TableTabControl.ResumeLayout(false);
@@ -1502,14 +1567,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeSalary)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emploeeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ConsumerTab.ResumeLayout(false);
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel1.PerformLayout();
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ConsumerGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ConsumersGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.consumerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.ProductTab.ResumeLayout(false);
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel1.PerformLayout();
@@ -1519,7 +1586,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ProductStockCountUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProductPriceUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProductGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             this.PurchaseProductsTab.ResumeLayout(false);
             this.splitContainer4.Panel1.ResumeLayout(false);
             this.splitContainer4.Panel1.PerformLayout();
@@ -1528,7 +1596,8 @@
             this.splitContainer4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PurchaseProductCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PurchaseProductsGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.purchaseProductBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.purchaseProductBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
             this.OrdersTab.ResumeLayout(false);
             this.splitContainer5.Panel1.ResumeLayout(false);
             this.splitContainer5.Panel1.PerformLayout();
@@ -1536,10 +1605,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
             this.splitContainer5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.OrdersGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
             this.ExportTab.ResumeLayout(false);
             this.ExportTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.purchaseProductBindingSource)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1549,7 +1625,6 @@
         private TabPage EmployeeTab;
         private TabPage ConsumerTab;
         private SplitContainer splitContainer1;
-        private DataGridView EmployeeGrid;
         private Label label4;
         private Label label3;
         private TextBox EmployeePhone;
@@ -1560,13 +1635,6 @@
         private Label label5;
         private MonthCalendar EmployeeBirthDate;
         private Button EmployeeSaveButton;
-        private BindingSource emploeeBindingSource;
-        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn surnameDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn birthDateDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn salaryDataGridViewTextBoxColumn;
         private Button CreateButton;
         private NumericUpDown EmployeeSalary;
         private Button DeleteButton;
@@ -1579,12 +1647,6 @@
         private TextBox ConsumerSurname;
         private Label label10;
         private TextBox ConsumerName;
-        private DataGridView ConsumerGrid;
-        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn surnameDataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn birthDateDataGridViewTextBoxColumn1;
-        private BindingSource consumerBindingSource;
         private Button ConsumerDeleteButton;
         private Button ConsumerSaveButton;
         private Button ConsumerCreateButton;
@@ -1599,8 +1661,6 @@
         private TextBox ProductDescription;
         private Label label13;
         private TextBox ProductName;
-        private DataGridView ProductGrid;
-        private BindingSource productBindingSource;
         private NumericUpDown ProductStockCountUpDown;
         private NumericUpDown ProductPriceUpDown;
         private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn2;
@@ -1618,7 +1678,6 @@
         private Button SavePurchaseProduct;
         private Button DeletePurchaseProduct;
         private Button CreatePurchaseProduct;
-        private DataGridView PurchaseProductsGrid;
         private SplitContainer splitContainer5;
         private ComboBox EmployeeInOrder;
         private ComboBox OrderStatus;
@@ -1630,14 +1689,12 @@
         private Label label19;
         private Label label20;
         private Label label21;
-        private DataGridView OrdersGrid;
         private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn3;
         private DataGridViewTextBoxColumn consumerDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn purchaseProductsDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn orderStatusDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn emploeeDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn createDateDataGridViewTextBoxColumn;
-        private BindingSource orderBindingSource;
         private ComboBox ConsumerPurchaseProduct;
         private Label label22;
         private NumericUpDown PurchaseProductCount;
@@ -1649,7 +1706,6 @@
         private DataGridViewTextBoxColumn purchaseCountDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn consumerDataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn orderDataGridViewTextBoxColumn;
-        private BindingSource purchaseProductBindingSource;
         private ComboBox PurcahseProductOrder;
         private Label label23;
         private ComboBox PurchaseProductSourceProduct;
@@ -1659,6 +1715,58 @@
         private Label label16;
         private MonthCalendar ExportPeriod;
         private Label label15;
-        private ContextMenuStrip contextMenuStrip1;
+        private DevExpress.XtraGrid.GridControl EmployeeGrid;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Columns.GridColumn colSalary;
+        private DevExpress.XtraGrid.Columns.GridColumn colId;
+        private DevExpress.XtraGrid.Columns.GridColumn colName;
+        private DevExpress.XtraGrid.Columns.GridColumn colSurname;
+        private DevExpress.XtraGrid.Columns.GridColumn colBirthDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colPhoneNumber;
+        private DevExpress.XtraGrid.GridControl ConsumersGrid;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private BindingSource emploeeBindingSource;
+        private BindingSource productBindingSource;
+        private BindingSource orderBindingSource;
+        private BindingSource purchaseProductBindingSource;
+        private BindingSource consumerBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colName1;
+        private DevExpress.XtraGrid.Columns.GridColumn colSurname1;
+        private DevExpress.XtraGrid.Columns.GridColumn colBirthDate1;
+        private DevExpress.XtraGrid.Columns.GridColumn colId1;
+        private DevExpress.XtraGrid.GridControl ProductGrid;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
+        private BindingSource productBindingSource1;
+        private DevExpress.XtraGrid.Columns.GridColumn colName2;
+        private DevExpress.XtraGrid.Columns.GridColumn colDescription;
+        private DevExpress.XtraGrid.Columns.GridColumn colPrice;
+        private DevExpress.XtraGrid.Columns.GridColumn colStockCount;
+        private DevExpress.XtraGrid.Columns.GridColumn colId2;
+        private DevExpress.XtraGrid.GridControl PurchaseProductsGrid;
+        private BindingSource purchaseProductBindingSource1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
+        private DevExpress.XtraGrid.Columns.GridColumn colName3;
+        private DevExpress.XtraGrid.Columns.GridColumn colDescription1;
+        private DevExpress.XtraGrid.Columns.GridColumn colPrice1;
+        private DevExpress.XtraGrid.Columns.GridColumn colPurchaseCount;
+        private DevExpress.XtraGrid.Columns.GridColumn colConsumer;
+        private DevExpress.XtraGrid.Columns.GridColumn colOrder;
+        private DevExpress.XtraGrid.Columns.GridColumn colId3;
+        private DevExpress.XtraGrid.GridControl OrdersGrid;
+        private BindingSource orderBindingSource1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView5;
+        private DevExpress.XtraGrid.Columns.GridColumn colCreateDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colConsumer1;
+        private DevExpress.XtraGrid.Columns.GridColumn colPurchaseProducts;
+        private DevExpress.XtraGrid.Columns.GridColumn colOrderStatus;
+        private DevExpress.XtraGrid.Columns.GridColumn colEmploee;
+        private DevExpress.XtraGrid.Columns.GridColumn colId4;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem exportToolStripMenuItem;
+        private ToolStripMenuItem pdfToolStripMenuItem;
+        private ToolStripMenuItem exelToolStripMenuItem;
+        private ToolStripMenuItem wordToolStripMenuItem;
+        private ToolStripMenuItem rtfToolStripMenuItem;
+        private ToolStripMenuItem htmlToolStripMenuItem;
     }
 }

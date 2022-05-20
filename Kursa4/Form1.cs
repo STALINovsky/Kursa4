@@ -1,8 +1,11 @@
 using DataBaseAccess;
+using DevExpress.XtraGrid;
+using DevExpress.XtraGrid.Views.Grid;
 using Kursa4.ExportHelpers;
 using Microsoft.EntityFrameworkCore;
 using Model;
 using Model.Enums;
+using System.Data;
 using System.Diagnostics;
 using System.Linq;
 
@@ -42,7 +45,7 @@ namespace Kursa4
         public void SetDataInGridView()
         {
             EmployeeGrid.DataSource = _context.Employees.Local.ToBindingList();
-            ConsumerGrid.DataSource = _context.Consumers.Local.ToBindingList();
+            ConsumersGrid.DataSource = _context.Consumers.Local.ToBindingList();
             ProductGrid.DataSource = _context.Products.Local.ToBindingList();
             OrdersGrid.DataSource = _context.Orders.Local.ToBindingList();
             PurchaseProductsGrid.DataSource = _context.PurchaseProducts.Local.ToBindingList();
@@ -75,30 +78,35 @@ namespace Kursa4
         {
             if (MessageBox.Show("Are you sure you want to delete this record ?", "Delete ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                var currentRow = EmployeeGrid.CurrentCell.RowIndex;
-                var idCell = EmployeeGrid[0, currentRow];
-                var id = (int)idCell.Value;
-                var rowData = _context.Employees.Where(employee => employee.Id == id).First();
+                int[] selRows = ((GridView)EmployeeGrid.MainView).GetSelectedRows();
+                if (selRows.Count() == 0)
+                {
+                    MessageBox.Show("Nothing to delete");
+                    return;
+                }
 
-                _context.Remove(rowData);
+                var selRow = (EmployeeGrid.MainView).GetRow(selRows[0]) as Emploee;
+                _context.Remove(selRow);
                 _context.SaveChangesAsync();
 
-                MessageBox.Show($"Employee with id = {id} was deleted successfully");
+                MessageBox.Show($"Employee with id = {selRow.Id} was deleted successfully");
             }
         }
 
         private void EmployeeGrid_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            var currentRow = EmployeeGrid.CurrentCell.RowIndex;
-            var idCell = EmployeeGrid[0, currentRow];
-            var id = (int)idCell.Value;
-            var rowData = _context.Employees.Where(employee => employee.Id == id).First();
+            int[] selRows = ((GridView)EmployeeGrid.MainView).GetSelectedRows();
+            if (selRows.Count() == 0)
+            {
+                return;
+            }
 
-            EmployeeName.Text = rowData.Name;
-            EmployeeSurname.Text = rowData.Surname;
-            EmployeePhone.Text = rowData.PhoneNumber;
-            EmployeeSalary.Value = rowData.Salary;
-            EmployeeBirthDate.SelectionRange.Start = rowData.BirthDate;
+            var selRow = (EmployeeGrid.MainView).GetRow(selRows[0]) as Emploee;
+            EmployeeName.Text = selRow.Name;
+            EmployeeSurname.Text = selRow.Surname;
+            EmployeePhone.Text = selRow.PhoneNumber;
+            EmployeeSalary.Value = selRow.Salary;
+            EmployeeBirthDate.SelectionRange.Start = selRow.BirthDate;
         }
 
         private void ConsumerCreateButton_Click(object sender, EventArgs e)
@@ -119,36 +127,41 @@ namespace Kursa4
         {
             if (MessageBox.Show("Are you sure you want to delete this record ?", "Delete ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                var currentRow = ConsumerGrid.CurrentCell.RowIndex;
-                var idCell = ConsumerGrid[0, currentRow];
-                var id = (int)idCell.Value;
-                var rowData = _context.Consumers.Where(consumer => consumer.Id == id).First();
+                int[] selRows = ((GridView)ConsumersGrid.MainView).GetSelectedRows();
+                if (selRows.Count() == 0)
+                {
+                    MessageBox.Show("Nothing to delete");
+                    return;
+                }
 
-                _context.Remove(rowData);
+                var selRow = (EmployeeGrid.MainView).GetRow(selRows[0]) as Consumer;
+                _context.Remove(selRow);
                 _context.SaveChangesAsync();
 
-                MessageBox.Show($"Consumer with id = {id} was deleted successfully");
+                MessageBox.Show($"Consumer with id = {selRow.Id} was deleted successfully");
             }
         }
 
         private void ConsumerSaveButton_Click(object sender, EventArgs e)
         {
             _context.SaveChanges();
-            ConsumerGrid.Update();
+            ConsumersGrid.Update();
 
             MessageBox.Show("Changes was saved successfully");
         }
 
         private void ConsumerGrid_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            var currentRow = ConsumerGrid.CurrentCell.RowIndex;
-            var idCell = ConsumerGrid[0, currentRow];
-            var id = (int)idCell.Value;
-            var rowData = _context.Consumers.Where(consumer => consumer.Id == id).First();
+            int[] selRows = ((GridView)EmployeeGrid.MainView).GetSelectedRows();
+            if (selRows.Count() == 0)
+            {
+                return;
+            }
 
-            ConsumerName.Text = rowData.Name;
-            ConsumerSurname.Text = rowData.Surname;
-            ConsumerBIrthdate.SelectionRange.Start = rowData.BirthDate;
+            var selRow = (EmployeeGrid.MainView).GetRow(selRows[0]) as Consumer;
+            ConsumerName.Text = selRow.Name;
+            ConsumerSurname.Text = selRow.Surname;
+            ConsumerBIrthdate.SelectionRange.Start = selRow.BirthDate;
         }
 
         private void CreateProduct_Click(object sender, EventArgs e)
@@ -169,15 +182,18 @@ namespace Kursa4
         {
             if (MessageBox.Show("Are you sure you want to delete this record ?", "Delete ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                var currentRow = ProductGrid.CurrentCell.RowIndex;
-                var idCell = ProductGrid[0, currentRow];
-                var id = (int)idCell.Value;
-                var rowData = _context.Products.Where(product => product.Id == id).First();
+                int[] selRows = ((GridView)ProductGrid.MainView).GetSelectedRows();
+                if (selRows.Count() == 0)
+                {
+                    MessageBox.Show("Nothing to delete");
+                    return;
+                }
 
-                _context.Remove(rowData);
+                var selRow = (EmployeeGrid.MainView).GetRow(selRows[0]) as Product;
+                _context.Remove(selRow);
                 _context.SaveChangesAsync();
 
-                MessageBox.Show($"Product with id = {id} was deleted successfully");
+                MessageBox.Show($"Product with id = {selRow.Id} was deleted successfully");
             }
         }
 
@@ -191,15 +207,18 @@ namespace Kursa4
 
         private void ProductGrid_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            var currentRow = ProductGrid.CurrentCell.RowIndex;
-            var idCell = ProductGrid[0, currentRow];
-            var id = (int)idCell.Value;
-            var rowData = _context.Products.Where(product => product.Id == id).First();
+            int[] selRows = ((GridView)ProductGrid.MainView).GetSelectedRows();
+            if (selRows.Count() == 0)
+            {
+                return;
+            }
 
-            ProductName.Text = rowData.Name;
-            ProductDescription.Text = rowData.Description;
-            ProductPriceUpDown.Value = rowData.Price;
-            ProductStockCountUpDown.Value = decimal.Parse(rowData.StockCount);
+            var selRow = (EmployeeGrid.MainView).GetRow(selRows[0]) as Product;
+
+            ProductName.Text = selRow.Name;
+            ProductDescription.Text = selRow.Description;
+            ProductPriceUpDown.Value = selRow.Price;
+            ProductStockCountUpDown.Value = decimal.Parse(selRow.StockCount);
         }
 
         private void ClearEmployeeData_Click(object sender, EventArgs e)
@@ -265,15 +284,18 @@ namespace Kursa4
         {
             if (MessageBox.Show("Are you sure you want to delete this record ?", "Delete ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                var currentRow = PurchaseProductsGrid.CurrentCell.RowIndex;
-                var idCell = PurchaseProductsGrid[0, currentRow];
-                var id = (int)idCell.Value;
-                var rowData = _context.PurchaseProducts.Where(product => product.Id == id).First();
+                int[] selRows = ((GridView)PurchaseProductsGrid.MainView).GetSelectedRows();
+                if (selRows.Count() == 0)
+                {
+                    MessageBox.Show("Nothing to delete");
+                    return;
+                }
 
-                _context.Remove(rowData);
+                var selRow = (EmployeeGrid.MainView).GetRow(selRows[0]) as PurchaseProduct;
+                _context.Remove(selRow);
                 _context.SaveChangesAsync();
 
-                MessageBox.Show($"Product with id = {id} was deleted successfully");
+                MessageBox.Show($"Product with id = {selRow.Id} was deleted successfully");
             }
         }
 
@@ -297,6 +319,49 @@ namespace Kursa4
             var endDate = ExportPeriod.SelectionRange.End;
             ExelExportHelper.ExportData(_context, startDate, endDate);
             MessageBox.Show($"Excel report was successuly generated({startDate} - {endDate})");
+        }
+
+        private (GridControl Grid, string FileName) GetCurrentGridData()
+        {
+            var index = TableTabControl.SelectedIndex;
+            return index switch
+            {
+                0 => (EmployeeGrid, "Employee"),
+                1 => (ConsumersGrid, "Consumers"),
+                2 => (ProductGrid, "Products"),
+                3 => (PurchaseProductsGrid, "Purchase Products"),
+                4 => (OrdersGrid, "Orders")
+            };
+        }
+
+        private void pdfToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var data = GetCurrentGridData();
+            data.Grid.ExportToPdf(data.FileName + ".pdf");
+        }
+
+        private void exelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var data = GetCurrentGridData();
+            data.Grid.ExportToXlsx(data.FileName + ".xslx");
+        }
+
+        private void wordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var data = GetCurrentGridData();
+            data.Grid.ExportToDocx(data.FileName + ".docx");
+        }
+
+        private void rtfToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var data = GetCurrentGridData();
+            data.Grid.ExportToRtf(data.FileName + ".rtf");
+        }
+
+        private void htmlToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var data = GetCurrentGridData();
+            data.Grid.ExportToPdf(data.FileName + ".pdf");
         }
     }
 }
