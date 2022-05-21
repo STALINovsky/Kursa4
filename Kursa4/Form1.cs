@@ -24,7 +24,7 @@ namespace Kursa4
         {
             base.OnLoad(e);
             _context = new BDLabsDbContext();
-
+            OrdersGrid.DefaultView.DataController.AllowIEnumerableDetails = true;
             _context.Employees.Load();
             _context.Consumers.Load();
             _context.Products.Load();
