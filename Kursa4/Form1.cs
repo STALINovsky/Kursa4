@@ -285,7 +285,7 @@ namespace Kursa4
                 0 => (EmployeeGrid, "Employee"),
                 1 => (ConsumersGrid, "Consumers"),
                 2 => (BookGrid, "Books"),
-                3 => (OrderedBooksGrid, "OrderedBooks"),
+                3 => (OrderedBookGrid, "OrderedBooks"),
                 4 => (OrdersGrid, "Orders")
             };
         }
