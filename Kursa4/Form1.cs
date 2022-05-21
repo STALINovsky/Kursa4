@@ -126,7 +126,7 @@ namespace Kursa4
                     return;
                 }
 
-                var selRow = (EmployeeGrid.MainView).GetRow(selRows[0]) as Consumer;
+                var selRow = (ConsumersGrid.MainView).GetRow(selRows[0]) as Consumer;
                 _context.Remove(selRow);
                 _context.SaveChangesAsync();
 
@@ -285,7 +285,7 @@ namespace Kursa4
                 0 => (EmployeeGrid, "Employee"),
                 1 => (ConsumersGrid, "Consumers"),
                 2 => (BookGrid, "Books"),
-                3 => (OrderedBooksGrid, "OrderedBooks"),
+                3 => (OrderedBookGrid, "OrderedBooks"),
                 4 => (OrdersGrid, "Orders")
             };
         }
