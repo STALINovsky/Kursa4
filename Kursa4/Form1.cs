@@ -275,7 +275,7 @@ namespace Kursa4
                 Consumer = (Consumer)ConsumerPurchaseProduct.SelectedValue,
                 Order = (Order)PurcahseProductOrder.SelectedValue,
             };
-
+            OrdersGrid.MainView.RefreshData();
             _context.PurchaseProducts.Add(purchaseProduct);
             _context.SaveChanges();
         }
