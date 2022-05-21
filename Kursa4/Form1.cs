@@ -1,13 +1,20 @@
 using DataBaseAccess;
 using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Views.Grid;
-using Kursa4.ExportHelpers;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Model;
 using Model.Enums;
 using System.Data;
 using System.Diagnostics;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace Kursa4
 {
@@ -27,9 +34,9 @@ namespace Kursa4
             OrdersGrid.DefaultView.DataController.AllowIEnumerableDetails = true;
             _context.Employees.Load();
             _context.Consumers.Load();
-            _context.Products.Load();
+            _context.Books.Load();
             _context.Orders.Load();
-            _context.PurchaseProducts.Load();
+            _context.OrderedBooks.Load();
             SetDataInGridView();
 
             ConsumerInOrder.DataSource = _context.Consumers.Local.ToBindingList();
@@ -37,7 +44,7 @@ namespace Kursa4
             OrderStatus.DataSource = Enum.GetValues(typeof(OrderStatus));
             ConsumerPurchaseProduct.DataSource = _context.Consumers.Local.ToBindingList();
             PurcahseProductOrder.DataSource = _context.Orders.Local.ToBindingList();
-            PurchaseProductSourceProduct.DataSource = _context.Products.Local.ToBindingList();
+            OrderedBooksSource.DataSource = _context.Books.Local.ToBindingList();
 
             //OrdersGrid.Columns[2].CellTemplate = new PurchaseProductListCell();
         }
@@ -46,9 +53,9 @@ namespace Kursa4
         {
             EmployeeGrid.DataSource = _context.Employees.Local.ToBindingList();
             ConsumersGrid.DataSource = _context.Consumers.Local.ToBindingList();
-            ProductGrid.DataSource = _context.Products.Local.ToBindingList();
+            BookGrid.DataSource = _context.Books.Local.ToBindingList();
             OrdersGrid.DataSource = _context.Orders.Local.ToBindingList();
-            PurchaseProductsGrid.DataSource = _context.PurchaseProducts.Local.ToBindingList();
+            OrderedBookGrid.DataSource = _context.OrderedBooks.Local.ToBindingList();
         }
 
         private void EmployeeSaveButton_Click(object sender, EventArgs e)
@@ -93,29 +100,14 @@ namespace Kursa4
             }
         }
 
-        private void EmployeeGrid_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            int[] selRows = ((GridView)EmployeeGrid.MainView).GetSelectedRows();
-            if (selRows.Count() == 0)
-            {
-                return;
-            }
-
-            var selRow = (EmployeeGrid.MainView).GetRow(selRows[0]) as Emploee;
-            EmployeeName.Text = selRow.Name;
-            EmployeeSurname.Text = selRow.Surname;
-            EmployeePhone.Text = selRow.PhoneNumber;
-            EmployeeSalary.Value = selRow.Salary;
-            EmployeeBirthDate.SelectionRange.Start = selRow.BirthDate;
-        }
-
         private void ConsumerCreateButton_Click(object sender, EventArgs e)
         {
             Consumer consumer = new()
             {
                 Name = ConsumerName.Text.Trim(),
                 Surname = ConsumerSurname.Text.Trim(),
-                BirthDate = ConsumerBIrthdate.SelectionRange.Start
+                BirthDate = ConsumerBIrthdate.SelectionRange.Start,
+                PhoneNumner = ConsumerPhoneNumber.Text.Trim(), 
             };
 
             _context.Consumers.Add(consumer);
@@ -150,31 +142,18 @@ namespace Kursa4
             MessageBox.Show("Changes was saved successfully");
         }
 
-        private void ConsumerGrid_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            int[] selRows = ((GridView)EmployeeGrid.MainView).GetSelectedRows();
-            if (selRows.Count() == 0)
-            {
-                return;
-            }
-
-            var selRow = (EmployeeGrid.MainView).GetRow(selRows[0]) as Consumer;
-            ConsumerName.Text = selRow.Name;
-            ConsumerSurname.Text = selRow.Surname;
-            ConsumerBIrthdate.SelectionRange.Start = selRow.BirthDate;
-        }
-
         private void CreateProduct_Click(object sender, EventArgs e)
         {
-            Product product = new()
+            Book book = new()
             {
                 Name = ProductName.Text.Trim(),
                 Description = ProductDescription.Text.Trim(),
-                Price = ProductPriceUpDown.Value,
-                StockCount = ProductStockCountUpDown.Value.ToString()
+                OrderingPrice = BookPriceUpDown.Value,
+                StockCount = (int)BookPriceUpDown.Value,
+                Author = BookAuthor.Text.Trim(),
             };
 
-            _context.Products.Add(product);
+            _context.Books.Add(book);
             _context.SaveChanges();
         }
 
@@ -182,14 +161,14 @@ namespace Kursa4
         {
             if (MessageBox.Show("Are you sure you want to delete this record ?", "Delete ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                int[] selRows = ((GridView)ProductGrid.MainView).GetSelectedRows();
+                int[] selRows = ((GridView)BookGrid.MainView).GetSelectedRows();
                 if (selRows.Count() == 0)
                 {
                     MessageBox.Show("Nothing to delete");
                     return;
                 }
 
-                var selRow = (EmployeeGrid.MainView).GetRow(selRows[0]) as Product;
+                var selRow = (EmployeeGrid.MainView).GetRow(selRows[0]) as Book;
                 _context.Remove(selRow);
                 _context.SaveChangesAsync();
 
@@ -200,25 +179,9 @@ namespace Kursa4
         private void SaveProduct_Click(object sender, EventArgs e)
         {
             _context.SaveChanges();
-            ProductGrid.Update();
+            BookGrid.Update();
 
             MessageBox.Show("Changes was saved successfully");
-        }
-
-        private void ProductGrid_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            int[] selRows = ((GridView)ProductGrid.MainView).GetSelectedRows();
-            if (selRows.Count() == 0)
-            {
-                return;
-            }
-
-            var selRow = (EmployeeGrid.MainView).GetRow(selRows[0]) as Product;
-
-            ProductName.Text = selRow.Name;
-            ProductDescription.Text = selRow.Description;
-            ProductPriceUpDown.Value = selRow.Price;
-            ProductStockCountUpDown.Value = decimal.Parse(selRow.StockCount);
         }
 
         private void ClearEmployeeData_Click(object sender, EventArgs e)
@@ -237,14 +200,14 @@ namespace Kursa4
         private void ClearProductData_Click(object sender, EventArgs e)
         {
             ProductName.Text = ProductDescription.Text = string.Empty;
-            ProductPriceUpDown.Value = decimal.Zero;
+            BookPriceUpDown.Value = decimal.Zero;
             ProductStockCountUpDown.Value = decimal.Zero;
         }
 
         private void SaveOrder_Click(object sender, EventArgs e)
         {
             _context.SaveChanges();
-            ProductGrid.Update();
+            BookGrid.Update();
 
             MessageBox.Show("Changes was saved successfully");
         }
@@ -266,17 +229,17 @@ namespace Kursa4
 
         private void CreatePurchaseProduct_Click(object sender, EventArgs e)
         {
-            PurchaseProduct purchaseProduct = new()
+            OrderedBook purchaseProduct = new()
             {
-                Name = ((Product)PurchaseProductSourceProduct.SelectedValue).Name,
-                Description = ((Product)PurchaseProductSourceProduct.SelectedValue).Description,
-                Price = ((Product)PurchaseProductSourceProduct.SelectedValue).Price,
-                PurchaseCount = (int)PurchaseProductCount.Value,
+                Name = ((Book)OrderedBooksSource.SelectedValue).Name,
+                Description = ((Book)OrderedBooksSource.SelectedValue).Description,
+                Author =  ((Book)OrderedBooksSource.SelectedValue).Author,
+                OrderingPrice = ((Book)OrderedBooksSource.SelectedValue).OrderingPrice,
                 Consumer = (Consumer)ConsumerPurchaseProduct.SelectedValue,
                 Order = (Order)PurcahseProductOrder.SelectedValue,
             };
             OrdersGrid.MainView.RefreshData();
-            _context.PurchaseProducts.Add(purchaseProduct);
+            _context.OrderedBooks.Add(purchaseProduct);
             _context.SaveChanges();
         }
 
@@ -284,19 +247,21 @@ namespace Kursa4
         {
             if (MessageBox.Show("Are you sure you want to delete this record ?", "Delete ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                int[] selRows = ((GridView)PurchaseProductsGrid.MainView).GetSelectedRows();
+                int[] selRows = ((GridView)OrderedBookGrid.MainView).GetSelectedRows();
                 if (selRows.Count() == 0)
                 {
                     MessageBox.Show("Nothing to delete");
                     return;
                 }
 
-                var selRow = (EmployeeGrid.MainView).GetRow(selRows[0]) as PurchaseProduct;
+                var selRow = (OrderedBookGrid.MainView).GetRow(selRows[0]) as OrderedBook;
                 _context.Remove(selRow);
                 _context.SaveChangesAsync();
 
                 MessageBox.Show($"Product with id = {selRow.Id} was deleted successfully");
             }
+
+            OrdersGrid.MainView.RefreshData();
         }
 
         private void OrdersGrid_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -305,22 +270,13 @@ namespace Kursa4
             if (e.ColumnIndex == one + one)
             {
                 var dataGridView = sender as DataGridView;
-                var temp = dataGridView[one + one, e.RowIndex].Value as ICollection<PurchaseProduct>;
+                var temp = dataGridView[one + one, e.RowIndex].Value as ICollection<OrderedBook>;
                 if (temp is not null)
                 {
                     e.Value = string.Join(", ", temp);
                 }
             }
         }
-
-        private void ExportButton_Click(object sender, EventArgs e)
-        {
-            var startDate = ExportPeriod.SelectionRange.Start;
-            var endDate = ExportPeriod.SelectionRange.End;
-            ExelExportHelper.ExportData(_context, startDate, endDate);
-            MessageBox.Show($"Excel report was successuly generated({startDate} - {endDate})");
-        }
-
         private (GridControl Grid, string FileName) GetCurrentGridData()
         {
             var index = TableTabControl.SelectedIndex;
@@ -328,8 +284,8 @@ namespace Kursa4
             {
                 0 => (EmployeeGrid, "Employee"),
                 1 => (ConsumersGrid, "Consumers"),
-                2 => (ProductGrid, "Products"),
-                3 => (PurchaseProductsGrid, "Purchase Products"),
+                2 => (BookGrid, "Books"),
+                3 => (OrderedBooksGrid, "OrderedBooks"),
                 4 => (OrdersGrid, "Orders")
             };
         }

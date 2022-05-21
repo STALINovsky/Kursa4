@@ -10,6 +10,23 @@ namespace DataBaseAccess.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Books",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    OrderingPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    Author = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    StockCount = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Books", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Consumers",
                 columns: table => new
                 {
@@ -17,7 +34,8 @@ namespace DataBaseAccess.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Surname = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    BirthDate = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    BirthDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Address = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -39,28 +57,6 @@ namespace DataBaseAccess.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Employees", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Products",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    StockCount = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ConsumerId = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Products", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Products_Consumers_ConsumerId",
-                        column: x => x.ConsumerId,
-                        principalTable: "Consumers",
-                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -92,33 +88,43 @@ namespace DataBaseAccess.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "PurchaseProducts",
+                name: "OrderedBooks",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    PurchaseCount = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    OrderingPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    Author = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ConsumerId = table.Column<int>(type: "int", nullable: false),
                     OrderId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_PurchaseProducts", x => x.Id);
+                    table.PrimaryKey("PK_OrderedBooks", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_PurchaseProducts_Consumers_ConsumerId",
+                        name: "FK_OrderedBooks_Consumers_ConsumerId",
                         column: x => x.ConsumerId,
                         principalTable: "Consumers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_PurchaseProducts_Orders_OrderId",
+                        name: "FK_OrderedBooks_Orders_OrderId",
                         column: x => x.OrderId,
                         principalTable: "Orders",
                         principalColumn: "Id");
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_OrderedBooks_ConsumerId",
+                table: "OrderedBooks",
+                column: "ConsumerId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_OrderedBooks_OrderId",
+                table: "OrderedBooks",
+                column: "OrderId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Orders_ConsumerId",
@@ -129,30 +135,15 @@ namespace DataBaseAccess.Migrations
                 name: "IX_Orders_EmploeeId",
                 table: "Orders",
                 column: "EmploeeId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Products_ConsumerId",
-                table: "Products",
-                column: "ConsumerId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_PurchaseProducts_ConsumerId",
-                table: "PurchaseProducts",
-                column: "ConsumerId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_PurchaseProducts_OrderId",
-                table: "PurchaseProducts",
-                column: "OrderId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Products");
+                name: "Books");
 
             migrationBuilder.DropTable(
-                name: "PurchaseProducts");
+                name: "OrderedBooks");
 
             migrationBuilder.DropTable(
                 name: "Orders");

@@ -22,6 +22,37 @@ namespace DataBaseAccess.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("Model.Book", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Author")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("OrderingPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("StockCount")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Books");
+                });
+
             modelBuilder.Entity("Model.Consumer", b =>
                 {
                     b.Property<int>("Id")
@@ -34,6 +65,10 @@ namespace DataBaseAccess.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumner")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -106,7 +141,7 @@ namespace DataBaseAccess.Migrations
                     b.ToTable("Orders");
                 });
 
-            modelBuilder.Entity("Model.Product", b =>
+            modelBuilder.Entity("Model.OrderedBook", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -114,33 +149,9 @@ namespace DataBaseAccess.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<string>("Description")
+                    b.Property<string>("Author")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("StockCount")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Products");
-                });
-
-            modelBuilder.Entity("Model.PurchaseProduct", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<int>("ConsumerId")
                         .HasColumnType("int");
@@ -156,11 +167,8 @@ namespace DataBaseAccess.Migrations
                     b.Property<int?>("OrderId")
                         .HasColumnType("int");
 
-                    b.Property<decimal>("Price")
+                    b.Property<decimal>("OrderingPrice")
                         .HasColumnType("decimal(18,2)");
-
-                    b.Property<int>("PurchaseCount")
-                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -168,7 +176,7 @@ namespace DataBaseAccess.Migrations
 
                     b.HasIndex("OrderId");
 
-                    b.ToTable("PurchaseProducts");
+                    b.ToTable("OrderedBooks");
                 });
 
             modelBuilder.Entity("Model.Order", b =>
@@ -190,7 +198,7 @@ namespace DataBaseAccess.Migrations
                     b.Navigation("Emploee");
                 });
 
-            modelBuilder.Entity("Model.PurchaseProduct", b =>
+            modelBuilder.Entity("Model.OrderedBook", b =>
                 {
                     b.HasOne("Model.Consumer", "Consumer")
                         .WithMany()

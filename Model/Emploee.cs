@@ -12,7 +12,7 @@ namespace Model
         public string Surname { get; set; }
         public DateTime BirthDate { get; set; }
         public string PhoneNumber { get; set; }
-        public Decimal Salary { get; set; }
+        public decimal Salary { get; set; }
 
         public override string ToString()
         {

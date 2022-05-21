@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    public class Product : BaseEntity
+    public class Book : BaseEntity
     {
         public string Name { get; set; }
         public string Description { get; set; }
-        public Decimal Price { get; set; }
-        public string StockCount { get; set; }
+        public decimal OrderingPrice { get; set; }
+        public string Author { get; set; }
+        public int StockCount { get; set; }
 
         public override string ToString()
         {

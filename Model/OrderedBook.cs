@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    public class PurchaseProduct : BaseEntity
+    public class OrderedBook : BaseEntity
     {
         public string Name { get; set; }
         public string Description { get; set; }
-        public decimal Price { get; set; }
-        public int PurchaseCount { get; set; }
+        public decimal OrderingPrice { get; set; }
+        public string Author { get; set; }
         public Consumer Consumer { get; set; }
         public Order? Order { get; set; }
 
         public override string ToString()
         {
-            return Id + ": " + Name + " " + PurchaseCount;
+            return Id + ": " + Name + " " + Author;
         }
     }
 }
