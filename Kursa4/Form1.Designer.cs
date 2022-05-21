@@ -1413,22 +1413,20 @@
             // 
             this.colPurchaseProducts.FieldName = "PurchaseProducts";
             this.colPurchaseProducts.Name = "colPurchaseProducts";
-            this.colPurchaseProducts.Visible = true;
-            this.colPurchaseProducts.VisibleIndex = 3;
             // 
             // colOrderStatus
             // 
             this.colOrderStatus.FieldName = "OrderStatus";
             this.colOrderStatus.Name = "colOrderStatus";
             this.colOrderStatus.Visible = true;
-            this.colOrderStatus.VisibleIndex = 4;
+            this.colOrderStatus.VisibleIndex = 3;
             // 
             // colEmploee
             // 
             this.colEmploee.FieldName = "Emploee";
             this.colEmploee.Name = "colEmploee";
             this.colEmploee.Visible = true;
-            this.colEmploee.VisibleIndex = 5;
+            this.colEmploee.VisibleIndex = 4;
             // 
             // colId4
             // 
