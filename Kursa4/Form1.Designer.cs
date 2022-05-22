@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pdfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,7 +49,6 @@
             this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.EmployeeGrid = new DevExpress.XtraGrid.GridControl();
-            this.gridView7 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.OrderedBooksTab = new System.Windows.Forms.TabPage();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.OrderedBooksSource = new System.Windows.Forms.ComboBox();
@@ -66,7 +64,6 @@
             this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ClientGrid = new DevExpress.XtraGrid.GridControl();
-            this.gridView6 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.BookTab = new System.Windows.Forms.TabPage();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.BookAuthor = new System.Windows.Forms.TextBox();
@@ -123,7 +120,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView7)).BeginInit();
             this.OrderedBooksTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
             this.splitContainer4.Panel1.SuspendLayout();
@@ -133,7 +129,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ClientGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView6)).BeginInit();
             this.BookTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
@@ -341,9 +336,6 @@
             this.OrderGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            gridLevelNode1.RelationName = "OrderedBooks";
-            this.OrderGrid.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
             this.OrderGrid.Location = new System.Drawing.Point(3, 3);
             this.OrderGrid.MainView = this.gridView5;
             this.OrderGrid.Name = "OrderGrid";
@@ -373,13 +365,7 @@
             this.EmployeeGrid.Size = new System.Drawing.Size(855, 622);
             this.EmployeeGrid.TabIndex = 0;
             this.EmployeeGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1,
-            this.gridView7});
-            // 
-            // gridView7
-            // 
-            this.gridView7.GridControl = this.EmployeeGrid;
-            this.gridView7.Name = "gridView7";
+            this.gridView1});
             // 
             // OrderedBooksTab
             // 
@@ -547,13 +533,7 @@
             this.ClientGrid.Size = new System.Drawing.Size(839, 622);
             this.ClientGrid.TabIndex = 0;
             this.ClientGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView2,
-            this.gridView6});
-            // 
-            // gridView6
-            // 
-            this.gridView6.GridControl = this.ClientGrid;
-            this.gridView6.Name = "gridView6";
+            this.gridView2});
             // 
             // BookTab
             // 
@@ -1159,7 +1139,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView7)).EndInit();
             this.OrderedBooksTab.ResumeLayout(false);
             this.splitContainer4.Panel1.ResumeLayout(false);
             this.splitContainer4.Panel1.PerformLayout();
@@ -1170,7 +1149,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ClientGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView6)).EndInit();
             this.BookTab.ResumeLayout(false);
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel1.PerformLayout();
@@ -1287,7 +1265,6 @@
         private TextBox ConsumerSurname;
         private Label label10;
         private TextBox ConsumerName;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView6;
         private TabPage EmployeeTab;
         private SplitContainer splitContainer1;
         private Button DeleteButton;
@@ -1303,7 +1280,6 @@
         private TextBox EmployeeSurname;
         private Label label1;
         private TextBox EmployeeName;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView7;
         private TabControl TableTabControl;
     }
 }

@@ -310,7 +310,7 @@ namespace Kursa4
 
         private void EmployeeCreateButton_Click(object sender, EventArgs e)
         {
-            Emploee employee = new()
+            Employee employee = new()
             {
                 Name = EmployeeName.Text.Trim(),
                 Surname = EmployeeSurname.Text.Trim(),
