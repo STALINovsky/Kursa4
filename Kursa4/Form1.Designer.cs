@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pdfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,80 +38,80 @@
             this.htmlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.OrdersTab = new System.Windows.Forms.TabPage();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
-            this.OrderGrid = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.CreateOrder = new System.Windows.Forms.Button();
-            this.SaveOrder = new System.Windows.Forms.Button();
-            this.ConsumerInOrder = new System.Windows.Forms.ComboBox();
-            this.OrderStatus = new System.Windows.Forms.ComboBox();
             this.EmployeeInOrder = new System.Windows.Forms.ComboBox();
-            this.OrderedBooksTab = new System.Windows.Forms.TabPage();
-            this.splitContainer4 = new System.Windows.Forms.SplitContainer();
-            this.OrderedBook = new DevExpress.XtraGrid.GridControl();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.CreatePurchaseProduct = new System.Windows.Forms.Button();
-            this.DeletePurchaseProduct = new System.Windows.Forms.Button();
-            this.SavePurchaseProduct = new System.Windows.Forms.Button();
-            this.label22 = new System.Windows.Forms.Label();
-            this.ConsumerPurchaseProduct = new System.Windows.Forms.ComboBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.PurcahseProductOrder = new System.Windows.Forms.ComboBox();
-            this.SourceProduct = new System.Windows.Forms.Label();
-            this.OrderedBooksSource = new System.Windows.Forms.ComboBox();
-            this.BookTab = new System.Windows.Forms.TabPage();
-            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.BookGrid = new DevExpress.XtraGrid.GridControl();
-            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.ProductName = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.ProductDescription = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.CreateProduct = new System.Windows.Forms.Button();
-            this.DeleteProduct = new System.Windows.Forms.Button();
-            this.SaveProduct = new System.Windows.Forms.Button();
-            this.BookPriceUpDown = new System.Windows.Forms.NumericUpDown();
-            this.ProductStockCountUpDown = new System.Windows.Forms.NumericUpDown();
-            this.label15 = new System.Windows.Forms.Label();
-            this.BookAuthor = new System.Windows.Forms.TextBox();
-            this.ClientTab = new System.Windows.Forms.TabPage();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.ClientGrid = new DevExpress.XtraGrid.GridControl();
-            this.gridView6 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.ConsumerName = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.ConsumerSurname = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.ConsumerPhoneNumber = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.ConsumerBIrthdate = new System.Windows.Forms.MonthCalendar();
-            this.ConsumerDeleteButton = new System.Windows.Forms.Button();
-            this.ConsumerCreateButton = new System.Windows.Forms.Button();
-            this.ConsumerSaveButton = new System.Windows.Forms.Button();
-            this.EmployeeTab = new System.Windows.Forms.TabPage();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.OrderStatus = new System.Windows.Forms.ComboBox();
+            this.ConsumerInOrder = new System.Windows.Forms.ComboBox();
+            this.SaveOrder = new System.Windows.Forms.Button();
+            this.CreateOrder = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.OrderGrid = new DevExpress.XtraGrid.GridControl();
+            this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.EmployeeGrid = new DevExpress.XtraGrid.GridControl();
             this.gridView7 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.EmployeeName = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.EmployeeSurname = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.EmployeePhone = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.EmployeeBirthDate = new System.Windows.Forms.MonthCalendar();
-            this.label5 = new System.Windows.Forms.Label();
-            this.EmployeeSaveButton = new System.Windows.Forms.Button();
-            this.CreateButton = new System.Windows.Forms.Button();
-            this.EmployeeSalary = new System.Windows.Forms.NumericUpDown();
+            this.OrderedBooksTab = new System.Windows.Forms.TabPage();
+            this.splitContainer4 = new System.Windows.Forms.SplitContainer();
+            this.OrderedBooksSource = new System.Windows.Forms.ComboBox();
+            this.SourceProduct = new System.Windows.Forms.Label();
+            this.PurcahseProductOrder = new System.Windows.Forms.ComboBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.ConsumerPurchaseProduct = new System.Windows.Forms.ComboBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.SavePurchaseProduct = new System.Windows.Forms.Button();
+            this.DeletePurchaseProduct = new System.Windows.Forms.Button();
+            this.CreatePurchaseProduct = new System.Windows.Forms.Button();
+            this.OrderedBook = new DevExpress.XtraGrid.GridControl();
+            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.ClientGrid = new DevExpress.XtraGrid.GridControl();
+            this.gridView6 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.BookTab = new System.Windows.Forms.TabPage();
+            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.BookAuthor = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.ProductStockCountUpDown = new System.Windows.Forms.NumericUpDown();
+            this.BookPriceUpDown = new System.Windows.Forms.NumericUpDown();
+            this.SaveProduct = new System.Windows.Forms.Button();
+            this.DeleteProduct = new System.Windows.Forms.Button();
+            this.CreateProduct = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.ProductDescription = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.ProductName = new System.Windows.Forms.TextBox();
+            this.BookGrid = new DevExpress.XtraGrid.GridControl();
+            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.ClientTab = new System.Windows.Forms.TabPage();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.ConsumerSaveButton = new System.Windows.Forms.Button();
+            this.ConsumerCreateButton = new System.Windows.Forms.Button();
+            this.ConsumerDeleteButton = new System.Windows.Forms.Button();
+            this.ConsumerBIrthdate = new System.Windows.Forms.MonthCalendar();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.ConsumerPhoneNumber = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.ConsumerSurname = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.ConsumerName = new System.Windows.Forms.TextBox();
+            this.EmployeeTab = new System.Windows.Forms.TabPage();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.DeleteButton = new System.Windows.Forms.Button();
+            this.EmployeeSalary = new System.Windows.Forms.NumericUpDown();
+            this.EmployeeCreateButton = new System.Windows.Forms.Button();
+            this.EmployeeSaveButton = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.EmployeeBirthDate = new System.Windows.Forms.MonthCalendar();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.EmployeePhone = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.EmployeeSurname = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.EmployeeName = new System.Windows.Forms.TextBox();
             this.TableTabControl = new System.Windows.Forms.TabControl();
             this.menuStrip1.SuspendLayout();
             this.OrdersTab.SuspendLayout();
@@ -119,39 +120,39 @@
             this.splitContainer5.Panel2.SuspendLayout();
             this.splitContainer5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OrderGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeeGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView7)).BeginInit();
             this.OrderedBooksTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
             this.splitContainer4.Panel1.SuspendLayout();
             this.splitContainer4.Panel2.SuspendLayout();
             this.splitContainer4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OrderedBook)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ClientGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView6)).BeginInit();
             this.BookTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductStockCountUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BookPriceUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BookGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BookPriceUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ProductStockCountUpDown)).BeginInit();
             this.ClientTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ClientGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView6)).BeginInit();
             this.EmployeeTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.EmployeeGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeSalary)).BeginInit();
             this.TableTabControl.SuspendLayout();
             this.SuspendLayout();
@@ -248,52 +249,56 @@
             this.splitContainer5.SplitterDistance = 334;
             this.splitContainer5.TabIndex = 4;
             // 
-            // OrderGrid
+            // EmployeeInOrder
             // 
-            this.OrderGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.EmployeeInOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.OrderGrid.Location = new System.Drawing.Point(3, 3);
-            this.OrderGrid.MainView = this.gridView5;
-            this.OrderGrid.Name = "OrderGrid";
-            this.OrderGrid.Size = new System.Drawing.Size(854, 628);
-            this.OrderGrid.TabIndex = 0;
-            this.OrderGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView5});
+            this.EmployeeInOrder.FormattingEnabled = true;
+            this.EmployeeInOrder.Location = new System.Drawing.Point(80, 64);
+            this.EmployeeInOrder.Name = "EmployeeInOrder";
+            this.EmployeeInOrder.Size = new System.Drawing.Size(251, 23);
+            this.EmployeeInOrder.TabIndex = 17;
             // 
-            // gridView1
+            // OrderStatus
             // 
-            this.gridView1.GridControl = this.EmployeeGrid;
-            this.gridView1.Name = "gridView1";
-            // 
-            // gridView5
-            // 
-            this.gridView5.GridControl = this.OrderGrid;
-            this.gridView5.Name = "gridView5";
-            // 
-            // label21
-            // 
-            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.OrderStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(3, 6);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(72, 15);
-            this.label21.TabIndex = 1;
-            this.label21.Text = "ConsumerId";
+            this.OrderStatus.FormattingEnabled = true;
+            this.OrderStatus.Location = new System.Drawing.Point(80, 34);
+            this.OrderStatus.Name = "OrderStatus";
+            this.OrderStatus.Size = new System.Drawing.Size(251, 23);
+            this.OrderStatus.TabIndex = 16;
             // 
-            // label20
+            // ConsumerInOrder
             // 
-            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.ConsumerInOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(3, 35);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(71, 15);
-            this.label20.TabIndex = 3;
-            this.label20.Text = "Order status";
+            this.ConsumerInOrder.FormattingEnabled = true;
+            this.ConsumerInOrder.Location = new System.Drawing.Point(80, 3);
+            this.ConsumerInOrder.Name = "ConsumerInOrder";
+            this.ConsumerInOrder.Size = new System.Drawing.Size(251, 23);
+            this.ConsumerInOrder.TabIndex = 15;
+            // 
+            // SaveOrder
+            // 
+            this.SaveOrder.Location = new System.Drawing.Point(3, 590);
+            this.SaveOrder.Name = "SaveOrder";
+            this.SaveOrder.Size = new System.Drawing.Size(75, 23);
+            this.SaveOrder.TabIndex = 11;
+            this.SaveOrder.Text = "Save";
+            this.SaveOrder.UseVisualStyleBackColor = true;
+            // 
+            // CreateOrder
+            // 
+            this.CreateOrder.Location = new System.Drawing.Point(141, 590);
+            this.CreateOrder.Name = "CreateOrder";
+            this.CreateOrder.Size = new System.Drawing.Size(75, 23);
+            this.CreateOrder.TabIndex = 9;
+            this.CreateOrder.Text = "Create";
+            this.CreateOrder.UseVisualStyleBackColor = true;
             // 
             // label19
             // 
@@ -307,56 +312,74 @@
             this.label19.TabIndex = 5;
             this.label19.Text = "EmployeeId";
             // 
-            // CreateOrder
+            // label20
             // 
-            this.CreateOrder.Location = new System.Drawing.Point(141, 590);
-            this.CreateOrder.Name = "CreateOrder";
-            this.CreateOrder.Size = new System.Drawing.Size(75, 23);
-            this.CreateOrder.TabIndex = 9;
-            this.CreateOrder.Text = "Create";
-            this.CreateOrder.UseVisualStyleBackColor = true;
-            // 
-            // SaveOrder
-            // 
-            this.SaveOrder.Location = new System.Drawing.Point(3, 590);
-            this.SaveOrder.Name = "SaveOrder";
-            this.SaveOrder.Size = new System.Drawing.Size(75, 23);
-            this.SaveOrder.TabIndex = 11;
-            this.SaveOrder.Text = "Save";
-            this.SaveOrder.UseVisualStyleBackColor = true;
-            // 
-            // ConsumerInOrder
-            // 
-            this.ConsumerInOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ConsumerInOrder.FormattingEnabled = true;
-            this.ConsumerInOrder.Location = new System.Drawing.Point(80, 3);
-            this.ConsumerInOrder.Name = "ConsumerInOrder";
-            this.ConsumerInOrder.Size = new System.Drawing.Size(251, 23);
-            this.ConsumerInOrder.TabIndex = 15;
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(3, 35);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(71, 15);
+            this.label20.TabIndex = 3;
+            this.label20.Text = "Order status";
             // 
-            // OrderStatus
+            // label21
             // 
-            this.OrderStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.OrderStatus.FormattingEnabled = true;
-            this.OrderStatus.Location = new System.Drawing.Point(80, 34);
-            this.OrderStatus.Name = "OrderStatus";
-            this.OrderStatus.Size = new System.Drawing.Size(251, 23);
-            this.OrderStatus.TabIndex = 16;
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(3, 6);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(72, 15);
+            this.label21.TabIndex = 1;
+            this.label21.Text = "ConsumerId";
             // 
-            // EmployeeInOrder
+            // OrderGrid
             // 
-            this.EmployeeInOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.OrderGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.EmployeeInOrder.FormattingEnabled = true;
-            this.EmployeeInOrder.Location = new System.Drawing.Point(80, 64);
-            this.EmployeeInOrder.Name = "EmployeeInOrder";
-            this.EmployeeInOrder.Size = new System.Drawing.Size(251, 23);
-            this.EmployeeInOrder.TabIndex = 17;
+            gridLevelNode1.RelationName = "OrderedBooks";
+            this.OrderGrid.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            gridLevelNode1});
+            this.OrderGrid.Location = new System.Drawing.Point(3, 3);
+            this.OrderGrid.MainView = this.gridView5;
+            this.OrderGrid.Name = "OrderGrid";
+            this.OrderGrid.Size = new System.Drawing.Size(854, 628);
+            this.OrderGrid.TabIndex = 0;
+            this.OrderGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView5});
+            // 
+            // gridView5
+            // 
+            this.gridView5.GridControl = this.OrderGrid;
+            this.gridView5.Name = "gridView5";
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.EmployeeGrid;
+            this.gridView1.Name = "gridView1";
+            // 
+            // EmployeeGrid
+            // 
+            this.EmployeeGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.EmployeeGrid.Location = new System.Drawing.Point(3, 3);
+            this.EmployeeGrid.MainView = this.gridView1;
+            this.EmployeeGrid.Name = "EmployeeGrid";
+            this.EmployeeGrid.Size = new System.Drawing.Size(855, 622);
+            this.EmployeeGrid.TabIndex = 0;
+            this.EmployeeGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1,
+            this.gridView7});
+            // 
+            // gridView7
+            // 
+            this.gridView7.GridControl = this.EmployeeGrid;
+            this.gridView7.Name = "gridView7";
             // 
             // OrderedBooksTab
             // 
@@ -394,101 +417,16 @@
             this.splitContainer4.SplitterDistance = 344;
             this.splitContainer4.TabIndex = 5;
             // 
-            // OrderedBook
+            // OrderedBooksSource
             // 
-            this.OrderedBook.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.OrderedBooksSource.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.OrderedBook.Location = new System.Drawing.Point(3, 3);
-            this.OrderedBook.MainView = this.gridView4;
-            this.OrderedBook.Name = "OrderedBook";
-            this.OrderedBook.Size = new System.Drawing.Size(844, 628);
-            this.OrderedBook.TabIndex = 0;
-            this.OrderedBook.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView4});
-            // 
-            // gridView2
-            // 
-            this.gridView2.GridControl = this.ClientGrid;
-            this.gridView2.Name = "gridView2";
-            // 
-            // gridView4
-            // 
-            this.gridView4.GridControl = this.OrderedBook;
-            this.gridView4.Name = "gridView4";
-            // 
-            // CreatePurchaseProduct
-            // 
-            this.CreatePurchaseProduct.Location = new System.Drawing.Point(126, 590);
-            this.CreatePurchaseProduct.Name = "CreatePurchaseProduct";
-            this.CreatePurchaseProduct.Size = new System.Drawing.Size(75, 23);
-            this.CreatePurchaseProduct.TabIndex = 9;
-            this.CreatePurchaseProduct.Text = "Create";
-            this.CreatePurchaseProduct.UseVisualStyleBackColor = true;
-            // 
-            // DeletePurchaseProduct
-            // 
-            this.DeletePurchaseProduct.Location = new System.Drawing.Point(266, 590);
-            this.DeletePurchaseProduct.Name = "DeletePurchaseProduct";
-            this.DeletePurchaseProduct.Size = new System.Drawing.Size(75, 23);
-            this.DeletePurchaseProduct.TabIndex = 10;
-            this.DeletePurchaseProduct.Text = "Delete";
-            this.DeletePurchaseProduct.UseVisualStyleBackColor = true;
-            // 
-            // SavePurchaseProduct
-            // 
-            this.SavePurchaseProduct.Location = new System.Drawing.Point(5, 590);
-            this.SavePurchaseProduct.Name = "SavePurchaseProduct";
-            this.SavePurchaseProduct.Size = new System.Drawing.Size(75, 23);
-            this.SavePurchaseProduct.TabIndex = 11;
-            this.SavePurchaseProduct.Text = "Save";
-            this.SavePurchaseProduct.UseVisualStyleBackColor = true;
-            // 
-            // label22
-            // 
-            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(5, 39);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(72, 15);
-            this.label22.TabIndex = 24;
-            this.label22.Text = "ConsumerId";
-            // 
-            // ConsumerPurchaseProduct
-            // 
-            this.ConsumerPurchaseProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ConsumerPurchaseProduct.FormattingEnabled = true;
-            this.ConsumerPurchaseProduct.Location = new System.Drawing.Point(82, 36);
-            this.ConsumerPurchaseProduct.Name = "ConsumerPurchaseProduct";
-            this.ConsumerPurchaseProduct.Size = new System.Drawing.Size(259, 23);
-            this.ConsumerPurchaseProduct.TabIndex = 25;
-            // 
-            // label23
-            // 
-            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(5, 68);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(37, 15);
-            this.label23.TabIndex = 26;
-            this.label23.Text = "Order";
-            // 
-            // PurcahseProductOrder
-            // 
-            this.PurcahseProductOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.PurcahseProductOrder.FormattingEnabled = true;
-            this.PurcahseProductOrder.Location = new System.Drawing.Point(48, 65);
-            this.PurcahseProductOrder.Name = "PurcahseProductOrder";
-            this.PurcahseProductOrder.Size = new System.Drawing.Size(293, 23);
-            this.PurcahseProductOrder.TabIndex = 27;
+            this.OrderedBooksSource.FormattingEnabled = true;
+            this.OrderedBooksSource.Location = new System.Drawing.Point(99, 7);
+            this.OrderedBooksSource.Name = "OrderedBooksSource";
+            this.OrderedBooksSource.Size = new System.Drawing.Size(242, 23);
+            this.OrderedBooksSource.TabIndex = 29;
             // 
             // SourceProduct
             // 
@@ -502,16 +440,120 @@
             this.SourceProduct.TabIndex = 28;
             this.SourceProduct.Text = "Source Book";
             // 
-            // OrderedBooksSource
+            // PurcahseProductOrder
             // 
-            this.OrderedBooksSource.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.PurcahseProductOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.OrderedBooksSource.FormattingEnabled = true;
-            this.OrderedBooksSource.Location = new System.Drawing.Point(99, 7);
-            this.OrderedBooksSource.Name = "OrderedBooksSource";
-            this.OrderedBooksSource.Size = new System.Drawing.Size(242, 23);
-            this.OrderedBooksSource.TabIndex = 29;
+            this.PurcahseProductOrder.FormattingEnabled = true;
+            this.PurcahseProductOrder.Location = new System.Drawing.Point(48, 65);
+            this.PurcahseProductOrder.Name = "PurcahseProductOrder";
+            this.PurcahseProductOrder.Size = new System.Drawing.Size(293, 23);
+            this.PurcahseProductOrder.TabIndex = 27;
+            // 
+            // label23
+            // 
+            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(5, 68);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(37, 15);
+            this.label23.TabIndex = 26;
+            this.label23.Text = "Order";
+            // 
+            // ConsumerPurchaseProduct
+            // 
+            this.ConsumerPurchaseProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ConsumerPurchaseProduct.FormattingEnabled = true;
+            this.ConsumerPurchaseProduct.Location = new System.Drawing.Point(82, 36);
+            this.ConsumerPurchaseProduct.Name = "ConsumerPurchaseProduct";
+            this.ConsumerPurchaseProduct.Size = new System.Drawing.Size(259, 23);
+            this.ConsumerPurchaseProduct.TabIndex = 25;
+            // 
+            // label22
+            // 
+            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(5, 39);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(72, 15);
+            this.label22.TabIndex = 24;
+            this.label22.Text = "ConsumerId";
+            // 
+            // SavePurchaseProduct
+            // 
+            this.SavePurchaseProduct.Location = new System.Drawing.Point(5, 590);
+            this.SavePurchaseProduct.Name = "SavePurchaseProduct";
+            this.SavePurchaseProduct.Size = new System.Drawing.Size(75, 23);
+            this.SavePurchaseProduct.TabIndex = 11;
+            this.SavePurchaseProduct.Text = "Save";
+            this.SavePurchaseProduct.UseVisualStyleBackColor = true;
+            // 
+            // DeletePurchaseProduct
+            // 
+            this.DeletePurchaseProduct.Location = new System.Drawing.Point(266, 590);
+            this.DeletePurchaseProduct.Name = "DeletePurchaseProduct";
+            this.DeletePurchaseProduct.Size = new System.Drawing.Size(75, 23);
+            this.DeletePurchaseProduct.TabIndex = 10;
+            this.DeletePurchaseProduct.Text = "Delete";
+            this.DeletePurchaseProduct.UseVisualStyleBackColor = true;
+            // 
+            // CreatePurchaseProduct
+            // 
+            this.CreatePurchaseProduct.Location = new System.Drawing.Point(126, 590);
+            this.CreatePurchaseProduct.Name = "CreatePurchaseProduct";
+            this.CreatePurchaseProduct.Size = new System.Drawing.Size(75, 23);
+            this.CreatePurchaseProduct.TabIndex = 9;
+            this.CreatePurchaseProduct.Text = "Create";
+            this.CreatePurchaseProduct.UseVisualStyleBackColor = true;
+            // 
+            // OrderedBook
+            // 
+            this.OrderedBook.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.OrderedBook.Location = new System.Drawing.Point(3, 3);
+            this.OrderedBook.MainView = this.gridView4;
+            this.OrderedBook.Name = "OrderedBook";
+            this.OrderedBook.Size = new System.Drawing.Size(844, 628);
+            this.OrderedBook.TabIndex = 0;
+            this.OrderedBook.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView4});
+            // 
+            // gridView4
+            // 
+            this.gridView4.GridControl = this.OrderedBook;
+            this.gridView4.Name = "gridView4";
+            // 
+            // gridView2
+            // 
+            this.gridView2.GridControl = this.ClientGrid;
+            this.gridView2.Name = "gridView2";
+            // 
+            // ClientGrid
+            // 
+            this.ClientGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ClientGrid.Location = new System.Drawing.Point(3, 3);
+            this.ClientGrid.MainView = this.gridView2;
+            this.ClientGrid.Name = "ClientGrid";
+            this.ClientGrid.Size = new System.Drawing.Size(839, 622);
+            this.ClientGrid.TabIndex = 0;
+            this.ClientGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2,
+            this.gridView6});
+            // 
+            // gridView6
+            // 
+            this.gridView6.GridControl = this.ClientGrid;
+            this.gridView6.Name = "gridView6";
             // 
             // BookTab
             // 
@@ -553,143 +595,27 @@
             this.splitContainer3.SplitterDistance = 333;
             this.splitContainer3.TabIndex = 2;
             // 
-            // BookGrid
+            // BookAuthor
             // 
-            this.BookGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.BookAuthor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.BookGrid.Location = new System.Drawing.Point(3, 3);
-            this.BookGrid.MainView = this.gridView3;
-            this.BookGrid.Name = "BookGrid";
-            this.BookGrid.Size = new System.Drawing.Size(855, 628);
-            this.BookGrid.TabIndex = 0;
-            this.BookGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView3});
+            this.BookAuthor.Location = new System.Drawing.Point(56, 80);
+            this.BookAuthor.Name = "BookAuthor";
+            this.BookAuthor.Size = new System.Drawing.Size(274, 23);
+            this.BookAuthor.TabIndex = 15;
             // 
-            // gridView3
+            // label15
             // 
-            this.gridView3.GridControl = this.BookGrid;
-            this.gridView3.Name = "gridView3";
-            // 
-            // ProductName
-            // 
-            this.ProductName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ProductName.Location = new System.Drawing.Point(50, 21);
-            this.ProductName.Name = "ProductName";
-            this.ProductName.Size = new System.Drawing.Size(280, 23);
-            this.ProductName.TabIndex = 0;
-            // 
-            // label13
-            // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 24);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(39, 15);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "Name";
-            // 
-            // ProductDescription
-            // 
-            this.ProductDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ProductDescription.Location = new System.Drawing.Point(79, 50);
-            this.ProductDescription.Name = "ProductDescription";
-            this.ProductDescription.Size = new System.Drawing.Size(251, 23);
-            this.ProductDescription.TabIndex = 2;
-            // 
-            // label12
-            // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 53);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(67, 15);
-            this.label12.TabIndex = 3;
-            this.label12.Text = "Description";
-            // 
-            // label11
-            // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 108);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(33, 15);
-            this.label11.TabIndex = 5;
-            this.label11.Text = "Price";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(8, 136);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 15);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "StockCount";
-            // 
-            // CreateProduct
-            // 
-            this.CreateProduct.Location = new System.Drawing.Point(145, 590);
-            this.CreateProduct.Name = "CreateProduct";
-            this.CreateProduct.Size = new System.Drawing.Size(75, 23);
-            this.CreateProduct.TabIndex = 9;
-            this.CreateProduct.Text = "Create";
-            this.CreateProduct.UseVisualStyleBackColor = true;
-            // 
-            // DeleteProduct
-            // 
-            this.DeleteProduct.Location = new System.Drawing.Point(255, 590);
-            this.DeleteProduct.Name = "DeleteProduct";
-            this.DeleteProduct.Size = new System.Drawing.Size(75, 23);
-            this.DeleteProduct.TabIndex = 10;
-            this.DeleteProduct.Text = "Delete";
-            this.DeleteProduct.UseVisualStyleBackColor = true;
-            // 
-            // SaveProduct
-            // 
-            this.SaveProduct.Location = new System.Drawing.Point(3, 590);
-            this.SaveProduct.Name = "SaveProduct";
-            this.SaveProduct.Size = new System.Drawing.Size(75, 23);
-            this.SaveProduct.TabIndex = 11;
-            this.SaveProduct.Text = "Save";
-            this.SaveProduct.UseVisualStyleBackColor = true;
-            // 
-            // BookPriceUpDown
-            // 
-            this.BookPriceUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.BookPriceUpDown.Location = new System.Drawing.Point(45, 107);
-            this.BookPriceUpDown.Maximum = new decimal(new int[] {
-            99999,
-            0,
-            0,
-            0});
-            this.BookPriceUpDown.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.BookPriceUpDown.Name = "BookPriceUpDown";
-            this.BookPriceUpDown.Size = new System.Drawing.Size(285, 23);
-            this.BookPriceUpDown.TabIndex = 12;
-            this.BookPriceUpDown.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(6, 80);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(44, 15);
+            this.label15.TabIndex = 14;
+            this.label15.Text = "Author";
             // 
             // ProductStockCountUpDown
             // 
@@ -716,27 +642,143 @@
             0,
             0});
             // 
-            // label15
+            // BookPriceUpDown
             // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.BookPriceUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(6, 80);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(44, 15);
-            this.label15.TabIndex = 14;
-            this.label15.Text = "Author";
+            this.BookPriceUpDown.Location = new System.Drawing.Point(45, 107);
+            this.BookPriceUpDown.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.BookPriceUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.BookPriceUpDown.Name = "BookPriceUpDown";
+            this.BookPriceUpDown.Size = new System.Drawing.Size(285, 23);
+            this.BookPriceUpDown.TabIndex = 12;
+            this.BookPriceUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
-            // BookAuthor
+            // SaveProduct
             // 
-            this.BookAuthor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.SaveProduct.Location = new System.Drawing.Point(3, 590);
+            this.SaveProduct.Name = "SaveProduct";
+            this.SaveProduct.Size = new System.Drawing.Size(75, 23);
+            this.SaveProduct.TabIndex = 11;
+            this.SaveProduct.Text = "Save";
+            this.SaveProduct.UseVisualStyleBackColor = true;
+            // 
+            // DeleteProduct
+            // 
+            this.DeleteProduct.Location = new System.Drawing.Point(255, 590);
+            this.DeleteProduct.Name = "DeleteProduct";
+            this.DeleteProduct.Size = new System.Drawing.Size(75, 23);
+            this.DeleteProduct.TabIndex = 10;
+            this.DeleteProduct.Text = "Delete";
+            this.DeleteProduct.UseVisualStyleBackColor = true;
+            // 
+            // CreateProduct
+            // 
+            this.CreateProduct.Location = new System.Drawing.Point(145, 590);
+            this.CreateProduct.Name = "CreateProduct";
+            this.CreateProduct.Size = new System.Drawing.Size(75, 23);
+            this.CreateProduct.TabIndex = 9;
+            this.CreateProduct.Text = "Create";
+            this.CreateProduct.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.BookAuthor.Location = new System.Drawing.Point(56, 80);
-            this.BookAuthor.Name = "BookAuthor";
-            this.BookAuthor.Size = new System.Drawing.Size(274, 23);
-            this.BookAuthor.TabIndex = 15;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(8, 136);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(69, 15);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "StockCount";
+            // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(6, 108);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(33, 15);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "Price";
+            // 
+            // label12
+            // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(6, 53);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(67, 15);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "Description";
+            // 
+            // ProductDescription
+            // 
+            this.ProductDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ProductDescription.Location = new System.Drawing.Point(79, 50);
+            this.ProductDescription.Name = "ProductDescription";
+            this.ProductDescription.Size = new System.Drawing.Size(251, 23);
+            this.ProductDescription.TabIndex = 2;
+            // 
+            // label13
+            // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(6, 24);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(39, 15);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "Name";
+            // 
+            // ProductName
+            // 
+            this.ProductName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ProductName.Location = new System.Drawing.Point(50, 21);
+            this.ProductName.Name = "ProductName";
+            this.ProductName.Size = new System.Drawing.Size(280, 23);
+            this.ProductName.TabIndex = 0;
+            // 
+            // BookGrid
+            // 
+            this.BookGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BookGrid.Location = new System.Drawing.Point(3, 3);
+            this.BookGrid.MainView = this.gridView3;
+            this.BookGrid.Name = "BookGrid";
+            this.BookGrid.Size = new System.Drawing.Size(855, 628);
+            this.BookGrid.TabIndex = 0;
+            this.BookGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView3});
+            // 
+            // gridView3
+            // 
+            this.gridView3.GridControl = this.BookGrid;
+            this.gridView3.Name = "gridView3";
             // 
             // ClientTab
             // 
@@ -777,89 +819,45 @@
             this.splitContainer2.SplitterDistance = 343;
             this.splitContainer2.TabIndex = 1;
             // 
-            // ClientGrid
+            // ConsumerSaveButton
             // 
-            this.ClientGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.ConsumerSaveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.ConsumerSaveButton.Location = new System.Drawing.Point(3, 602);
+            this.ConsumerSaveButton.Name = "ConsumerSaveButton";
+            this.ConsumerSaveButton.Size = new System.Drawing.Size(75, 23);
+            this.ConsumerSaveButton.TabIndex = 11;
+            this.ConsumerSaveButton.Text = "Save";
+            this.ConsumerSaveButton.UseVisualStyleBackColor = true;
+            // 
+            // ConsumerCreateButton
+            // 
+            this.ConsumerCreateButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.ConsumerCreateButton.Location = new System.Drawing.Point(135, 602);
+            this.ConsumerCreateButton.Name = "ConsumerCreateButton";
+            this.ConsumerCreateButton.Size = new System.Drawing.Size(75, 23);
+            this.ConsumerCreateButton.TabIndex = 10;
+            this.ConsumerCreateButton.Text = "Create";
+            this.ConsumerCreateButton.UseVisualStyleBackColor = true;
+            // 
+            // ConsumerDeleteButton
+            // 
+            this.ConsumerDeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ConsumerDeleteButton.Location = new System.Drawing.Point(265, 602);
+            this.ConsumerDeleteButton.Name = "ConsumerDeleteButton";
+            this.ConsumerDeleteButton.Size = new System.Drawing.Size(75, 23);
+            this.ConsumerDeleteButton.TabIndex = 9;
+            this.ConsumerDeleteButton.Text = "Delete";
+            this.ConsumerDeleteButton.UseVisualStyleBackColor = true;
+            // 
+            // ConsumerBIrthdate
+            // 
+            this.ConsumerBIrthdate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ClientGrid.Location = new System.Drawing.Point(3, 3);
-            this.ClientGrid.MainView = this.gridView2;
-            this.ClientGrid.Name = "ClientGrid";
-            this.ClientGrid.Size = new System.Drawing.Size(839, 622);
-            this.ClientGrid.TabIndex = 0;
-            this.ClientGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView2});
-            // 
-            // gridView6
-            // 
-            this.gridView6.GridControl = this.ClientGrid;
-            this.gridView6.Name = "gridView6";
-            // 
-            // ConsumerName
-            // 
-            this.ConsumerName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ConsumerName.Location = new System.Drawing.Point(47, 3);
-            this.ConsumerName.Name = "ConsumerName";
-            this.ConsumerName.Size = new System.Drawing.Size(293, 23);
-            this.ConsumerName.TabIndex = 0;
-            // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 6);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(39, 15);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "Name";
-            // 
-            // ConsumerSurname
-            // 
-            this.ConsumerSurname.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ConsumerSurname.Location = new System.Drawing.Point(63, 32);
-            this.ConsumerSurname.Name = "ConsumerSurname";
-            this.ConsumerSurname.Size = new System.Drawing.Size(277, 23);
-            this.ConsumerSurname.TabIndex = 2;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 35);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(54, 15);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "Surname";
-            // 
-            // ConsumerPhoneNumber
-            // 
-            this.ConsumerPhoneNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ConsumerPhoneNumber.Location = new System.Drawing.Point(50, 61);
-            this.ConsumerPhoneNumber.Name = "ConsumerPhoneNumber";
-            this.ConsumerPhoneNumber.Size = new System.Drawing.Size(290, 23);
-            this.ConsumerPhoneNumber.TabIndex = 4;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 64);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(41, 15);
-            this.label8.TabIndex = 5;
-            this.label8.Text = "Phone";
+            this.ConsumerBIrthdate.Location = new System.Drawing.Point(99, 96);
+            this.ConsumerBIrthdate.MaxSelectionCount = 1;
+            this.ConsumerBIrthdate.Name = "ConsumerBIrthdate";
+            this.ConsumerBIrthdate.TabIndex = 8;
             // 
             // label7
             // 
@@ -873,45 +871,71 @@
             this.label7.TabIndex = 7;
             this.label7.Text = "Date";
             // 
-            // ConsumerBIrthdate
+            // label8
             // 
-            this.ConsumerBIrthdate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ConsumerBIrthdate.Location = new System.Drawing.Point(99, 96);
-            this.ConsumerBIrthdate.MaxSelectionCount = 1;
-            this.ConsumerBIrthdate.Name = "ConsumerBIrthdate";
-            this.ConsumerBIrthdate.TabIndex = 8;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(3, 64);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(41, 15);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "Phone";
             // 
-            // ConsumerDeleteButton
+            // ConsumerPhoneNumber
             // 
-            this.ConsumerDeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ConsumerDeleteButton.Location = new System.Drawing.Point(265, 602);
-            this.ConsumerDeleteButton.Name = "ConsumerDeleteButton";
-            this.ConsumerDeleteButton.Size = new System.Drawing.Size(75, 23);
-            this.ConsumerDeleteButton.TabIndex = 9;
-            this.ConsumerDeleteButton.Text = "Delete";
-            this.ConsumerDeleteButton.UseVisualStyleBackColor = true;
+            this.ConsumerPhoneNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ConsumerPhoneNumber.Location = new System.Drawing.Point(50, 61);
+            this.ConsumerPhoneNumber.Name = "ConsumerPhoneNumber";
+            this.ConsumerPhoneNumber.Size = new System.Drawing.Size(290, 23);
+            this.ConsumerPhoneNumber.TabIndex = 4;
             // 
-            // ConsumerCreateButton
+            // label9
             // 
-            this.ConsumerCreateButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.ConsumerCreateButton.Location = new System.Drawing.Point(135, 602);
-            this.ConsumerCreateButton.Name = "ConsumerCreateButton";
-            this.ConsumerCreateButton.Size = new System.Drawing.Size(75, 23);
-            this.ConsumerCreateButton.TabIndex = 10;
-            this.ConsumerCreateButton.Text = "Create";
-            this.ConsumerCreateButton.UseVisualStyleBackColor = true;
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(3, 35);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(54, 15);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "Surname";
             // 
-            // ConsumerSaveButton
+            // ConsumerSurname
             // 
-            this.ConsumerSaveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.ConsumerSaveButton.Location = new System.Drawing.Point(3, 602);
-            this.ConsumerSaveButton.Name = "ConsumerSaveButton";
-            this.ConsumerSaveButton.Size = new System.Drawing.Size(75, 23);
-            this.ConsumerSaveButton.TabIndex = 11;
-            this.ConsumerSaveButton.Text = "Save";
-            this.ConsumerSaveButton.UseVisualStyleBackColor = true;
+            this.ConsumerSurname.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ConsumerSurname.Location = new System.Drawing.Point(63, 32);
+            this.ConsumerSurname.Name = "ConsumerSurname";
+            this.ConsumerSurname.Size = new System.Drawing.Size(277, 23);
+            this.ConsumerSurname.TabIndex = 2;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(3, 6);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(39, 15);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "Name";
+            // 
+            // ConsumerName
+            // 
+            this.ConsumerName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ConsumerName.Location = new System.Drawing.Point(47, 3);
+            this.ConsumerName.Name = "ConsumerName";
+            this.ConsumerName.Size = new System.Drawing.Size(293, 23);
+            this.ConsumerName.TabIndex = 0;
             // 
             // EmployeeTab
             // 
@@ -935,7 +959,7 @@
             // 
             this.splitContainer1.Panel1.Controls.Add(this.DeleteButton);
             this.splitContainer1.Panel1.Controls.Add(this.EmployeeSalary);
-            this.splitContainer1.Panel1.Controls.Add(this.CreateButton);
+            this.splitContainer1.Panel1.Controls.Add(this.EmployeeCreateButton);
             this.splitContainer1.Panel1.Controls.Add(this.EmployeeSaveButton);
             this.splitContainer1.Panel1.Controls.Add(this.label5);
             this.splitContainer1.Panel1.Controls.Add(this.EmployeeBirthDate);
@@ -954,141 +978,15 @@
             this.splitContainer1.SplitterDistance = 327;
             this.splitContainer1.TabIndex = 0;
             // 
-            // EmployeeGrid
+            // DeleteButton
             // 
-            this.EmployeeGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.EmployeeGrid.DataSource = typeof(Model.Emploee);
-            this.EmployeeGrid.Location = new System.Drawing.Point(3, 3);
-            this.EmployeeGrid.MainView = this.gridView1;
-            this.EmployeeGrid.Name = "EmployeeGrid";
-            this.EmployeeGrid.Size = new System.Drawing.Size(855, 622);
-            this.EmployeeGrid.TabIndex = 0;
-            this.EmployeeGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            // 
-            // gridView7
-            // 
-            this.gridView7.GridControl = this.EmployeeGrid;
-            this.gridView7.Name = "gridView7";
-            // 
-            // EmployeeName
-            // 
-            this.EmployeeName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.EmployeeName.Location = new System.Drawing.Point(47, 3);
-            this.EmployeeName.Name = "EmployeeName";
-            this.EmployeeName.Size = new System.Drawing.Size(274, 23);
-            this.EmployeeName.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 15);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Name";
-            // 
-            // EmployeeSurname
-            // 
-            this.EmployeeSurname.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.EmployeeSurname.Location = new System.Drawing.Point(63, 32);
-            this.EmployeeSurname.Name = "EmployeeSurname";
-            this.EmployeeSurname.Size = new System.Drawing.Size(258, 23);
-            this.EmployeeSurname.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 35);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 15);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Surname";
-            // 
-            // EmployeePhone
-            // 
-            this.EmployeePhone.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.EmployeePhone.Location = new System.Drawing.Point(50, 61);
-            this.EmployeePhone.Name = "EmployeePhone";
-            this.EmployeePhone.Size = new System.Drawing.Size(271, 23);
-            this.EmployeePhone.TabIndex = 4;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 64);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 15);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Phone";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 125);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(31, 15);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Date";
-            // 
-            // EmployeeBirthDate
-            // 
-            this.EmployeeBirthDate.Location = new System.Drawing.Point(99, 125);
-            this.EmployeeBirthDate.MaxSelectionCount = 1;
-            this.EmployeeBirthDate.Name = "EmployeeBirthDate";
-            this.EmployeeBirthDate.TabIndex = 8;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 93);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 15);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Salary";
-            // 
-            // EmployeeSaveButton
-            // 
-            this.EmployeeSaveButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.EmployeeSaveButton.Location = new System.Drawing.Point(130, 602);
-            this.EmployeeSaveButton.Name = "EmployeeSaveButton";
-            this.EmployeeSaveButton.Size = new System.Drawing.Size(75, 23);
-            this.EmployeeSaveButton.TabIndex = 11;
-            this.EmployeeSaveButton.Text = "Save";
-            this.EmployeeSaveButton.UseVisualStyleBackColor = true;
-            // 
-            // CreateButton
-            // 
-            this.CreateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.CreateButton.Location = new System.Drawing.Point(3, 602);
-            this.CreateButton.Name = "CreateButton";
-            this.CreateButton.Size = new System.Drawing.Size(75, 23);
-            this.CreateButton.TabIndex = 12;
-            this.CreateButton.Text = "Create";
-            this.CreateButton.UseVisualStyleBackColor = true;
+            this.DeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.DeleteButton.Location = new System.Drawing.Point(246, 602);
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.Size = new System.Drawing.Size(75, 23);
+            this.DeleteButton.TabIndex = 14;
+            this.DeleteButton.Text = "Delete";
+            this.DeleteButton.UseVisualStyleBackColor = true;
             // 
             // EmployeeSalary
             // 
@@ -1105,15 +1003,123 @@
             this.EmployeeSalary.Size = new System.Drawing.Size(274, 23);
             this.EmployeeSalary.TabIndex = 13;
             // 
-            // DeleteButton
+            // EmployeeCreateButton
             // 
-            this.DeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.DeleteButton.Location = new System.Drawing.Point(246, 602);
-            this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(75, 23);
-            this.DeleteButton.TabIndex = 14;
-            this.DeleteButton.Text = "Delete";
-            this.DeleteButton.UseVisualStyleBackColor = true;
+            this.EmployeeCreateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.EmployeeCreateButton.Location = new System.Drawing.Point(3, 602);
+            this.EmployeeCreateButton.Name = "EmployeeCreateButton";
+            this.EmployeeCreateButton.Size = new System.Drawing.Size(75, 23);
+            this.EmployeeCreateButton.TabIndex = 12;
+            this.EmployeeCreateButton.Text = "Create";
+            this.EmployeeCreateButton.UseVisualStyleBackColor = true;
+            this.EmployeeCreateButton.Click += new System.EventHandler(this.EmployeeCreateButton_Click);
+            // 
+            // EmployeeSaveButton
+            // 
+            this.EmployeeSaveButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.EmployeeSaveButton.Location = new System.Drawing.Point(130, 602);
+            this.EmployeeSaveButton.Name = "EmployeeSaveButton";
+            this.EmployeeSaveButton.Size = new System.Drawing.Size(75, 23);
+            this.EmployeeSaveButton.TabIndex = 11;
+            this.EmployeeSaveButton.Text = "Save";
+            this.EmployeeSaveButton.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 93);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(38, 15);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Salary";
+            // 
+            // EmployeeBirthDate
+            // 
+            this.EmployeeBirthDate.Location = new System.Drawing.Point(99, 125);
+            this.EmployeeBirthDate.MaxSelectionCount = 1;
+            this.EmployeeBirthDate.Name = "EmployeeBirthDate";
+            this.EmployeeBirthDate.TabIndex = 8;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(3, 125);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(31, 15);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Date";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 64);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(41, 15);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Phone";
+            // 
+            // EmployeePhone
+            // 
+            this.EmployeePhone.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.EmployeePhone.Location = new System.Drawing.Point(50, 61);
+            this.EmployeePhone.Name = "EmployeePhone";
+            this.EmployeePhone.Size = new System.Drawing.Size(271, 23);
+            this.EmployeePhone.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 35);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 15);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Surname";
+            // 
+            // EmployeeSurname
+            // 
+            this.EmployeeSurname.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.EmployeeSurname.Location = new System.Drawing.Point(63, 32);
+            this.EmployeeSurname.Name = "EmployeeSurname";
+            this.EmployeeSurname.Size = new System.Drawing.Size(258, 23);
+            this.EmployeeSurname.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(39, 15);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Name";
+            // 
+            // EmployeeName
+            // 
+            this.EmployeeName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.EmployeeName.Location = new System.Drawing.Point(47, 3);
+            this.EmployeeName.Name = "EmployeeName";
+            this.EmployeeName.Size = new System.Drawing.Size(274, 23);
+            this.EmployeeName.TabIndex = 0;
             // 
             // TableTabControl
             // 
@@ -1150,8 +1156,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
             this.splitContainer5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.OrderGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeeGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView7)).EndInit();
             this.OrderedBooksTab.ResumeLayout(false);
             this.splitContainer4.Panel1.ResumeLayout(false);
             this.splitContainer4.Panel1.PerformLayout();
@@ -1159,34 +1167,32 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
             this.splitContainer4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.OrderedBook)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ClientGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView6)).EndInit();
             this.BookTab.ResumeLayout(false);
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel1.PerformLayout();
             this.splitContainer3.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ProductStockCountUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BookPriceUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BookGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BookPriceUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ProductStockCountUpDown)).EndInit();
             this.ClientTab.ResumeLayout(false);
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel1.PerformLayout();
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ClientGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView6)).EndInit();
             this.EmployeeTab.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.EmployeeGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeSalary)).EndInit();
             this.TableTabControl.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -1286,7 +1292,7 @@
         private SplitContainer splitContainer1;
         private Button DeleteButton;
         private NumericUpDown EmployeeSalary;
-        private Button CreateButton;
+        private Button EmployeeCreateButton;
         private Button EmployeeSaveButton;
         private Label label5;
         private MonthCalendar EmployeeBirthDate;

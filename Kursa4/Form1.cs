@@ -26,27 +26,27 @@ namespace Kursa4
             }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
         }
 
-        //protected override void OnLoad(EventArgs e)
-        //{
-        //    base.OnLoad(e);
-        //    _context = new BDLabsDbContext();
-        //    OrdersGrid.DefaultView.DataController.AllowIEnumerableDetails = true;
-        //    _context.Employees.Load();
-        //    _context.Consumers.Load();
-        //    _context.Books.Load();
-        //    _context.Orders.Load();
-        //    _context.OrderedBooks.Load();
-        //    SetDataInGridView();
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+            _context = new BDLabsDbContext();
+            //OrdersGrid.DefaultView.DataController.AllowIEnumerableDetails = true;
+            //_context.Employees.Load();
+            //_context.Consumers.Load();
+            //_context.Books.Load();
+            //_context.Orders.Load();
+            //_context.OrderedBooks.Load();
+            //SetDataInGridView();
 
-        //    ConsumerInOrder.DataSource = _context.Consumers.Local.ToBindingList();
-        //    EmployeeInOrder.DataSource = _context.Employees.Local.ToBindingList();
-        //    OrderStatus.DataSource = Enum.GetValues(typeof(OrderStatus));
-        //    ConsumerPurchaseProduct.DataSource = _context.Consumers.Local.ToBindingList();
-        //    PurcahseProductOrder.DataSource = _context.Orders.Local.ToBindingList();
-        //    OrderedBooksSource.DataSource = _context.Books.Local.ToBindingList();
+            //ConsumerInOrder.DataSource = _context.Consumers.Local.ToBindingList();
+            //EmployeeInOrder.DataSource = _context.Employees.Local.ToBindingList();
+            //OrderStatus.DataSource = Enum.GetValues(typeof(OrderStatus));
+            //ConsumerPurchaseProduct.DataSource = _context.Consumers.Local.ToBindingList();
+            //PurcahseProductOrder.DataSource = _context.Orders.Local.ToBindingList();
+            //OrderedBooksSource.DataSource = _context.Books.Local.ToBindingList();
 
-        //    OrdersGrid.Columns[2].CellTemplate = new PurchaseProductListCell();
-        //}
+            //OrdersGrid.Columns[2].CellTemplate = new PurchaseProductListCell();
+        }
 
         //public void SetDataInGridView()
         //{
@@ -66,18 +66,7 @@ namespace Kursa4
         //}
 
         //private void CreateButton_Click(object sender, EventArgs e)
-        //{
-        //    Emploee employee = new()
-        //    {
-        //        Name = EmployeeName.Text.Trim(),
-        //        Surname = EmployeeSurname.Text.Trim(),
-        //        PhoneNumber = EmployeePhone.Text.Trim(),
-        //        BirthDate = EmployeeBirthDate.SelectionRange.Start,
-        //        Salary = EmployeeSalary.Value
-        //    };
-
-        //    _context.Employees.Add(employee);
-        //    _context.SaveChanges();
+        // 
         //}
 
         //private void DeleteButton_Click(object sender, EventArgs e)
@@ -317,6 +306,21 @@ namespace Kursa4
         {
             //var data = GetCurrentGridData();
             //data.Grid.ExportToPdf(data.FileName + ".pdf");
+        }
+
+        private void EmployeeCreateButton_Click(object sender, EventArgs e)
+        {
+            Emploee employee = new()
+            {
+                Name = EmployeeName.Text.Trim(),
+                Surname = EmployeeSurname.Text.Trim(),
+                PhoneNumber = EmployeePhone.Text.Trim(),
+                BirthDate = EmployeeBirthDate.SelectionRange.Start,
+                Salary = (int)EmployeeSalary.Value
+            };
+
+            _context.Employees.Add(employee);
+            _context.SaveChanges();
         }
     }
 }
