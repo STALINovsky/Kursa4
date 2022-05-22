@@ -746,6 +746,7 @@
             // 
             this.colName1.FieldName = "Name";
             this.colName1.Name = "colName1";
+            this.colName1.OptionsColumn.AllowEdit = false;
             this.colName1.Visible = true;
             this.colName1.VisibleIndex = 1;
             // 
