@@ -1,5 +1,3 @@
-using DataBaseAccess;
-
 namespace Kursa4
 {
     internal static class Program

@@ -2,19 +2,8 @@ using DataBaseAccess;
 using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Views.Grid;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
 using Model;
 using Model.Enums;
-using System.Data;
-using System.Diagnostics;
-using System.Linq;
-using Microsoft.EntityFrameworkCore;
 
 namespace Kursa4
 {
@@ -107,7 +96,7 @@ namespace Kursa4
                 Name = ConsumerName.Text.Trim(),
                 Surname = ConsumerSurname.Text.Trim(),
                 BirthDate = ConsumerBIrthdate.SelectionRange.Start,
-                PhoneNumner = ConsumerPhoneNumber.Text.Trim(), 
+                PhoneNumner = ConsumerPhoneNumber.Text.Trim(),
             };
 
             _context.Consumers.Add(consumer);
@@ -233,7 +222,7 @@ namespace Kursa4
             {
                 Name = ((Book)OrderedBooksSource.SelectedValue).Name,
                 Description = ((Book)OrderedBooksSource.SelectedValue).Description,
-                Author =  ((Book)OrderedBooksSource.SelectedValue).Author,
+                Author = ((Book)OrderedBooksSource.SelectedValue).Author,
                 OrderingPrice = ((Book)OrderedBooksSource.SelectedValue).OrderingPrice,
                 Consumer = (Consumer)ConsumerPurchaseProduct.SelectedValue,
                 Order = (Order)PurcahseProductOrder.SelectedValue,
