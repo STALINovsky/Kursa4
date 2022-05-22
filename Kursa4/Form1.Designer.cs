@@ -119,7 +119,7 @@
             this.colStockCount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colId2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ConsumerTab = new System.Windows.Forms.TabPage();
+            this.ClientTab = new System.Windows.Forms.TabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.ConsumerSaveButton = new System.Windows.Forms.Button();
             this.ConsumerCreateButton = new System.Windows.Forms.Button();
@@ -184,7 +184,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
-            this.ConsumerTab.SuspendLayout();
+            this.ClientTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -463,6 +463,7 @@
             // 
             this.colId.FieldName = "Id";
             this.colId.Name = "colId";
+            this.colId.OptionsColumn.AllowEdit = false;
             this.colId.Visible = true;
             this.colId.VisibleIndex = 0;
             // 
@@ -1067,16 +1068,16 @@
             this.colId2.Visible = true;
             this.colId2.VisibleIndex = 0;
             // 
-            // ConsumerTab
+            // ClientTab
             // 
-            this.ConsumerTab.Controls.Add(this.splitContainer2);
-            this.ConsumerTab.Location = new System.Drawing.Point(4, 24);
-            this.ConsumerTab.Name = "ConsumerTab";
-            this.ConsumerTab.Padding = new System.Windows.Forms.Padding(3);
-            this.ConsumerTab.Size = new System.Drawing.Size(1198, 616);
-            this.ConsumerTab.TabIndex = 1;
-            this.ConsumerTab.Text = "Consumer";
-            this.ConsumerTab.UseVisualStyleBackColor = true;
+            this.ClientTab.Controls.Add(this.splitContainer2);
+            this.ClientTab.Location = new System.Drawing.Point(4, 24);
+            this.ClientTab.Name = "ClientTab";
+            this.ClientTab.Padding = new System.Windows.Forms.Padding(3);
+            this.ClientTab.Size = new System.Drawing.Size(1198, 616);
+            this.ClientTab.TabIndex = 1;
+            this.ClientTab.Text = "Client";
+            this.ClientTab.UseVisualStyleBackColor = true;
             // 
             // splitContainer2
             // 
@@ -1419,7 +1420,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TableTabControl.Controls.Add(this.EmployeeTab);
-            this.TableTabControl.Controls.Add(this.ConsumerTab);
+            this.TableTabControl.Controls.Add(this.ClientTab);
             this.TableTabControl.Controls.Add(this.BookTab);
             this.TableTabControl.Controls.Add(this.OrderedBooksTab);
             this.TableTabControl.Controls.Add(this.OrdersTab);
@@ -1479,7 +1480,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).EndInit();
-            this.ConsumerTab.ResumeLayout(false);
+            this.ClientTab.ResumeLayout(false);
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel1.PerformLayout();
             this.splitContainer2.Panel2.ResumeLayout(false);
@@ -1590,7 +1591,7 @@
         private Label label13;
         private TextBox ProductName;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
-        private TabPage ConsumerTab;
+        private TabPage ClientTab;
         private SplitContainer splitContainer2;
         private Button ConsumerSaveButton;
         private Button ConsumerCreateButton;

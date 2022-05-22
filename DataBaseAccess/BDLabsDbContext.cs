@@ -15,7 +15,7 @@ namespace DataBaseAccess
             optionsBuilder.UseSqlServer(ConnectionString);
         }
 
-        public DbSet<Consumer> Consumers { get; set; }
+        public DbSet<Client> Consumers { get; set; }
         public DbSet<Emploee> Employees { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Book> Books { get; set; }

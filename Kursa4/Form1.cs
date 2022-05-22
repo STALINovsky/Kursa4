@@ -91,7 +91,7 @@ namespace Kursa4
 
         private void ConsumerCreateButton_Click(object sender, EventArgs e)
         {
-            Consumer consumer = new()
+            Client consumer = new()
             {
                 Name = ConsumerName.Text.Trim(),
                 Surname = ConsumerSurname.Text.Trim(),
@@ -115,7 +115,7 @@ namespace Kursa4
                     return;
                 }
 
-                var selRow = (ConsumersGrid.MainView).GetRow(selRows[0]) as Consumer;
+                var selRow = (ConsumersGrid.MainView).GetRow(selRows[0]) as Client;
                 _context.Remove(selRow);
                 _context.SaveChangesAsync();
 
@@ -205,7 +205,7 @@ namespace Kursa4
         {
             Order order = new()
             {
-                Consumer = (Consumer)ConsumerInOrder.SelectedValue,
+                Consumer = (Client)ConsumerInOrder.SelectedValue,
                 CreateDate = DateTime.Now,
                 Emploee = (Emploee)EmployeeInOrder.SelectedValue,
                 OrderStatus = (OrderStatus)OrderStatus.SelectedValue,
@@ -224,7 +224,7 @@ namespace Kursa4
                 Description = ((Book)OrderedBooksSource.SelectedValue).Description,
                 Author = ((Book)OrderedBooksSource.SelectedValue).Author,
                 OrderingPrice = ((Book)OrderedBooksSource.SelectedValue).OrderingPrice,
-                Consumer = (Consumer)ConsumerPurchaseProduct.SelectedValue,
+                Consumer = (Client)ConsumerPurchaseProduct.SelectedValue,
                 Order = (Order)PurcahseProductOrder.SelectedValue,
             };
             OrdersGrid.MainView.RefreshData();

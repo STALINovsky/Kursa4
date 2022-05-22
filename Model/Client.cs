@@ -1,6 +1,6 @@
 ﻿namespace Model
 {
-    public class Consumer : BaseEntity
+    public class Client : BaseEntity
     {
         public string Name { get; set; }
         public string Surname { get; set; }
