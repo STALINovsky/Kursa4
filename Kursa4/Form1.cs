@@ -205,7 +205,7 @@ namespace Kursa4
         {
             Order order = new()
             {
-                Consumer = (Client)ConsumerInOrder.SelectedValue,
+                Client = (Client)ConsumerInOrder.SelectedValue,
                 CreateDate = DateTime.Now,
                 Emploee = (Emploee)EmployeeInOrder.SelectedValue,
                 OrderStatus = (OrderStatus)OrderStatus.SelectedValue,
@@ -224,7 +224,7 @@ namespace Kursa4
                 Description = ((Book)OrderedBooksSource.SelectedValue).Description,
                 Author = ((Book)OrderedBooksSource.SelectedValue).Author,
                 OrderingPrice = ((Book)OrderedBooksSource.SelectedValue).OrderingPrice,
-                Consumer = (Client)ConsumerPurchaseProduct.SelectedValue,
+                Client = (Client)ConsumerPurchaseProduct.SelectedValue,
                 Order = (Order)PurcahseProductOrder.SelectedValue,
             };
             OrdersGrid.MainView.RefreshData();

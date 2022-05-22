@@ -5,14 +5,15 @@ namespace Model
     public class Order : BaseEntity
     {
         public DateTime CreateDate { get; set; }
-        public Client Consumer { get; set; }
-        public ICollection<OrderedBook> PurchaseProducts { get; set; }
+        public DateTime CloseDate { get; set; }
+        public Client Client { get; set; }
+        public ICollection<OrderedBook> OrderedBooks { get; set; }
         public OrderStatus OrderStatus { get; set; }
         public Emploee Emploee { get; set; }
 
         public override string ToString()
         {
-            return Id + ": " + Consumer.Name + " " + Consumer.Surname;
+            return Id + ": " + Client.Name + " " + Client.Surname;
         }
     }
 }
