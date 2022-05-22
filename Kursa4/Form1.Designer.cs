@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pdfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,8 +45,6 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.emploeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.OrderedBooksTab = new System.Windows.Forms.TabPage();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.OrderedBooksSource = new System.Windows.Forms.ComboBox();
@@ -59,8 +56,6 @@
             this.SavePurchaseProduct = new System.Windows.Forms.Button();
             this.DeletePurchaseProduct = new System.Windows.Forms.Button();
             this.CreatePurchaseProduct = new System.Windows.Forms.Button();
-            this.orderedBookBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.consumerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.BookTab = new System.Windows.Forms.TabPage();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.BookAuthor = new System.Windows.Forms.TextBox();
@@ -76,8 +71,6 @@
             this.ProductDescription = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.ProductName = new System.Windows.Forms.TextBox();
-            this.bookBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ClientTab = new System.Windows.Forms.TabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.ConsumerSaveButton = new System.Windows.Forms.Button();
@@ -112,22 +105,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).BeginInit();
             this.splitContainer5.Panel1.SuspendLayout();
             this.splitContainer5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emploeeBindingSource)).BeginInit();
             this.OrderedBooksTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
             this.splitContainer4.Panel1.SuspendLayout();
             this.splitContainer4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.orderedBookBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.consumerBindingSource)).BeginInit();
             this.BookTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProductStockCountUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BookPriceUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
             this.ClientTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
@@ -1024,15 +1011,11 @@
             this.splitContainer5.Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
             this.splitContainer5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emploeeBindingSource)).EndInit();
             this.OrderedBooksTab.ResumeLayout(false);
             this.splitContainer4.Panel1.ResumeLayout(false);
             this.splitContainer4.Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
             this.splitContainer4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.orderedBookBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.consumerBindingSource)).EndInit();
             this.BookTab.ResumeLayout(false);
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel1.PerformLayout();
@@ -1040,8 +1023,6 @@
             this.splitContainer3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ProductStockCountUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BookPriceUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).EndInit();
             this.ClientTab.ResumeLayout(false);
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel1.PerformLayout();
@@ -1152,11 +1133,5 @@
         private ComboBox OrderedBooksSource;
         private TextBox BookAuthor;
         private Label label15;
-        private BindingSource orderBindingSource;
-        private BindingSource emploeeBindingSource;
-        private BindingSource orderedBookBindingSource;
-        private BindingSource consumerBindingSource;
-        private BindingSource bookBindingSource;
-        private BindingSource bookBindingSource1;
     }
 }
