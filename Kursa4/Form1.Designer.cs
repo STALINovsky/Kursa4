@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode3 = new DevExpress.XtraGrid.GridLevelNode();
             this.OrderedBooks = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -45,6 +44,7 @@
             this.colStockCount1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colId2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridView6 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -159,7 +159,6 @@
             this.EmployeeName = new System.Windows.Forms.TextBox();
             this.TableTabControl = new System.Windows.Forms.TabControl();
             this.clientBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.OrderedBooks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BookGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
@@ -249,10 +248,6 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BookGrid.DataSource = this.bookBindingSource;
-            gridLevelNode1.LevelTemplate = this.OrderedBooks;
-            gridLevelNode1.RelationName = "Level1";
-            this.BookGrid.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
             this.BookGrid.Location = new System.Drawing.Point(3, 3);
             this.BookGrid.MainView = this.gridView3;
             this.BookGrid.Name = "BookGrid";
@@ -322,6 +317,14 @@
             this.gridView6.GridControl = this.OrderGrid;
             this.gridView6.Name = "gridView6";
             // 
+            // gridColumn11
+            // 
+            this.gridColumn11.Caption = "Id";
+            this.gridColumn11.FieldName = "Id";
+            this.gridColumn11.Name = "gridColumn11";
+            this.gridColumn11.Visible = true;
+            this.gridColumn11.VisibleIndex = 3;
+            // 
             // gridColumn4
             // 
             this.gridColumn4.Caption = "Name";
@@ -352,10 +355,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderGrid.DataSource = this.orderBindingSource;
-            gridLevelNode2.LevelTemplate = this.gridView6;
-            gridLevelNode2.RelationName = "OrderedBooks";
+            gridLevelNode1.LevelTemplate = this.gridView6;
+            gridLevelNode1.RelationName = "OrderedBooks";
             this.OrderGrid.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
+            gridLevelNode1});
             this.OrderGrid.Location = new System.Drawing.Point(3, 3);
             this.OrderGrid.MainView = this.gridView5;
             this.OrderGrid.Name = "OrderGrid";
@@ -477,10 +480,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.EmployeeGrid.DataSource = this.employeeBindingSource;
-            gridLevelNode3.LevelTemplate = this.gridView7;
-            gridLevelNode3.RelationName = "OrderedBooks";
+            gridLevelNode2.LevelTemplate = this.gridView7;
+            gridLevelNode2.RelationName = "OrderedBooks";
             this.EmployeeGrid.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode3});
+            gridLevelNode2});
             this.EmployeeGrid.Location = new System.Drawing.Point(3, 3);
             this.EmployeeGrid.MainView = this.gridView1;
             this.EmployeeGrid.Name = "EmployeeGrid";
@@ -1525,14 +1528,6 @@
             // clientBindingSource1
             // 
             this.clientBindingSource1.DataSource = typeof(Model.Client);
-            // 
-            // gridColumn11
-            // 
-            this.gridColumn11.Caption = "Id";
-            this.gridColumn11.FieldName = "Id";
-            this.gridColumn11.Name = "gridColumn11";
-            this.gridColumn11.Visible = true;
-            this.gridColumn11.VisibleIndex = 3;
             // 
             // Form1
             // 

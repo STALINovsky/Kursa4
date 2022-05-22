@@ -154,7 +154,7 @@ namespace Kursa4
                     return;
                 }
 
-                var selRow = (EmployeeGrid.MainView).GetRow(selRows[0]) as Book;
+                var selRow = (BookGrid.MainView).GetRow(selRows[0]) as Book;
                 _context.Remove(selRow);
                 _context.SaveChangesAsync();
 
