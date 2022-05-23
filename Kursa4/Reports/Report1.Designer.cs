@@ -114,12 +114,16 @@
             // StartDate
             // 
             this.StartDate.Description = "Start Date";
+            this.StartDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "LocalDateTimeThisMonth()")});
             this.StartDate.Name = "StartDate";
             this.StartDate.Type = typeof(System.DateTime);
             this.StartDate.ValueInfo = "1753-01-01";
             // 
             // EndDate
             // 
+            this.EndDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "LocalDateTimeNextMonth()")});
             this.EndDate.Name = "EndDate";
             this.EndDate.Type = typeof(System.DateTime);
             this.EndDate.ValueInfo = "1753-01-01";
