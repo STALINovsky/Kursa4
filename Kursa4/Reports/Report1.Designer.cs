@@ -138,7 +138,7 @@
             this.BottomMargin.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.pageInfo1,
             this.pageInfo2});
-            this.BottomMargin.HeightF = 23.15725F;
+            this.BottomMargin.HeightF = 23F;
             this.BottomMargin.Name = "BottomMargin";
             // 
             // pageInfo1
@@ -162,6 +162,7 @@
             // 
             this.ReportHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.label1});
+            this.ReportHeader.Expanded = false;
             this.ReportHeader.HeightF = 60F;
             this.ReportHeader.Name = "ReportHeader";
             // 
@@ -436,7 +437,7 @@
             // 
             // xrLabel4
             // 
-            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 13.28224F);
+            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(9.999996F, 13.28224F);
             this.xrLabel4.Name = "xrLabel4";
             this.xrLabel4.SizeF = new System.Drawing.SizeF(125F, 14.88444F);
             this.xrLabel4.StyleName = "GrandTotalCaption1";
@@ -457,20 +458,20 @@
             // 
             // label2
             // 
-            this.label2.LocationFloat = new DevExpress.Utils.PointFloat(8.618689F, 49.49999F);
+            this.label2.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 49.5F);
             this.label2.Name = "label2";
-            this.label2.SizeF = new System.Drawing.SizeF(58.33337F, 14.88444F);
+            this.label2.SizeF = new System.Drawing.SizeF(126.3813F, 14.88445F);
             this.label2.StyleName = "GrandTotalCaption1";
-            this.label2.Text = "COUNT";
+            this.label2.Text = "COUNT OF ORDERS";
             // 
             // label3
             // 
             this.label3.CanGrow = false;
             this.label3.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumCount([Id])")});
-            this.label3.LocationFloat = new DevExpress.Utils.PointFloat(66.95202F, 49.49999F);
+            this.label3.LocationFloat = new DevExpress.Utils.PointFloat(136.3813F, 49.5F);
             this.label3.Name = "label3";
-            this.label3.SizeF = new System.Drawing.SizeF(51.79797F, 14.88444F);
+            this.label3.SizeF = new System.Drawing.SizeF(57.99368F, 14.88446F);
             this.label3.StyleName = "GrandTotalData1";
             this.label3.StylePriority.UseTextAlignment = false;
             xrSummary2.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
