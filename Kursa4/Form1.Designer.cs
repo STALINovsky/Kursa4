@@ -31,18 +31,6 @@
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
-            this.OrderedBooks = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.BookGrid = new DevExpress.XtraGrid.GridControl();
-            this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colName2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colDescription1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colAuthor1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colStockCount1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colId2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridView6 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -72,6 +60,18 @@
             this.colPhoneNumber = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSalary = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.OrderedBooks = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.BookGrid = new DevExpress.XtraGrid.GridControl();
+            this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colName2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDescription1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAuthor1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colStockCount1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colId2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pdfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -159,10 +159,6 @@
             this.EmployeeName = new System.Windows.Forms.TextBox();
             this.TableTabControl = new System.Windows.Forms.TabControl();
             this.clientBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.OrderedBooks)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BookGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OrderGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
@@ -171,6 +167,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrderedBooks)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BookGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.OrdersTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).BeginInit();
@@ -208,104 +208,6 @@
             this.TableTabControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // OrderedBooks
-            // 
-            this.OrderedBooks.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1,
-            this.gridColumn2,
-            this.gridColumn3});
-            this.OrderedBooks.GridControl = this.BookGrid;
-            this.OrderedBooks.Name = "OrderedBooks";
-            // 
-            // gridColumn1
-            // 
-            this.gridColumn1.Caption = "gridColumn1";
-            this.gridColumn1.FieldName = "Name";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
-            // 
-            // gridColumn2
-            // 
-            this.gridColumn2.Caption = "gridColumn2";
-            this.gridColumn2.FieldName = "Description";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
-            // 
-            // gridColumn3
-            // 
-            this.gridColumn3.Caption = "gridColumn3";
-            this.gridColumn3.FieldName = "Author";
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
-            // 
-            // BookGrid
-            // 
-            this.BookGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.BookGrid.DataSource = this.bookBindingSource;
-            this.BookGrid.Location = new System.Drawing.Point(3, 3);
-            this.BookGrid.MainView = this.gridView3;
-            this.BookGrid.Name = "BookGrid";
-            this.BookGrid.Size = new System.Drawing.Size(855, 628);
-            this.BookGrid.TabIndex = 0;
-            this.BookGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView3,
-            this.OrderedBooks});
-            // 
-            // bookBindingSource
-            // 
-            this.bookBindingSource.DataSource = typeof(Model.Book);
-            // 
-            // gridView3
-            // 
-            this.gridView3.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colName2,
-            this.colDescription1,
-            this.colAuthor1,
-            this.colStockCount1,
-            this.colId2});
-            this.gridView3.GridControl = this.BookGrid;
-            this.gridView3.Name = "gridView3";
-            // 
-            // colName2
-            // 
-            this.colName2.FieldName = "Name";
-            this.colName2.Name = "colName2";
-            this.colName2.Visible = true;
-            this.colName2.VisibleIndex = 1;
-            // 
-            // colDescription1
-            // 
-            this.colDescription1.FieldName = "Description";
-            this.colDescription1.Name = "colDescription1";
-            this.colDescription1.Visible = true;
-            this.colDescription1.VisibleIndex = 2;
-            // 
-            // colAuthor1
-            // 
-            this.colAuthor1.FieldName = "Author";
-            this.colAuthor1.Name = "colAuthor1";
-            this.colAuthor1.Visible = true;
-            this.colAuthor1.VisibleIndex = 3;
-            // 
-            // colStockCount1
-            // 
-            this.colStockCount1.FieldName = "StockCount";
-            this.colStockCount1.Name = "colStockCount1";
-            this.colStockCount1.Visible = true;
-            this.colStockCount1.VisibleIndex = 4;
-            // 
-            // colId2
-            // 
-            this.colId2.FieldName = "Id";
-            this.colId2.Name = "colId2";
-            this.colId2.Visible = true;
-            this.colId2.VisibleIndex = 0;
             // 
             // gridView6
             // 
@@ -383,6 +285,8 @@
             this.colEmploee,
             this.colId4});
             this.gridView5.GridControl = this.OrderGrid;
+            this.gridView5.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "Id", null, "")});
             this.gridView5.Name = "gridView5";
             // 
             // colCreateDate
@@ -550,6 +454,104 @@
             this.colId.Name = "colId";
             this.colId.Visible = true;
             this.colId.VisibleIndex = 5;
+            // 
+            // OrderedBooks
+            // 
+            this.OrderedBooks.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.gridColumn2,
+            this.gridColumn3});
+            this.OrderedBooks.GridControl = this.BookGrid;
+            this.OrderedBooks.Name = "OrderedBooks";
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "gridColumn1";
+            this.gridColumn1.FieldName = "Name";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "gridColumn2";
+            this.gridColumn2.FieldName = "Description";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 1;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "gridColumn3";
+            this.gridColumn3.FieldName = "Author";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 2;
+            // 
+            // BookGrid
+            // 
+            this.BookGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BookGrid.DataSource = this.bookBindingSource;
+            this.BookGrid.Location = new System.Drawing.Point(3, 3);
+            this.BookGrid.MainView = this.gridView3;
+            this.BookGrid.Name = "BookGrid";
+            this.BookGrid.Size = new System.Drawing.Size(855, 628);
+            this.BookGrid.TabIndex = 0;
+            this.BookGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView3,
+            this.OrderedBooks});
+            // 
+            // bookBindingSource
+            // 
+            this.bookBindingSource.DataSource = typeof(Model.Book);
+            // 
+            // gridView3
+            // 
+            this.gridView3.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colName2,
+            this.colDescription1,
+            this.colAuthor1,
+            this.colStockCount1,
+            this.colId2});
+            this.gridView3.GridControl = this.BookGrid;
+            this.gridView3.Name = "gridView3";
+            // 
+            // colName2
+            // 
+            this.colName2.FieldName = "Name";
+            this.colName2.Name = "colName2";
+            this.colName2.Visible = true;
+            this.colName2.VisibleIndex = 1;
+            // 
+            // colDescription1
+            // 
+            this.colDescription1.FieldName = "Description";
+            this.colDescription1.Name = "colDescription1";
+            this.colDescription1.Visible = true;
+            this.colDescription1.VisibleIndex = 2;
+            // 
+            // colAuthor1
+            // 
+            this.colAuthor1.FieldName = "Author";
+            this.colAuthor1.Name = "colAuthor1";
+            this.colAuthor1.Visible = true;
+            this.colAuthor1.VisibleIndex = 3;
+            // 
+            // colStockCount1
+            // 
+            this.colStockCount1.FieldName = "StockCount";
+            this.colStockCount1.Name = "colStockCount1";
+            this.colStockCount1.Visible = true;
+            this.colStockCount1.VisibleIndex = 4;
+            // 
+            // colId2
+            // 
+            this.colId2.FieldName = "Id";
+            this.colId2.Name = "colId2";
+            this.colId2.Visible = true;
+            this.colId2.VisibleIndex = 0;
             // 
             // menuStrip1
             // 
@@ -1539,10 +1541,6 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = " ";
-            ((System.ComponentModel.ISupportInitialize)(this.OrderedBooks)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BookGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OrderGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
@@ -1551,6 +1549,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrderedBooks)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BookGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.OrdersTab.ResumeLayout(false);

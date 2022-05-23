@@ -234,7 +234,7 @@ namespace Kursa4
             return index switch
             {
                 0 => (EmployeeGrid, "Employee"),
-                1 => (ClientGrid, "Consumers"),
+                1 => (ClientGrid, "Clients"),
                 2 => (BookGrid, "Books"),
                 3 => (OrderedBooksGrid, "OrderedBooks"),
                 4 => (OrderGrid, "Orders")
@@ -244,31 +244,68 @@ namespace Kursa4
         private void pdfToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var data = GetCurrentGridData();
-            data.Grid.ExportToPdf(data.FileName + ".pdf");
+            var view = data.Grid.MainView as GridView;
+            view.OptionsPrint.PrintDetails = true;
+            view.OptionsPrint.ExpandAllDetails = true;
+            FolderBrowserDialog dialog = new FolderBrowserDialog();
+            dialog.ShowDialog();
+
+            var filepath = dialog.SelectedPath + "\\" + data.FileName + ".pdf";
+
+            data.Grid.MainView.ExportToPdf(filepath);
         }
 
         private void exelToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var data = GetCurrentGridData();
-            data.Grid.ExportToXlsx(data.FileName + ".xslx");
+            var view = data.Grid.MainView as GridView;
+            view.OptionsPrint.PrintDetails = true;
+            view.OptionsPrint.ExpandAllDetails = true;
+            FolderBrowserDialog dialog = new FolderBrowserDialog();
+            dialog.ShowDialog();
+
+            var filepath = dialog.SelectedPath + "\\" + data.FileName + ".xslx";
+            data.Grid.MainView.ExportToXlsx(filepath);
         }
 
         private void wordToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var data = GetCurrentGridData();
-            data.Grid.ExportToDocx(data.FileName + ".docx");
+            var view = data.Grid.MainView as GridView;
+            view.OptionsPrint.PrintDetails = true;
+            view.OptionsPrint.ExpandAllDetails = true;
+            FolderBrowserDialog dialog = new FolderBrowserDialog();
+            dialog.ShowDialog();
+
+            var filepath = dialog.SelectedPath + "\\" + data.FileName + ".docx";
+            data.Grid.MainView.ExportToDocx(filepath);
         }
 
         private void rtfToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var data = GetCurrentGridData();
-            data.Grid.ExportToRtf(data.FileName + ".rtf");
+            var view = data.Grid.MainView as GridView;
+            view.OptionsPrint.PrintDetails = true;
+            view.OptionsPrint.ExpandAllDetails = true;
+            FolderBrowserDialog dialog = new FolderBrowserDialog();
+            dialog.ShowDialog();
+
+            var filepath = dialog.SelectedPath + "\\" + data.FileName + ".rtf";
+            data.Grid.MainView.ExportToRtf(filepath);
         }
 
         private void htmlToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var data = GetCurrentGridData();
-            data.Grid.ExportToPdf(data.FileName + ".pdf");
+            var view = data.Grid.MainView as GridView;
+            view.OptionsPrint.PrintDetails = true;
+            view.OptionsPrint.ExpandAllDetails = true;
+            FolderBrowserDialog dialog = new FolderBrowserDialog();
+            dialog.ShowDialog();
+
+            var filepath = dialog.SelectedPath + "\\" + data.FileName + ".html";
+
+            data.Grid.MainView.ExportToPdf(filepath);
         }
     }
 }
