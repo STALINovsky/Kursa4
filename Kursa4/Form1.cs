@@ -1,6 +1,8 @@
 using DataBaseAccess;
 using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraReports.UI;
+using Kursa4.Reports;
 using Microsoft.EntityFrameworkCore;
 using Model;
 using Model.Enums;
@@ -306,6 +308,13 @@ namespace Kursa4
             var filepath = dialog.SelectedPath + "\\" + data.FileName + ".html";
 
             data.Grid.MainView.ExportToPdf(filepath);
+        }
+
+        private void reportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var report = new Report1();
+            var printTool = new ReportPrintTool(report);
+            printTool.ShowRibbonPreview();
         }
     }
 }

@@ -8,6 +8,10 @@ namespace DataBaseAccess
         public const string ConnectionString = "Server=(localdb)\\mssqllocaldb;Database=Course;Trusted_Connection=True;";
         public BDLabsDbContext() : base()
         {
+            this.Employees.Load();
+            this.Clients.Load();
+            this.Orders.Load();
+            this.OrderedBooks.Load();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

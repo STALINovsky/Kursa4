@@ -159,6 +159,7 @@
             this.EmployeeName = new System.Windows.Forms.TextBox();
             this.TableTabControl = new System.Windows.Forms.TabControl();
             this.clientBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.gridView6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OrderGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
@@ -556,7 +557,8 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exportToolStripMenuItem});
+            this.exportToolStripMenuItem,
+            this.reportToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1230, 24);
@@ -578,35 +580,35 @@
             // pdfToolStripMenuItem
             // 
             this.pdfToolStripMenuItem.Name = "pdfToolStripMenuItem";
-            this.pdfToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.pdfToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pdfToolStripMenuItem.Text = "Pdf";
             this.pdfToolStripMenuItem.Click += new System.EventHandler(this.pdfToolStripMenuItem_Click);
             // 
             // exelToolStripMenuItem
             // 
             this.exelToolStripMenuItem.Name = "exelToolStripMenuItem";
-            this.exelToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.exelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exelToolStripMenuItem.Text = "Exel";
             this.exelToolStripMenuItem.Click += new System.EventHandler(this.exelToolStripMenuItem_Click);
             // 
             // wordToolStripMenuItem
             // 
             this.wordToolStripMenuItem.Name = "wordToolStripMenuItem";
-            this.wordToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.wordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.wordToolStripMenuItem.Text = "Word";
             this.wordToolStripMenuItem.Click += new System.EventHandler(this.wordToolStripMenuItem_Click);
             // 
             // rtfToolStripMenuItem
             // 
             this.rtfToolStripMenuItem.Name = "rtfToolStripMenuItem";
-            this.rtfToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.rtfToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.rtfToolStripMenuItem.Text = "Rtf";
             this.rtfToolStripMenuItem.Click += new System.EventHandler(this.rtfToolStripMenuItem_Click);
             // 
             // htmlToolStripMenuItem
             // 
             this.htmlToolStripMenuItem.Name = "htmlToolStripMenuItem";
-            this.htmlToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.htmlToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.htmlToolStripMenuItem.Text = "Html";
             this.htmlToolStripMenuItem.Click += new System.EventHandler(this.htmlToolStripMenuItem_Click);
             // 
@@ -1531,6 +1533,13 @@
             // 
             this.clientBindingSource1.DataSource = typeof(Model.Client);
             // 
+            // reportToolStripMenuItem
+            // 
+            this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
+            this.reportToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.reportToolStripMenuItem.Text = "Report";
+            this.reportToolStripMenuItem.Click += new System.EventHandler(this.reportToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1748,5 +1757,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
+        private ToolStripMenuItem reportToolStripMenuItem;
     }
 }
