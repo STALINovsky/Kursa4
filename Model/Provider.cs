@@ -7,13 +7,17 @@ namespace Model
     {
         public Provider()
         {
-            ComponentsLogs = new HashSet<ComponentsLog>();
         }
 
         public int Id { get; set; }
         public string ProviderName { get; set; } = null!;
         public string? Description { get; set; }
 
-        public virtual ICollection<ComponentsLog> ComponentsLogs { get; set; }
+        public virtual ICollection<Component> Components { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Id}: {ProviderName}";
+        }
     }
 }

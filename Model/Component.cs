@@ -7,17 +7,16 @@ namespace Model
     {
         public Component()
         {
-            ComponentsLogs = new HashSet<ComponentsLog>();
         }
 
         public int Id { get; set; }
-        public int ManufacturerId { get; set; }
         public string ComponentName { get; set; } = null!;
+        public string Description { get; set; }
         public decimal Price { get; set; }
-        public int Count { get; set; }
-        public bool IsDeleted { get; set; }
+        public int ManufacturerId { get; set; }
+        public int ProviderId { get; set; }
 
+        public Provider Provider { get; set; } = null!;
         public virtual Manufacturer Manufacturer { get; set; } = null!;
-        public virtual ICollection<ComponentsLog> ComponentsLogs { get; set; }
     }
 }

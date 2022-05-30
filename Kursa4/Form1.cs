@@ -2,9 +2,8 @@ using DataBaseAccess;
 using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraReports.UI;
-using Kursa4.Reports;
 using Microsoft.EntityFrameworkCore;
-using Model.Enums;
+using Model;
 
 namespace Kursa4
 {
@@ -22,65 +21,63 @@ namespace Kursa4
             base.OnLoad(e);
             _context = new BDLabsDbContext();
             OrderGrid.DefaultView.DataController.AllowIEnumerableDetails = true;
-            _context.Employees.Load();
-            _context.Clients.Load();
-            _context.Books.Load();
+            _context.Manufacturers.Load();
+            _context.Providers.Load();
+            _context.Components.Load();
+            _context.PurchasedComponents.Load();
             _context.Orders.Load();
-            _context.OrderedBooks.Load();
             SetDataInGridView();
 
-            ConsumerInOrder.DataSource = _context.Clients.Local.ToBindingList();
-            EmployeeInOrder.DataSource = _context.Employees.Local.ToBindingList();
-            OrderStatus.DataSource = Enum.GetValues(typeof(OrderStatus));
-            ConsumerPurchaseProduct.DataSource = _context.Clients.Local.ToBindingList();
-            PurcahseProductOrder.DataSource = _context.Orders.Local.ToBindingList();
-            OrderedBooksSource.DataSource = _context.Books.Local.ToBindingList();
+            ComponentManufacturer.DataSource = _context.Manufacturers.Local.ToBindingList();
+            ComponentProvider.DataSource = _context.Providers.Local.ToBindingList();
+            //EmployeeInOrder.DataSource = _context.Employees.Local.ToBindingList();
+            //OrderStatus.DataSource = Enum.GetValues(typeof(OrderStatus));
+            //ConsumerPurchaseProduct.DataSource = _context.Clients.Local.ToBindingList();
+            //PurcahseProductOrder.DataSource = _context.Orders.Local.ToBindingList();
+            //OrderedBooksSource.DataSource = _context.Books.Local.ToBindingList();
         }
 
         public void SetDataInGridView()
         {
-            EmployeeGrid.DataSource = _context.Employees.Local.ToBindingList();
-            ClientGrid.DataSource = _context.Clients.Local.ToBindingList();
-            BookGrid.DataSource = _context.Books.Local.ToBindingList();
+            ManufacturerGrid.DataSource = _context.Manufacturers.Local.ToBindingList();
+            ProviderGrid.DataSource = _context.Providers.Local.ToBindingList();
+            ComponentGrid.DataSource = _context.Components.Local.ToBindingList();
             OrderGrid.DataSource = _context.Orders.Local.ToBindingList();
-            OrderedBooksGrid.DataSource = _context.OrderedBooks.Local.ToBindingList();
+            PurchasedComponentGrid.DataSource = _context.PurchasedComponents.Local.ToBindingList();
         }
 
-        private void EmployeeCreateButton_Click(object sender, EventArgs e)
+        private void ManufacturerCreateButton_Click(object sender, EventArgs e)
         {
-            Employee employee = new()
+            Manufacturer manufacturer = new()
             {
-                Name = EmployeeName.Text.Trim(),
-                Surname = EmployeeSurname.Text.Trim(),
-                PhoneNumber = EmployeePhone.Text.Trim(),
-                BirthDate = EmployeeBirthDate.SelectionRange.Start,
-                Salary = (int)EmployeeSalary.Value
+                ManufacturerName = ManufacturerName.Text.Trim(),
+                Description = ManufacturerDescription.Text.Trim()
             };
 
-            _context.Employees.Add(employee);
+            _context.Manufacturers.Add(manufacturer);
             _context.SaveChanges();
         }
 
-        private void EmployeeSaveButton_Click(object sender, EventArgs e)
+        private void ManufacturerSaveButton_Click(object sender, EventArgs e)
         {
             _context.SaveChanges();
-            EmployeeGrid.Update();
+            ManufacturerGrid.Update();
 
             MessageBox.Show("Changes was saved successfully");
         }
 
-        private void EmpoyeeDeleteButton_Click(object sender, EventArgs e)
+        private void ManufacturerDeleteButton_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Are you sure you want to delete this record ?", "Delete ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                int[] selRows = ((GridView)EmployeeGrid.MainView).GetSelectedRows();
+                int[] selRows = ((GridView)ManufacturerGrid.MainView).GetSelectedRows();
                 if (selRows.Count() == 0)
                 {
                     MessageBox.Show("Nothing to delete");
                     return;
                 }
 
-                var selRow = (EmployeeGrid.MainView).GetRow(selRows[0]) as Employee;
+                var selRow = (ManufacturerGrid.MainView).GetRow(selRows[0]) as Manufacturer;
                 _context.Remove(selRow);
                 _context.SaveChangesAsync();
 
@@ -88,74 +85,73 @@ namespace Kursa4
             }
         }
 
-        private void ClientCreateButton_Click(object sender, EventArgs e)
+        private void ProviderCreateButton_Click(object sender, EventArgs e)
         {
-            Client consumer = new()
+            Provider provider = new()
             {
-                Name = ConsumerName.Text.Trim(),
-                Surname = ConsumerSurname.Text.Trim(),
-                BirthDate = ConsumerBIrthdate.SelectionRange.Start,
-                PhoneNumber = ConsumerPhoneNumber.Text.Trim(),
+                ProviderName = ProviderName.Text.Trim(),
+                Description = ProviderDescription.Text.Trim(),
             };
 
-            _context.Clients.Add(consumer);
+            _context.Providers.Add(provider);
             _context.SaveChanges();
-            MessageBox.Show("Consumer was added successfully");
+            MessageBox.Show("Provider was added successfully");
         }
 
-        private void ClientDeleteButton_Click(object sender, EventArgs e)
+        private void ProviderDeleteButton_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Are you sure you want to delete this record ?", "Delete ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                int[] selRows = ((GridView)ClientGrid.MainView).GetSelectedRows();
+                int[] selRows = ((GridView)ProviderGrid.MainView).GetSelectedRows();
                 if (selRows.Count() == 0)
                 {
                     MessageBox.Show("Nothing to delete");
                     return;
                 }
 
-                var selRow = (ClientGrid.MainView).GetRow(selRows[0]) as Client;
+                var selRow = (ProviderGrid.MainView).GetRow(selRows[0]) as Provider;
                 _context.Remove(selRow);
                 _context.SaveChangesAsync();
 
-                MessageBox.Show($"Consumer with id = {selRow.Id} was deleted successfully");
+                MessageBox.Show($"Provider with id = {selRow.Id} was deleted successfully");
             }
         }
 
-        private void ClientSaveButton_Click(object sender, EventArgs e)
+        private void ProviderSaveButton_Click(object sender, EventArgs e)
         {
             _context.SaveChanges();
-            ClientGrid.Update();
+            ProviderGrid.Update();
 
             MessageBox.Show("Changes was saved successfully");
         }
 
-        private void CreateBook_Click(object sender, EventArgs e)
+        private void ComponentCreateButton_Click(object sender, EventArgs e)
         {
-            Book book = new()
+            Component component = new()
             {
-                Name = ProductName.Text.Trim(),
-                Description = ProductDescription.Text.Trim(),
-                StockCount = (int)ProductStockCountUpDown.Value,
-                Author = BookAuthor.Text.Trim(),
+                ComponentName = ComponentName.Text.Trim(),
+                Description = ComponentDescription.Text.Trim(),
+                Provider = ComponentProvider.SelectedValue as Provider,
+                Manufacturer = ComponentManufacturer.SelectedValue as Manufacturer,
+                Price = (int)ComponentPrice.Value
             };
 
-            _context.Books.Add(book);
+            _context.Components.Add(component);
             _context.SaveChanges();
         }
 
-        private void DeleteBook_Click(object sender, EventArgs e)
+        private void ComponentDeleteButton_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Are you sure you want to delete this record ?", "Delete ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                int[] selRows = ((GridView)BookGrid.MainView).GetSelectedRows();
+                int[] selRows = ((GridView)ComponentGrid.MainView).GetSelectedRows();
                 if (selRows.Count() == 0)
                 {
                     MessageBox.Show("Nothing to delete");
                     return;
                 }
 
-                var selRow = (BookGrid.MainView).GetRow(selRows[0]) as Book;
+                var selRow = (ComponentGrid.MainView).GetRow(selRows[0]) as Component;
                 _context.Remove(selRow);
                 _context.SaveChangesAsync();
 
@@ -163,157 +159,160 @@ namespace Kursa4
             }
         }
 
-        private void SaveBook_Click(object sender, EventArgs e)
+        private void ComponentSaveButton_Click(object sender, EventArgs e)
         {
             _context.SaveChanges();
-            BookGrid.Update();
+            ComponentGrid.Update();
 
             MessageBox.Show("Changes was saved successfully");
         }
 
         private void SaveOrder_Click(object sender, EventArgs e)
         {
-            _context.SaveChanges();
-            BookGrid.Update();
+            //_context.SaveChanges();
+            //BookGrid.Update();
 
-            MessageBox.Show("Changes was saved successfully");
+            //MessageBox.Show("Changes was saved successfully");
         }
 
         private void CreateOrder_Click(object sender, EventArgs e)
         {
-            Order order = new()
-            {
-                Client = (Client)ConsumerInOrder.SelectedValue,
-                CreateDate = DateTime.Now,
-                Emploee = (Employee)EmployeeInOrder.SelectedValue,
-                OrderStatus = (OrderStatus)OrderStatus.SelectedValue,
-            };
+            //Order order = new()
+            //{
+            //    Client = (Client)ConsumerInOrder.SelectedValue,
+            //    CreateDate = DateTime.Now,
+            //    Emploee = (Employee)EmployeeInOrder.SelectedValue,
+            //    OrderStatus = (OrderStatus)OrderStatus.SelectedValue,
+            //};
 
-            _context.Orders.Add(order);
-            _context.SaveChanges();
+            //_context.Orders.Add(order);
+            //_context.SaveChanges();
         }
 
 
         private void CreatePurchaseProduct_Click(object sender, EventArgs e)
         {
-            OrderedBook purchaseProduct = new()
-            {
-                Name = ((Book)OrderedBooksSource.SelectedValue).Name,
-                Description = ((Book)OrderedBooksSource.SelectedValue).Description,
-                Author = ((Book)OrderedBooksSource.SelectedValue).Author,
-                Order = (Order)PurcahseProductOrder.SelectedValue,
-            };
-            OrderGrid.MainView.RefreshData();
-            _context.OrderedBooks.Add(purchaseProduct);
-            _context.SaveChanges();
+            //OrderedBook purchaseProduct = new()
+            //{
+            //    Name = ((Book)OrderedBooksSource.SelectedValue).Name,
+            //    Description = ((Book)OrderedBooksSource.SelectedValue).Description,
+            //    Author = ((Book)OrderedBooksSource.SelectedValue).Author,
+            //    Order = (Order)PurcahseProductOrder.SelectedValue,
+            //};
+            //OrderGrid.MainView.RefreshData();
+            //_context.OrderedBooks.Add(purchaseProduct);
+            //_context.SaveChanges();
         }
 
         private void DeletePurchaseProduct_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure you want to delete this record ?", "Delete ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                int[] selRows = ((GridView)OrderedBooksGrid.MainView).GetSelectedRows();
-                if (selRows.Count() == 0)
-                {
-                    MessageBox.Show("Nothing to delete");
-                    return;
-                }
+            //if (MessageBox.Show("Are you sure you want to delete this record ?", "Delete ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            //{
+            //    int[] selRows = ((GridView)OrderedBooksGrid.MainView).GetSelectedRows();
+            //    if (selRows.Count() == 0)
+            //    {
+            //        MessageBox.Show("Nothing to delete");
+            //        return;
+            //    }
 
-                var selRow = (OrderedBooksGrid.MainView).GetRow(selRows[0]) as OrderedBook;
-                _context.Remove(selRow);
-                _context.SaveChangesAsync();
+            //    var selRow = (OrderedBooksGrid.MainView).GetRow(selRows[0]) as OrderedBook;
+            //    _context.Remove(selRow);
+            //    _context.SaveChangesAsync();
 
-                MessageBox.Show($"Product with id = {selRow.Id} was deleted successfully");
-            }
+            //    MessageBox.Show($"Product with id = {selRow.Id} was deleted successfully");
+            //}
 
-            OrderGrid.MainView.RefreshData();
+            //OrderGrid.MainView.RefreshData();
         }
 
         private (GridControl Grid, string FileName) GetCurrentGridData()
         {
-            var index = TableTabControl.SelectedIndex;
-            return index switch
-            {
-                0 => (EmployeeGrid, "Employee"),
-                1 => (ClientGrid, "Clients"),
-                2 => (BookGrid, "Books"),
-                3 => (OrderedBooksGrid, "OrderedBooks"),
-                4 => (OrderGrid, "Orders")
-            };
+            //var index = TableTabControl.SelectedIndex;
+            //return index switch
+            //{
+            //    0 => (EmployeeGrid, "Employee"),
+            //    1 => (ClientGrid, "Clients"),
+            //    2 => (BookGrid, "Books"),
+            //    3 => (OrderedBooksGrid, "OrderedBooks"),
+            //    4 => (OrderGrid, "Orders")
+            //};
+            return default;
         }
 
         private void pdfToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var data = GetCurrentGridData();
-            var view = data.Grid.MainView as GridView;
-            view.OptionsPrint.PrintDetails = true;
-            view.OptionsPrint.ExpandAllDetails = true;
-            FolderBrowserDialog dialog = new FolderBrowserDialog();
-            dialog.ShowDialog();
+            //var data = GetCurrentGridData();
+            //var view = data.Grid.MainView as GridView;
+            //view.OptionsPrint.PrintDetails = true;
+            //view.OptionsPrint.ExpandAllDetails = true;
+            //FolderBrowserDialog dialog = new FolderBrowserDialog();
+            //dialog.ShowDialog();
 
-            var filepath = dialog.SelectedPath + "\\" + data.FileName + ".pdf";
+            //var filepath = dialog.SelectedPath + "\\" + data.FileName + ".pdf";
 
-            data.Grid.MainView.ExportToPdf(filepath);
+            //data.Grid.MainView.ExportToPdf(filepath);
         }
 
         private void exelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var data = GetCurrentGridData();
-            var view = data.Grid.MainView as GridView;
-            view.OptionsPrint.PrintDetails = true;
-            view.OptionsPrint.ExpandAllDetails = true;
-            FolderBrowserDialog dialog = new FolderBrowserDialog();
-            dialog.ShowDialog();
+            //var data = GetCurrentGridData();
+            //var view = data.Grid.MainView as GridView;
+            //view.OptionsPrint.PrintDetails = true;
+            //view.OptionsPrint.ExpandAllDetails = true;
+            //FolderBrowserDialog dialog = new FolderBrowserDialog();
+            //dialog.ShowDialog();
 
-            var filepath = dialog.SelectedPath + "\\" + data.FileName + ".xslx";
-            data.Grid.MainView.ExportToXlsx(filepath);
+            //var filepath = dialog.SelectedPath + "\\" + data.FileName + ".xslx";
+            //data.Grid.MainView.ExportToXlsx(filepath);
         }
 
         private void wordToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var data = GetCurrentGridData();
-            var view = data.Grid.MainView as GridView;
-            view.OptionsPrint.PrintDetails = true;
-            view.OptionsPrint.ExpandAllDetails = true;
-            FolderBrowserDialog dialog = new FolderBrowserDialog();
-            dialog.ShowDialog();
+            //var data = GetCurrentGridData();
+            //var view = data.Grid.MainView as GridView;
+            //view.OptionsPrint.PrintDetails = true;
+            //view.OptionsPrint.ExpandAllDetails = true;
+            //FolderBrowserDialog dialog = new FolderBrowserDialog();
+            //dialog.ShowDialog();
 
-            var filepath = dialog.SelectedPath + "\\" + data.FileName + ".docx";
-            data.Grid.MainView.ExportToDocx(filepath);
+            //var filepath = dialog.SelectedPath + "\\" + data.FileName + ".docx";
+            //data.Grid.MainView.ExportToDocx(filepath);
         }
 
         private void rtfToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var data = GetCurrentGridData();
-            var view = data.Grid.MainView as GridView;
-            view.OptionsPrint.PrintDetails = true;
-            view.OptionsPrint.ExpandAllDetails = true;
-            FolderBrowserDialog dialog = new FolderBrowserDialog();
-            dialog.ShowDialog();
+            //var data = GetCurrentGridData();
+            //var view = data.Grid.MainView as GridView;
+            //view.OptionsPrint.PrintDetails = true;
+            //view.OptionsPrint.ExpandAllDetails = true;
+            //FolderBrowserDialog dialog = new FolderBrowserDialog();
+            //dialog.ShowDialog();
 
-            var filepath = dialog.SelectedPath + "\\" + data.FileName + ".rtf";
-            data.Grid.MainView.ExportToRtf(filepath);
+            //var filepath = dialog.SelectedPath + "\\" + data.FileName + ".rtf";
+            //data.Grid.MainView.ExportToRtf(filepath);
         }
 
         private void htmlToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var data = GetCurrentGridData();
-            var view = data.Grid.MainView as GridView;
-            view.OptionsPrint.PrintDetails = true;
-            view.OptionsPrint.ExpandAllDetails = true;
-            FolderBrowserDialog dialog = new FolderBrowserDialog();
-            dialog.ShowDialog();
+            //var data = GetCurrentGridData();
+            //var view = data.Grid.MainView as GridView;
+            //view.OptionsPrint.PrintDetails = true;
+            //view.OptionsPrint.ExpandAllDetails = true;
+            //FolderBrowserDialog dialog = new FolderBrowserDialog();
+            //dialog.ShowDialog();
 
-            var filepath = dialog.SelectedPath + "\\" + data.FileName + ".html";
+            //var filepath = dialog.SelectedPath + "\\" + data.FileName + ".html";
 
-            data.Grid.MainView.ExportToPdf(filepath);
+            //data.Grid.MainView.ExportToPdf(filepath);
         }
 
         private void reportToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var report = new Report1();
-            var printTool = new ReportPrintTool(report);
-            printTool.ShowRibbonPreview();
+            //var report = new Report1();
+            //var printTool = new ReportPrintTool(report);
+            //printTool.ShowRibbonPreview();
         }
+
+
     }
 }
