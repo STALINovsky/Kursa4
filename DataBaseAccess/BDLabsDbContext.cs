@@ -10,6 +10,11 @@ namespace DataBaseAccess
     {
         public BDLabsDbContext()
         {
+            Manufacturers.Load();
+            Providers.Load();
+            Components.Load();
+            PurchasedComponents.Load();
+            Orders.Load();
         }
 
         public BDLabsDbContext(DbContextOptions<BDLabsDbContext> options)

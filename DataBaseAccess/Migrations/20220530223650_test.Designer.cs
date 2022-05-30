@@ -4,6 +4,7 @@ using DataBaseAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataBaseAccess.Migrations
 {
     [DbContext(typeof(BDLabsDbContext))]
-    partial class BDLabsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220530223650_test")]
+    partial class test
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -141,7 +143,7 @@ namespace DataBaseAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("OrderId")
+                    b.Property<int?>("OrderId")
                         .HasColumnType("int");
 
                     b.Property<decimal>("Price")
@@ -179,13 +181,9 @@ namespace DataBaseAccess.Migrations
 
             modelBuilder.Entity("Model.PurchasedComponent", b =>
                 {
-                    b.HasOne("Model.Order", "Order")
+                    b.HasOne("Model.Order", null)
                         .WithMany("PurchasedComponents")
-                        .HasForeignKey("OrderId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Order");
+                        .HasForeignKey("OrderId");
                 });
 
             modelBuilder.Entity("Model.Manufacturer", b =>

@@ -4,6 +4,7 @@ using DataBaseAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataBaseAccess.Migrations
 {
     [DbContext(typeof(BDLabsDbContext))]
-    partial class BDLabsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220530220553_ManufacturerId")]
+    partial class ManufacturerId
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -141,9 +143,6 @@ namespace DataBaseAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("OrderId")
-                        .HasColumnType("int");
-
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
@@ -152,8 +151,6 @@ namespace DataBaseAccess.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("OrderId");
 
                     b.ToTable("PurchasedComponents");
                 });
@@ -177,25 +174,9 @@ namespace DataBaseAccess.Migrations
                     b.Navigation("Provider");
                 });
 
-            modelBuilder.Entity("Model.PurchasedComponent", b =>
-                {
-                    b.HasOne("Model.Order", "Order")
-                        .WithMany("PurchasedComponents")
-                        .HasForeignKey("OrderId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Order");
-                });
-
             modelBuilder.Entity("Model.Manufacturer", b =>
                 {
                     b.Navigation("Components");
-                });
-
-            modelBuilder.Entity("Model.Order", b =>
-                {
-                    b.Navigation("PurchasedComponents");
                 });
 
             modelBuilder.Entity("Model.Provider", b =>

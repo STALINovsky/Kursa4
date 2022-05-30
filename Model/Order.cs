@@ -14,5 +14,12 @@ namespace Model
         public DateTime DeliveryDate { get; set; }
 
         public OrderStatus OrderStatus { get; set; }
+
+        public virtual ICollection<PurchasedComponent> PurchasedComponents { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Id}: {CreateDate}";
+        }
     }   
 }

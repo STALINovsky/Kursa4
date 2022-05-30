@@ -18,5 +18,10 @@ namespace Model
 
         public Provider Provider { get; set; } = null!;
         public virtual Manufacturer Manufacturer { get; set; } = null!;
+
+        public override string ToString()
+        {
+            return $"{Id}: {ComponentName}";
+        }
     }
 }

@@ -48,12 +48,7 @@
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.OrderGrid = new DevExpress.XtraGrid.GridControl();
-            this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colId4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCreateDate = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colDeliveryDate = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colOrderStatus = new DevExpress.XtraGrid.Columns.GridColumn();
             this.OrderedBooks = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -80,25 +75,25 @@
             this.CreateOrder = new System.Windows.Forms.Button();
             this.PurchasedComponentTab = new System.Windows.Forms.TabPage();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
+            this.PurchasedComponentCount = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.OrderedBooksSource = new System.Windows.Forms.ComboBox();
+            this.PurchasedComponentSource = new System.Windows.Forms.ComboBox();
             this.SourceProduct = new System.Windows.Forms.Label();
-            this.PurcahseProductOrder = new System.Windows.Forms.ComboBox();
+            this.PurchasedComponentOrder = new System.Windows.Forms.ComboBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.SavePurchaseProduct = new System.Windows.Forms.Button();
-            this.DeletePurchaseProduct = new System.Windows.Forms.Button();
-            this.CreatePurchaseProduct = new System.Windows.Forms.Button();
+            this.PurchasedComponentSaveButton = new System.Windows.Forms.Button();
+            this.PurchasedComponentDeleteButton = new System.Windows.Forms.Button();
+            this.PurchasedComponentCreateButton = new System.Windows.Forms.Button();
             this.PurchasedComponentGrid = new DevExpress.XtraGrid.GridControl();
             this.purchasedComponentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colManufacturerId1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colComponentName1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDescription2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPrice1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colManufacturerName1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colProviderName1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colProviderName = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -139,6 +134,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.ManufacturerName = new System.Windows.Forms.TextBox();
             this.TableTabControl = new System.Windows.Forms.TabControl();
+            this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.colId4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCreateDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDeliveryDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colOrderStatus = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridView8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ManufacturerGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.manufacturerBindingSource)).BeginInit();
@@ -146,7 +146,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OrderGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OrderedBooks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ComponentGrid)).BeginInit();
@@ -163,6 +162,7 @@
             this.splitContainer4.Panel1.SuspendLayout();
             this.splitContainer4.Panel2.SuspendLayout();
             this.splitContainer4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PurchasedComponentCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PurchasedComponentGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchasedComponentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
@@ -186,6 +186,7 @@
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.TableTabControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // gridView8
@@ -353,34 +354,6 @@
             this.gridView5.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "Id", null, "")});
             this.gridView5.Name = "gridView5";
-            // 
-            // colId4
-            // 
-            this.colId4.FieldName = "Id";
-            this.colId4.Name = "colId4";
-            this.colId4.Visible = true;
-            this.colId4.VisibleIndex = 0;
-            // 
-            // colCreateDate
-            // 
-            this.colCreateDate.FieldName = "CreateDate";
-            this.colCreateDate.Name = "colCreateDate";
-            this.colCreateDate.Visible = true;
-            this.colCreateDate.VisibleIndex = 1;
-            // 
-            // colDeliveryDate
-            // 
-            this.colDeliveryDate.FieldName = "DeliveryDate";
-            this.colDeliveryDate.Name = "colDeliveryDate";
-            this.colDeliveryDate.Visible = true;
-            this.colDeliveryDate.VisibleIndex = 2;
-            // 
-            // colOrderStatus
-            // 
-            this.colOrderStatus.FieldName = "OrderStatus";
-            this.colOrderStatus.Name = "colOrderStatus";
-            this.colOrderStatus.Visible = true;
-            this.colOrderStatus.VisibleIndex = 3;
             // 
             // OrderedBooks
             // 
@@ -620,15 +593,15 @@
             // 
             // splitContainer4.Panel1
             // 
+            this.splitContainer4.Panel1.Controls.Add(this.PurchasedComponentCount);
             this.splitContainer4.Panel1.Controls.Add(this.label3);
-            this.splitContainer4.Panel1.Controls.Add(this.comboBox1);
-            this.splitContainer4.Panel1.Controls.Add(this.OrderedBooksSource);
+            this.splitContainer4.Panel1.Controls.Add(this.PurchasedComponentSource);
             this.splitContainer4.Panel1.Controls.Add(this.SourceProduct);
-            this.splitContainer4.Panel1.Controls.Add(this.PurcahseProductOrder);
+            this.splitContainer4.Panel1.Controls.Add(this.PurchasedComponentOrder);
             this.splitContainer4.Panel1.Controls.Add(this.label23);
-            this.splitContainer4.Panel1.Controls.Add(this.SavePurchaseProduct);
-            this.splitContainer4.Panel1.Controls.Add(this.DeletePurchaseProduct);
-            this.splitContainer4.Panel1.Controls.Add(this.CreatePurchaseProduct);
+            this.splitContainer4.Panel1.Controls.Add(this.PurchasedComponentSaveButton);
+            this.splitContainer4.Panel1.Controls.Add(this.PurchasedComponentDeleteButton);
+            this.splitContainer4.Panel1.Controls.Add(this.PurchasedComponentCreateButton);
             // 
             // splitContainer4.Panel2
             // 
@@ -636,6 +609,23 @@
             this.splitContainer4.Size = new System.Drawing.Size(1198, 634);
             this.splitContainer4.SplitterDistance = 344;
             this.splitContainer4.TabIndex = 5;
+            // 
+            // PurchasedComponentCount
+            // 
+            this.PurchasedComponentCount.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.PurchasedComponentCount.Location = new System.Drawing.Point(52, 68);
+            this.PurchasedComponentCount.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.PurchasedComponentCount.Name = "PurchasedComponentCount";
+            this.PurchasedComponentCount.Size = new System.Drawing.Size(287, 23);
+            this.PurchasedComponentCount.TabIndex = 32;
             // 
             // label3
             // 
@@ -649,27 +639,16 @@
             this.label3.TabIndex = 31;
             this.label3.Text = "Count";
             // 
-            // comboBox1
+            // PurchasedComponentSource
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.PurchasedComponentSource.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(52, 65);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(289, 23);
-            this.comboBox1.TabIndex = 30;
-            // 
-            // OrderedBooksSource
-            // 
-            this.OrderedBooksSource.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.OrderedBooksSource.FormattingEnabled = true;
-            this.OrderedBooksSource.Location = new System.Drawing.Point(121, 7);
-            this.OrderedBooksSource.Name = "OrderedBooksSource";
-            this.OrderedBooksSource.Size = new System.Drawing.Size(220, 23);
-            this.OrderedBooksSource.TabIndex = 29;
+            this.PurchasedComponentSource.FormattingEnabled = true;
+            this.PurchasedComponentSource.Location = new System.Drawing.Point(121, 7);
+            this.PurchasedComponentSource.Name = "PurchasedComponentSource";
+            this.PurchasedComponentSource.Size = new System.Drawing.Size(220, 23);
+            this.PurchasedComponentSource.TabIndex = 29;
             // 
             // SourceProduct
             // 
@@ -683,16 +662,16 @@
             this.SourceProduct.TabIndex = 28;
             this.SourceProduct.Text = "Source Component";
             // 
-            // PurcahseProductOrder
+            // PurchasedComponentOrder
             // 
-            this.PurcahseProductOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.PurchasedComponentOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PurcahseProductOrder.FormattingEnabled = true;
-            this.PurcahseProductOrder.Location = new System.Drawing.Point(52, 36);
-            this.PurcahseProductOrder.Name = "PurcahseProductOrder";
-            this.PurcahseProductOrder.Size = new System.Drawing.Size(289, 23);
-            this.PurcahseProductOrder.TabIndex = 27;
+            this.PurchasedComponentOrder.FormattingEnabled = true;
+            this.PurchasedComponentOrder.Location = new System.Drawing.Point(52, 36);
+            this.PurchasedComponentOrder.Name = "PurchasedComponentOrder";
+            this.PurchasedComponentOrder.Size = new System.Drawing.Size(289, 23);
+            this.PurchasedComponentOrder.TabIndex = 27;
             // 
             // label23
             // 
@@ -706,34 +685,35 @@
             this.label23.TabIndex = 26;
             this.label23.Text = "Order";
             // 
-            // SavePurchaseProduct
+            // PurchasedComponentSaveButton
             // 
-            this.SavePurchaseProduct.Location = new System.Drawing.Point(124, 608);
-            this.SavePurchaseProduct.Name = "SavePurchaseProduct";
-            this.SavePurchaseProduct.Size = new System.Drawing.Size(75, 23);
-            this.SavePurchaseProduct.TabIndex = 11;
-            this.SavePurchaseProduct.Text = "Save";
-            this.SavePurchaseProduct.UseVisualStyleBackColor = true;
+            this.PurchasedComponentSaveButton.Location = new System.Drawing.Point(124, 608);
+            this.PurchasedComponentSaveButton.Name = "PurchasedComponentSaveButton";
+            this.PurchasedComponentSaveButton.Size = new System.Drawing.Size(75, 23);
+            this.PurchasedComponentSaveButton.TabIndex = 11;
+            this.PurchasedComponentSaveButton.Text = "Save";
+            this.PurchasedComponentSaveButton.UseVisualStyleBackColor = true;
+            this.PurchasedComponentSaveButton.Click += new System.EventHandler(this.PurchasedComponentSaveButton_Click);
             // 
-            // DeletePurchaseProduct
+            // PurchasedComponentDeleteButton
             // 
-            this.DeletePurchaseProduct.Location = new System.Drawing.Point(266, 608);
-            this.DeletePurchaseProduct.Name = "DeletePurchaseProduct";
-            this.DeletePurchaseProduct.Size = new System.Drawing.Size(75, 23);
-            this.DeletePurchaseProduct.TabIndex = 10;
-            this.DeletePurchaseProduct.Text = "Delete";
-            this.DeletePurchaseProduct.UseVisualStyleBackColor = true;
-            this.DeletePurchaseProduct.Click += new System.EventHandler(this.DeletePurchaseProduct_Click);
+            this.PurchasedComponentDeleteButton.Location = new System.Drawing.Point(266, 608);
+            this.PurchasedComponentDeleteButton.Name = "PurchasedComponentDeleteButton";
+            this.PurchasedComponentDeleteButton.Size = new System.Drawing.Size(75, 23);
+            this.PurchasedComponentDeleteButton.TabIndex = 10;
+            this.PurchasedComponentDeleteButton.Text = "Delete";
+            this.PurchasedComponentDeleteButton.UseVisualStyleBackColor = true;
+            this.PurchasedComponentDeleteButton.Click += new System.EventHandler(this.PurchasedComponentDeleteButton_Click);
             // 
-            // CreatePurchaseProduct
+            // PurchasedComponentCreateButton
             // 
-            this.CreatePurchaseProduct.Location = new System.Drawing.Point(5, 608);
-            this.CreatePurchaseProduct.Name = "CreatePurchaseProduct";
-            this.CreatePurchaseProduct.Size = new System.Drawing.Size(75, 23);
-            this.CreatePurchaseProduct.TabIndex = 9;
-            this.CreatePurchaseProduct.Text = "Create";
-            this.CreatePurchaseProduct.UseVisualStyleBackColor = true;
-            this.CreatePurchaseProduct.Click += new System.EventHandler(this.CreatePurchaseProduct_Click);
+            this.PurchasedComponentCreateButton.Location = new System.Drawing.Point(5, 608);
+            this.PurchasedComponentCreateButton.Name = "PurchasedComponentCreateButton";
+            this.PurchasedComponentCreateButton.Size = new System.Drawing.Size(75, 23);
+            this.PurchasedComponentCreateButton.TabIndex = 9;
+            this.PurchasedComponentCreateButton.Text = "Create";
+            this.PurchasedComponentCreateButton.UseVisualStyleBackColor = true;
+            this.PurchasedComponentCreateButton.Click += new System.EventHandler(this.PurchasedComponentCreateButton_Click);
             // 
             // PurchasedComponentGrid
             // 
@@ -749,16 +729,20 @@
             this.PurchasedComponentGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView4});
             // 
+            // purchasedComponentBindingSource
+            // 
+            this.purchasedComponentBindingSource.DataSource = typeof(Model.PurchasedComponent);
+            // 
             // gridView4
             // 
             this.gridView4.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colId3,
-            this.colManufacturerId1,
             this.colComponentName1,
             this.colDescription2,
             this.colPrice1,
             this.colCount,
-            this.colManufacturerName1});
+            this.colManufacturerName1,
+            this.colProviderName1});
             this.gridView4.GridControl = this.PurchasedComponentGrid;
             this.gridView4.Name = "gridView4";
             // 
@@ -769,47 +753,47 @@
             this.colId3.Visible = true;
             this.colId3.VisibleIndex = 0;
             // 
-            // colManufacturerId1
-            // 
-            this.colManufacturerId1.FieldName = "ManufacturerId";
-            this.colManufacturerId1.Name = "colManufacturerId1";
-            this.colManufacturerId1.Visible = true;
-            this.colManufacturerId1.VisibleIndex = 1;
-            // 
             // colComponentName1
             // 
             this.colComponentName1.FieldName = "ComponentName";
             this.colComponentName1.Name = "colComponentName1";
             this.colComponentName1.Visible = true;
-            this.colComponentName1.VisibleIndex = 2;
+            this.colComponentName1.VisibleIndex = 1;
             // 
             // colDescription2
             // 
             this.colDescription2.FieldName = "Description";
             this.colDescription2.Name = "colDescription2";
             this.colDescription2.Visible = true;
-            this.colDescription2.VisibleIndex = 3;
+            this.colDescription2.VisibleIndex = 2;
             // 
             // colPrice1
             // 
             this.colPrice1.FieldName = "Price";
             this.colPrice1.Name = "colPrice1";
             this.colPrice1.Visible = true;
-            this.colPrice1.VisibleIndex = 4;
+            this.colPrice1.VisibleIndex = 3;
             // 
             // colCount
             // 
             this.colCount.FieldName = "Count";
             this.colCount.Name = "colCount";
             this.colCount.Visible = true;
-            this.colCount.VisibleIndex = 5;
+            this.colCount.VisibleIndex = 4;
             // 
             // colManufacturerName1
             // 
             this.colManufacturerName1.FieldName = "ManufacturerName";
             this.colManufacturerName1.Name = "colManufacturerName1";
             this.colManufacturerName1.Visible = true;
-            this.colManufacturerName1.VisibleIndex = 6;
+            this.colManufacturerName1.VisibleIndex = 5;
+            // 
+            // colProviderName1
+            // 
+            this.colProviderName1.FieldName = "ProviderName";
+            this.colProviderName1.Name = "colProviderName1";
+            this.colProviderName1.Visible = true;
+            this.colProviderName1.VisibleIndex = 6;
             // 
             // gridView2
             // 
@@ -1278,6 +1262,38 @@
             this.TableTabControl.Size = new System.Drawing.Size(1206, 662);
             this.TableTabControl.TabIndex = 0;
             // 
+            // orderBindingSource
+            // 
+            this.orderBindingSource.DataSource = typeof(Model.Order);
+            // 
+            // colId4
+            // 
+            this.colId4.FieldName = "Id";
+            this.colId4.Name = "colId4";
+            this.colId4.Visible = true;
+            this.colId4.VisibleIndex = 0;
+            // 
+            // colCreateDate
+            // 
+            this.colCreateDate.FieldName = "CreateDate";
+            this.colCreateDate.Name = "colCreateDate";
+            this.colCreateDate.Visible = true;
+            this.colCreateDate.VisibleIndex = 1;
+            // 
+            // colDeliveryDate
+            // 
+            this.colDeliveryDate.FieldName = "DeliveryDate";
+            this.colDeliveryDate.Name = "colDeliveryDate";
+            this.colDeliveryDate.Visible = true;
+            this.colDeliveryDate.VisibleIndex = 2;
+            // 
+            // colOrderStatus
+            // 
+            this.colOrderStatus.FieldName = "OrderStatus";
+            this.colOrderStatus.Name = "colOrderStatus";
+            this.colOrderStatus.Visible = true;
+            this.colOrderStatus.VisibleIndex = 3;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1295,7 +1311,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OrderGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OrderedBooks)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ComponentGrid)).EndInit();
@@ -1314,6 +1329,7 @@
             this.splitContainer4.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
             this.splitContainer4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PurchasedComponentCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PurchasedComponentGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchasedComponentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
@@ -1340,6 +1356,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.TableTabControl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1382,13 +1399,13 @@
         private DevExpress.XtraGrid.GridControl ManufacturerGrid;
         private TabPage PurchasedComponentTab;
         private SplitContainer splitContainer4;
-        private ComboBox OrderedBooksSource;
+        private ComboBox PurchasedComponentSource;
         private Label SourceProduct;
-        private ComboBox PurcahseProductOrder;
+        private ComboBox PurchasedComponentOrder;
         private Label label23;
-        private Button SavePurchaseProduct;
-        private Button DeletePurchaseProduct;
-        private Button CreatePurchaseProduct;
+        private Button PurchasedComponentSaveButton;
+        private Button PurchasedComponentDeleteButton;
+        private Button PurchasedComponentCreateButton;
         private DevExpress.XtraGrid.GridControl PurchasedComponentGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
@@ -1447,24 +1464,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn colDescription1;
         private BindingSource providerBindingSource;
         private BindingSource componentBindingSource;
-        private BindingSource purchasedComponentBindingSource;
-        private DevExpress.XtraGrid.Columns.GridColumn colId3;
-        private DevExpress.XtraGrid.Columns.GridColumn colManufacturerId1;
-        private DevExpress.XtraGrid.Columns.GridColumn colComponentName1;
-        private DevExpress.XtraGrid.Columns.GridColumn colDescription2;
-        private DevExpress.XtraGrid.Columns.GridColumn colPrice1;
-        private DevExpress.XtraGrid.Columns.GridColumn colCount;
-        private DevExpress.XtraGrid.Columns.GridColumn colManufacturerName1;
-        private BindingSource orderBindingSource;
-        private DevExpress.XtraGrid.Columns.GridColumn colId4;
-        private DevExpress.XtraGrid.Columns.GridColumn colCreateDate;
-        private DevExpress.XtraGrid.Columns.GridColumn colDeliveryDate;
-        private DevExpress.XtraGrid.Columns.GridColumn colOrderStatus;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView8;
         private Label label2;
         private TextBox ManufacturerDescription;
         private Label label3;
-        private ComboBox comboBox1;
         private Label label5;
         private Label label4;
         private NumericUpDown ComponentPrice;
@@ -1474,5 +1477,19 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
         private Label label6;
         private TextBox ComponentDescription;
+        private NumericUpDown PurchasedComponentCount;
+        private BindingSource purchasedComponentBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colId3;
+        private DevExpress.XtraGrid.Columns.GridColumn colComponentName1;
+        private DevExpress.XtraGrid.Columns.GridColumn colDescription2;
+        private DevExpress.XtraGrid.Columns.GridColumn colPrice1;
+        private DevExpress.XtraGrid.Columns.GridColumn colCount;
+        private DevExpress.XtraGrid.Columns.GridColumn colManufacturerName1;
+        private DevExpress.XtraGrid.Columns.GridColumn colProviderName1;
+        private BindingSource orderBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colId4;
+        private DevExpress.XtraGrid.Columns.GridColumn colCreateDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colDeliveryDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colOrderStatus;
     }
 }
