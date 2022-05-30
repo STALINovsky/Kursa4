@@ -4,7 +4,6 @@ using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraReports.UI;
 using Kursa4.Reports;
 using Microsoft.EntityFrameworkCore;
-using Model;
 using Model.Enums;
 
 namespace Kursa4

@@ -79,6 +79,7 @@
             this.wordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rtfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.htmlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.OrdersTab = new System.Windows.Forms.TabPage();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
             this.EmployeeInOrder = new System.Windows.Forms.ComboBox();
@@ -159,7 +160,6 @@
             this.EmployeeName = new System.Windows.Forms.TextBox();
             this.TableTabControl = new System.Windows.Forms.TabControl();
             this.clientBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.gridView6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OrderGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
@@ -270,10 +270,6 @@
             this.OrderGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView5,
             this.gridView6});
-            // 
-            // orderBindingSource
-            // 
-            this.orderBindingSource.DataSource = typeof(Model.Order);
             // 
             // gridView5
             // 
@@ -398,10 +394,6 @@
             this.gridView1,
             this.gridView7});
             // 
-            // employeeBindingSource
-            // 
-            this.employeeBindingSource.DataSource = typeof(Model.Employee);
-            // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
@@ -504,10 +496,6 @@
             this.gridView3,
             this.OrderedBooks});
             // 
-            // bookBindingSource
-            // 
-            this.bookBindingSource.DataSource = typeof(Model.Book);
-            // 
             // gridView3
             // 
             this.gridView3.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
@@ -580,37 +568,44 @@
             // pdfToolStripMenuItem
             // 
             this.pdfToolStripMenuItem.Name = "pdfToolStripMenuItem";
-            this.pdfToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pdfToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.pdfToolStripMenuItem.Text = "Pdf";
             this.pdfToolStripMenuItem.Click += new System.EventHandler(this.pdfToolStripMenuItem_Click);
             // 
             // exelToolStripMenuItem
             // 
             this.exelToolStripMenuItem.Name = "exelToolStripMenuItem";
-            this.exelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exelToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.exelToolStripMenuItem.Text = "Exel";
             this.exelToolStripMenuItem.Click += new System.EventHandler(this.exelToolStripMenuItem_Click);
             // 
             // wordToolStripMenuItem
             // 
             this.wordToolStripMenuItem.Name = "wordToolStripMenuItem";
-            this.wordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.wordToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.wordToolStripMenuItem.Text = "Word";
             this.wordToolStripMenuItem.Click += new System.EventHandler(this.wordToolStripMenuItem_Click);
             // 
             // rtfToolStripMenuItem
             // 
             this.rtfToolStripMenuItem.Name = "rtfToolStripMenuItem";
-            this.rtfToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.rtfToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.rtfToolStripMenuItem.Text = "Rtf";
             this.rtfToolStripMenuItem.Click += new System.EventHandler(this.rtfToolStripMenuItem_Click);
             // 
             // htmlToolStripMenuItem
             // 
             this.htmlToolStripMenuItem.Name = "htmlToolStripMenuItem";
-            this.htmlToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.htmlToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.htmlToolStripMenuItem.Text = "Html";
             this.htmlToolStripMenuItem.Click += new System.EventHandler(this.htmlToolStripMenuItem_Click);
+            // 
+            // reportToolStripMenuItem
+            // 
+            this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
+            this.reportToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.reportToolStripMenuItem.Text = "Report";
+            this.reportToolStripMenuItem.Click += new System.EventHandler(this.reportToolStripMenuItem_Click);
             // 
             // OrdersTab
             // 
@@ -735,10 +730,6 @@
             this.label21.Size = new System.Drawing.Size(72, 15);
             this.label21.TabIndex = 1;
             this.label21.Text = "ConsumerId";
-            // 
-            // orderedBookBindingSource
-            // 
-            this.orderedBookBindingSource.DataSource = typeof(Model.OrderedBook);
             // 
             // OrderedBooksTab
             // 
@@ -991,10 +982,6 @@
             this.ClientGrid.TabIndex = 0;
             this.ClientGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
-            // 
-            // clientBindingSource
-            // 
-            this.clientBindingSource.DataSource = typeof(Model.Client);
             // 
             // BookTab
             // 
@@ -1528,17 +1515,6 @@
             this.TableTabControl.SelectedIndex = 0;
             this.TableTabControl.Size = new System.Drawing.Size(1206, 662);
             this.TableTabControl.TabIndex = 0;
-            // 
-            // clientBindingSource1
-            // 
-            this.clientBindingSource1.DataSource = typeof(Model.Client);
-            // 
-            // reportToolStripMenuItem
-            // 
-            this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
-            this.reportToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
-            this.reportToolStripMenuItem.Text = "Report";
-            this.reportToolStripMenuItem.Click += new System.EventHandler(this.reportToolStripMenuItem_Click);
             // 
             // Form1
             // 
