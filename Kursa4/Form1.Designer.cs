@@ -48,7 +48,12 @@
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.OrderGrid = new DevExpress.XtraGrid.GridControl();
+            this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colId4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCreateDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDeliveryDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colOrderStatus = new DevExpress.XtraGrid.Columns.GridColumn();
             this.OrderedBooks = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -134,11 +139,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.ManufacturerName = new System.Windows.Forms.TextBox();
             this.TableTabControl = new System.Windows.Forms.TabControl();
-            this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.colId4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCreateDate = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colDeliveryDate = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colOrderStatus = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridView8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ManufacturerGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.manufacturerBindingSource)).BeginInit();
@@ -146,6 +146,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OrderGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OrderedBooks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ComponentGrid)).BeginInit();
@@ -186,7 +187,6 @@
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.TableTabControl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // gridView8
@@ -343,6 +343,10 @@
             this.gridView5,
             this.gridView6});
             // 
+            // orderBindingSource
+            // 
+            this.orderBindingSource.DataSource = typeof(Model.Order);
+            // 
             // gridView5
             // 
             this.gridView5.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
@@ -354,6 +358,34 @@
             this.gridView5.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "Id", null, "")});
             this.gridView5.Name = "gridView5";
+            // 
+            // colId4
+            // 
+            this.colId4.FieldName = "Id";
+            this.colId4.Name = "colId4";
+            this.colId4.Visible = true;
+            this.colId4.VisibleIndex = 0;
+            // 
+            // colCreateDate
+            // 
+            this.colCreateDate.FieldName = "CreateDate";
+            this.colCreateDate.Name = "colCreateDate";
+            this.colCreateDate.Visible = true;
+            this.colCreateDate.VisibleIndex = 1;
+            // 
+            // colDeliveryDate
+            // 
+            this.colDeliveryDate.FieldName = "DeliveryDate";
+            this.colDeliveryDate.Name = "colDeliveryDate";
+            this.colDeliveryDate.Visible = true;
+            this.colDeliveryDate.VisibleIndex = 2;
+            // 
+            // colOrderStatus
+            // 
+            this.colOrderStatus.FieldName = "OrderStatus";
+            this.colOrderStatus.Name = "colOrderStatus";
+            this.colOrderStatus.Visible = true;
+            this.colOrderStatus.VisibleIndex = 3;
             // 
             // OrderedBooks
             // 
@@ -612,20 +644,25 @@
             // 
             // PurchasedComponentCount
             // 
-            this.PurchasedComponentCount.Increment = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
             this.PurchasedComponentCount.Location = new System.Drawing.Point(52, 68);
             this.PurchasedComponentCount.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
+            this.PurchasedComponentCount.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.PurchasedComponentCount.Name = "PurchasedComponentCount";
             this.PurchasedComponentCount.Size = new System.Drawing.Size(287, 23);
             this.PurchasedComponentCount.TabIndex = 32;
+            this.PurchasedComponentCount.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label3
             // 
@@ -1262,38 +1299,6 @@
             this.TableTabControl.Size = new System.Drawing.Size(1206, 662);
             this.TableTabControl.TabIndex = 0;
             // 
-            // orderBindingSource
-            // 
-            this.orderBindingSource.DataSource = typeof(Model.Order);
-            // 
-            // colId4
-            // 
-            this.colId4.FieldName = "Id";
-            this.colId4.Name = "colId4";
-            this.colId4.Visible = true;
-            this.colId4.VisibleIndex = 0;
-            // 
-            // colCreateDate
-            // 
-            this.colCreateDate.FieldName = "CreateDate";
-            this.colCreateDate.Name = "colCreateDate";
-            this.colCreateDate.Visible = true;
-            this.colCreateDate.VisibleIndex = 1;
-            // 
-            // colDeliveryDate
-            // 
-            this.colDeliveryDate.FieldName = "DeliveryDate";
-            this.colDeliveryDate.Name = "colDeliveryDate";
-            this.colDeliveryDate.Visible = true;
-            this.colDeliveryDate.VisibleIndex = 2;
-            // 
-            // colOrderStatus
-            // 
-            this.colOrderStatus.FieldName = "OrderStatus";
-            this.colOrderStatus.Name = "colOrderStatus";
-            this.colOrderStatus.Visible = true;
-            this.colOrderStatus.VisibleIndex = 3;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1311,6 +1316,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OrderGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OrderedBooks)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ComponentGrid)).EndInit();
@@ -1356,7 +1362,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.TableTabControl.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

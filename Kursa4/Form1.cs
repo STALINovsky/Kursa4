@@ -198,9 +198,11 @@ namespace Kursa4
                 ComponentName = ((Component)PurchasedComponentSource.SelectedValue).ComponentName,
                 Description = ((Component)PurchasedComponentSource.SelectedValue).Description,
                 ManufacturerName = ((Component)PurchasedComponentSource.SelectedValue).Manufacturer.Description,
+                Price = ((Component)PurchasedComponentSource.SelectedValue).Price,
                 ProviderName = ((Component)PurchasedComponentSource.SelectedValue).Provider.ProviderName,
                 Count = (int)PurchasedComponentCount.Value,
                 Order = PurchasedComponentOrder.SelectedValue as Order,
+
             };
 
             PurchasedComponentGrid.MainView.RefreshData();
